@@ -1,0 +1,85 @@
+aadpratap@351-Debian:~$ ip -4 addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    altname enp2s1
+    inet 192.168.154.129/24 brd 192.168.154.255 scope global dynamic noprefixroute ens33
+       valid_lft 1491sec preferred_lft 1491sec
+9: enx20d778fe2e41: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx20d778fe2e41
+       valid_lft 1083sec preferred_lft 1083sec
+10: enx20d778fe2e43: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx20d778fe2e43
+       valid_lft 1083sec preferred_lft 1083sec
+aadpratap@351-Debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=4.06 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=1.44 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=2.72 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=2.70 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3016ms
+rtt min/avg/max/mdev = 1.443/2.731/4.063/0.926 ms
+aadpratap@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+ +-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |H|e|l|l|o| |M|r|.|M|o|n|e|y|H|o|n|e|y|
+ +-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+-+
+Last login: Fri Oct  7 22:41:20 2022 from 192.168.7.1
+debian@aaadprat-beagle:~$ cd /proc/
+debian@aaadprat-beagle:/proc$ ls
+1     1479  1889  664  93             filesystems   pvr
+10    15    1894  667  94             fs            sched_debug
+101   1575  2     668  95             interrupts    schedstat
+102   1584  20    67   97             iomem         self
+103   1587  21    68   98             ioports       slabinfo
+109   1588  22    680  989            irq           softirqs
+11    16    23    69   991            kallsyms      stat
+1105  1603  24    70   apm            keys          swaps
+118   1604  3     71   buddyinfo      key-users     sys
+119   1614  4     72   bus            kmsg          sysrq-trigger
+12    17    530   728  cgroups        kpagecgroup   sysvipc
+1229  1724  531   73   cmdline        kpagecount    thread-self
+126   1728  580   730  config.gz      kpageflags    timer_list
+129   1729  600   74   consoles       loadavg       tty
+13    18    603   766  cpu            locks         uptime
+130   1831  615   767  cpuinfo        meminfo       version
+131   1849  616   768  crypto         misc          vmallocinfo
+132   1851  619   781  devices        modules       vmstat
+133   1863  620   8    device-tree    mounts        zoneinfo
+135   1865  636   84   diskstats      mtd
+136   1866  645   85   driver         net
+1427  1867  648   87   dynamic_debug  pagetypeinfo
+1459  1884  65    88   execdomains    partitions
+1478  1888  66    9    fb             pressure
+debian@aaadprat-beagle:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@aaadprat-beagle:/proc$ cat uptime
+17929.94 17063.06
+debian@aaadprat-beagle:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061748
+debian@aaadprat-beagle:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+aadpratap@351-Debian:~$ 
+

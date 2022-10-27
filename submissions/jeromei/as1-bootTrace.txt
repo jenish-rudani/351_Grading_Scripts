@@ -1,0 +1,39 @@
+jeromei@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+    ____  ____  ______            __                             
+   / __ )/ __ )/ ____/  _        / /__  _________  ____ ___  ___ 
+  / __  / __  / / __   (_)  __  / / _ \/ ___/ __ \/ __ `__ \/ _ \
+ / /_/ / /_/ / /_/ /  _    / /_/ /  __/ /  / /_/ / / / / / /  __/
+/_____/_____/\____/  (_)   \____/\___/_/   \____/_/ /_/ /_/\___/ 
+                                                              
+Last login: Thu Oct  6 17:59:53 2022 from 192.168.7.1
+Hello embedded world, from Jerome!
+
+When the LED 3 Lights up, Press the USER button!
+New best time!
+Your reaction time was  190 ms; your Best time is 190
+Your reaction time was  213 ms; your Best time is 190
+Your reaction time was  520 ms; your Best time is 190
+Your reaction time was  1008 ms; your Best time is 190
+New best time!
+Your reaction time was  185 ms; your Best time is 185
+Your reaction time was  5000 ms; your Best time is 185
+Your reaction time was  410 ms; your Best time is 185
+New best time!
+Your reaction time was  177 ms; your Best time is 177
+Your reaction time was  2697 ms; your Best time is 177
+You matched your best time!
+Your reaction time was  177 ms; your Best time is 177
+No input within 5000 ms ; quitting!
+debian@jeromei-beagle:~$ source mountNFS.sh 
+debian@jeromei-beagle:/mnt/remote$ ls myApps/
+hello
+
+
+

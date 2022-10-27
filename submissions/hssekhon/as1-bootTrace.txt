@@ -1,0 +1,38 @@
+honey@351DEB:~/cmpt433/work/myApps$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+                                                                                                  
+,--.   ,--.       ,--.                                  ,--.  ,--.                                
+|  |   |  | ,---. |  | ,---. ,---. ,--,--,--. ,---.     |  '--'  | ,---. ,--,--,  ,---. ,--. ,--. 
+|  |.'.|  || .-. :|  || .--'| .-. ||        || .-. :    |  .--.  || .-. ||      \| .-. : \  '  /  
+|   ,'.   |\   --.|  |\ `--.' '-' '|  |  |  |\   --.    |  |  |  |' '-' '|  ||  |\   --.  \   '   
+'--'   '--' `----'`--' `---' `---' `--`--`--' `----'    `--'  `--' `---' `--''--' `----'.-'  /    
+                                                                                        `---'     
+Last login: Fri Oct  7 06:45:24 2022 from 192.168.7.1
+Hello Embedded World! from Honeypal 
+
+When LED3 lights up please press the USER Button
+New Best time!
+Your reaction time was 5000;Best so far in game is (5000) 
+Your reaction time was 5000;Best so far in game is (5000) 
+New Best time!
+Your reaction time was (560);Best so far in game is (560) 
+Your reaction time was (906);Best so far in game is (560) 
+Your reaction time was (659);Best so far in game is (560) 
+No input within 5 seconds; quitting
+debian@hssekhon-beagle:~$ ./m
+main          mount-nfs.sh  
+debian@hssekhon-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@hssekhon-beagle:~$ cd /m
+media/ mnt/   
+debian@hssekhon-beagle:~$ cd /mnt/remote/myApps/
+debian@hssekhon-beagle:/mnt/remote/myApps$ ls
+export  hello  main
+debian@hssekhon-beagle:/mnt/remote/myApps$

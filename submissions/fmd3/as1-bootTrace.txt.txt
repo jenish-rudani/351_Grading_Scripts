@@ -1,0 +1,45 @@
+flynn@351-debian:~/cmpt433/work/myApps/as1$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+
+
+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+ |W|e|l|c|o|m|e| |F|l|y|n|n|!|
+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+
+
+Last login: Mon Sep 26 18:17:17 2022 from 192.168.7.1
+Hello embedded world, from Flynn!
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was 5000ms; best so far in game is 5000ms
+New best time!
+Your reaction time was 129ms; best so far in game is 129ms
+Your reaction time was 143ms; best so far in game is 129ms
+Your reaction time was 146ms; best so far in game is 129ms
+Your reaction time was 129ms; best so far in game is 129ms
+Your reaction time was 132ms; best so far in game is 129ms
+New best time!
+Your reaction time was 125ms; best so far in game is 125ms
+Your reaction time was 132ms; best so far in game is 125ms
+Your reaction time was 133ms; best so far in game is 125ms
+No input within 5000ms quitting!
+debian@fmd3-beagle:~$ ./mountNFS.sh 
+[sudo] password for debian: 
+debian@fmd3-beagle:~$ cd /m
+media/ mnt/   
+debian@fmd3-beagle:~$ cd /m
+media/ mnt/   
+debian@fmd3-beagle:~$ cd /mnt/remote/
+debian@fmd3-beagle:/mnt/remote$ ls
+myApps  nfs_messages.txt
+debian@fmd3-beagle:/mnt/remote$ cd myApps/
+debian@fmd3-beagle:/mnt/remote/myApps$ ls
+hello_target
+debian@fmd3-beagle:/mnt/remote/myApps$ 

@@ -1,0 +1,46 @@
+ian@Debian-351:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+ _       __     __                               ____          
+| |     / /__  / /________  ____ ___  ___       /  _/___ _____ 
+| | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \      / // __ `/ __ \
+| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/    _/ // /_/ / / / /
+|__/|__/\___/_/\___/\____/_/ /_/ /_/\___( )  /___/\__,_/_/ /_/ 
+                                        |/                     
+Last login: Wed Oct  5 04:03:36 2022 from 192.168.7.1
+
+Hello embedded world, from Ian!
+
+When LED3 lights up, press the USER button!
+New Best Time!
+Your reaction time: 1126 ms. 	Your fastest time: 	1126 ms.
+New Best Time!
+Your reaction time: 247 ms. 	Your fastest time: 	247 ms.
+Your reaction time: 263 ms. 	Your fastest time: 	247 ms.
+Your reaction time: 251 ms. 	Your fastest time: 	247 ms.
+Your reaction time: 267 ms. 	Your fastest time: 	247 ms.
+New Best Time!
+Your reaction time: 200 ms. 	Your fastest time: 	200 ms.
+Your reaction time: 276 ms. 	Your fastest time: 	200 ms.
+New Best Time!
+Your reaction time: 173 ms. 	Your fastest time: 	173 ms.
+No input within 5000 ms: Quitting
+debian@icruiksh-beagle:~$ ./scripts/mountNFS.sh 
+Start mountNFS
+[sudo] password for debian: 
+Done mountNFS
+debian@icruiksh-beagle:~$ ls /mnt/remote/myApps/
+hello
+debian@icruiksh-beagle:~$ 

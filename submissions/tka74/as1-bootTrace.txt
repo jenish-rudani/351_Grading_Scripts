@@ -1,0 +1,48 @@
+thomas@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+ +-+-+-+-+-+-+-+ +-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+ +-+-+-+
+ |T|h|o|m|a|s|,| |h|e|'|s| |t|h|e| |c|h|e|e|k|y| |o|n|e|
+ +-+-+-+-+-+-+-+ +-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+ +-+-+-+
+
+Last login: Tue Oct  4 02:12:15 2022 from 192.168.7.1
+Hello embedded world, from Thomas Kingsman!
+
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was  230ms; best so far in game is  230ms
+New best time!
+Your reaction time was  174ms; best so far in game is  174ms
+Your reaction time was  209ms; best so far in game is  174ms
+Your reaction time was  182ms; best so far in game is  174ms
+Your reaction time was  196ms; best so far in game is  174ms
+Your reaction time was  190ms; best so far in game is  174ms
+Your reaction time was  209ms; best so far in game is  174ms
+No input within 5000ms; quitting!
+debian@tka74-beagle:~$ ./hello
+Hello embedded world, from Thomas Kingsman!
+
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was 1175ms; best so far in game is 1175ms
+New best time!
+Your reaction time was 1144ms; best so far in game is 1144ms
+Your reaction time was 1186ms; best so far in game is 1144ms
+New best time!
+Your reaction time was  514ms; best so far in game is  514ms
+New best time!
+Your reaction time was  493ms; best so far in game is  493ms
+Input too early; quitting!
+debian@tka74-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@tka74-beagle:~$ cd /mnt/remote/myApps
+debian@tka74-beagle:/mnt/remote/myApps$ ls
+hello
+debian@tka74-beagle:/mnt/remote/myApps$ 
+

@@ -1,0 +1,29 @@
+arminder@351-Debian:~/cmpt433/work/as1$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+                         _                      
+| | _  |  _  _ __  _    |_| ____  o __  _| _  __
+|^|(/_ | (_ (_)|||(/_   | | | ||| | | |(_|(/_ | 
+ 
+Last login: Sat Oct  8 00:27:53 2022 from 192.168.7.1
+Hello embedded world, from Arminder! 
+
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was 743; best so far in game is 743.
+Your reaction time was 1254; best so far in game is 743.
+New best time!
+Your reaction time was 610; best so far in game is 610.
+Your reaction time was 661; best so far in game is 610.
+Your reaction time was 4217; best so far in game is 610.
+Your reaction time was 5000; best so far in game is 610.
+No input within 5000ms; quitting!
+debian@aka139-beagle:~$ cd /mnt/remote/myApps
+debian@aka139-beagle:/mnt/remote/myApps$ ls
+export  hello  unexport
+debian@aka139-beagle:/mnt/remote/myApps$ 

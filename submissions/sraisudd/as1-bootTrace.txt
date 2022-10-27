@@ -1,0 +1,19 @@
+WHEN LED3 lights up, press the USER button! 
+WOOW! That's your new best time! 
+Your reaction time was 522 ms 
+Your best so far is 522 ms 
+WOOW! That's your new best time! 
+Your reaction time was 109 ms 
+Your best so far is 109 ms 
+Your reaction time was 219 ms 
+Your best so far is 109 ms 
+You pressed the button way too soon! 
+Your reaction time was 5000 ms 
+Your best so far is 109 ms
+Your reaction time was 1494 ms 
+Your best so far is 109 ms 
+Your reaction time was 552 ms 
+Your best so far is 109 ms 
+SIOCADDRT: File exists
+nameserver 8.8.8.8
+hello

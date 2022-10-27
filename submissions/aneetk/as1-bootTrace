@@ -1,0 +1,43 @@
+aneet@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+\ \   / /                      | |   | | | |   (_)         /\                   | | | |
+  \ \_/ /__  _   _    __ _  ___ | |_  | |_| |__  _ ___     /  \   _ __   ___  ___| |_| |
+   \   / _ \| | | |  / _` |/ _ \| __| | __| '_ \| / __|   / /\ \ | '_ \ / _ \/ _ \ __| |
+    | | (_) | |_| | | (_| | (_) | |_  | |_| | | | \__ \  / ____ \| | | |  __/  __/ |_|_|
+    |_|\___/ \__,_|  \__, |\___/ \__|  \__|_| |_|_|___/ /_/    \_\_| |_|\___|\___|\__(_)
+                      __/ |                                                             
+                     |___/                                                              
+Last login: Fri Oct  7 07:10:35 2022 from 192.168.7.1
+Hello embedded world, from Aneet!
+Press the USER button to start playing!
+When LED3 lights up, press the USER button!
+Your reaction time was 100000 ms.
+New best time!
+When LED3 lights up, press the USER button!
+Your reaction time was 1286 ms.
+New best time!
+When LED3 lights up, press the USER button!
+Your reaction time was 1118 ms.
+New best time!
+When LED3 lights up, press the USER button!
+Your reaction time was 745 ms.
+best time so far in game is 745 
+When LED3 lights up, press the USER button!
+Your reaction time was 745 ms.
+best time so far in game is 745 
+When LED3 lights up, press the USER button!
+That's too slow, exiting the game :(
+^C
+debian@aneetk-beagle:~$ cd /mnt/remote/
+debian@aneetk-beagle:/mnt/remote$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@aneetk-beagle:/mnt/remote$ cd myApps/
+debian@aneetk-beagle:/mnt/remote/myApps$ ls
+as1-bootTrace  export  game
+

@@ -1,0 +1,35 @@
+nasim@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password:
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Oct  8 01:28:24 2022 from 192.168.7.1
+Hello embedded world, from nasim!
+When LED3 lights up, press the USER button!
+Your recation time was 316
+
+ New best time !
+When LED3 lights up, press the USER button!
+Your recation time was 491
+best so far in game is 316
+When LED3 lights up, press the USER button!
+Your recation time was 334
+best so far in game is 316
+When LED3 lights up, press the USER button!
+No input within 5000ms; quitting!
+debian@nakbari-beagle:~$ ./mount-nfs.sh
+[sudo] password for debian:
+debian@nakbari-beagle:~$ ls
+export  hello  mount-nfs.sh  ssh
+debian@nakbari-beagle:~$
+

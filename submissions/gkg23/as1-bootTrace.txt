@@ -1,0 +1,32 @@
+gavin@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+ _       __     __                             ______            _          __
+| |     / /__  / /________  ____ ___  ___     / ____/___ __   __(_)___     / /
+| | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \   / / __/ __ `/ | / / / __ \   / / 
+| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/  / /_/ / /_/ /| |/ / / / / /  /_/  
+|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/   \____/\__,_/ |___/_/_/ /_/  (_)   
+                                                                              
+Last login: Wed Oct  5 05:11:42 2022 from 192.168.7.1
+Hello embedded world, from Gavin!
+When LED3 lights up, press the USER button!
+
+New best time!
+Your reaction time was 1757ms; best so far is 1757ms
+New best time!
+Your reaction time was 1464ms; best so far is 1464ms
+Your reaction time was 2417ms; best so far is 1464ms
+Your response time was 5000ms; best so far is 1464ms
+New best time!
+Your reaction time was 714ms; best so far is 714ms
+Your reaction time was 2407ms; best so far is 714ms
+No input within 5000ms; quitting!
+debian@gkg23-beagle:~$ ls /mnt/remote/myApps
+hello
+debian@gkg23-beagle:~$ 
+

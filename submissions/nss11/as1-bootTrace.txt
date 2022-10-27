@@ -1,0 +1,25 @@
+navpreet@351-Debian:~/Downloads$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ███╗   ██╗ █████╗ ██╗   ██╗
+██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ████╗  ██║██╔══██╗██║   ██║
+██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗      ██╔██╗ ██║███████║██║   ██║
+██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝      ██║╚██╗██║██╔══██║╚██╗ ██╔╝
+╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗    ██║ ╚████║██║  ██║ ╚████╔╝ 
+ ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝    ╚═╝  ╚═══╝╚═╝  ╚═╝  ╚═══╝  
+                                                                                             
+Last login: Sat Oct  8 22:10:02 2022 from 192.168.7.1
+Hello Embedded World! from Navpreet Singh Sidhu 
+
+When LED3 lights up please press the USER Button
+New Best time!
+Your reaction time was (313);Best so far in game is (313) 
+Your reaction time was 5000;Best so far in game is (313) 
+Your reaction time was (563);Best so far in game is (313) 
+Your reaction time was 5000;Best so far in game is (313) 
+No input within 5 seconds; quitting

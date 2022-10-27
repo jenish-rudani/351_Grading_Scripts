@@ -1,0 +1,42 @@
+ante@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+  _    _ _   _____              _       _ _     ____  
+ | |  | (_) |  __ \            | |     | | |  _|___ \ 
+ | |__| |_  | |  | | __ _ _ __ | |_ ___| | | (_) __) |
+ |  __  | | | |  | |/ _` | '_ \| __/ _ \ | |    |__ < 
+ | |  | | | | |__| | (_| | | | | ||  __/_|_|  _ ___) |
+ |_|  |_|_| |_____/ \__,_|_| |_|\__\___(_|_) (_)____/ 
+                                                      
+                                                      
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Oct  7 04:40:05 2022 from 192.168.7.1
+Hello embedded world, from Dante!
+Your reaction time was 2303.
+New Best Time!
+Your reaction time was 271; best so far in game is 271
+New Best Time!
+Your reaction time was 311; best so far in game is 271
+Your reaction time was 5000; best so far in game is 271
+Your reaction time was 540; best so far in game is 271
+Your reaction time was 291; best so far in game is 271
+Your reaction time was 395; best so far in game is 271
+No input within 5000 ms; quitting!
+debian@dumpherv-beagle:~$ ls
+hello  internetToTarget.sh  mount-nfs.sh
+debian@dumpherv-beagle:~$ ./mount-nfs.sh
+[sudo] password for debian: 
+debian@dumpherv-beagle:~$ ls /mnt/remote/myApps
+hello

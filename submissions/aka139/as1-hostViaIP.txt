@@ -1,0 +1,81 @@
+arminder@351-Debian:~$ ./internetToTarget.sh 
+1
+arminder@351-Debian:~$ ip -4 addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    altname enp2s1
+    inet 192.168.44.128/24 brd 192.168.44.255 scope global dynamic noprefixroute ens33
+       valid_lft 1659sec preferred_lft 1659sec
+3: enx20d778fe2e43: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx20d778fe2e43
+       valid_lft 1071sec preferred_lft 1071sec
+4: enx20d778fe2e41: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx20d778fe2e41
+       valid_lft 1070sec preferred_lft 1070sec
+arminder@351-Debian:~$ ping google.ca
+PING google.ca (142.250.217.99) 56(84) bytes of data.
+64 bytes from sea09s30-in-f3.1e100.net (142.250.217.99): icmp_seq=1 ttl=128 time=7.66 ms
+64 bytes from sea09s30-in-f3.1e100.net (142.250.217.99): icmp_seq=2 ttl=128 time=10.0 ms
+64 bytes from sea09s30-in-f3.1e100.net (142.250.217.99): icmp_seq=3 ttl=128 time=9.34 ms
+64 bytes from sea09s30-in-f3.1e100.net (142.250.217.99): icmp_seq=4 ttl=128 time=7.66 ms
+
+^C--- google.ca ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3014ms
+rtt min/avg/max/mdev = 7.659/8.665/10.001/1.032 ms
+arminder@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+                         _                      
+| | _  |  _  _ __  _    |_| ____  o __  _| _  __
+|^|(/_ | (_ (_)|||(/_   | | | ||| | | |(_|(/_ | 
+ 
+Last login: Fri Oct  7 02:30:31 2022 from 192.168.7.1
+debian@aka139-beagle:~$ cd /proc
+debian@aka139-beagle:/proc$ ls
+1     12   20   618  727  93         devices        kpagecount    softirqs
+10    126  21   619  728  94         device-tree    kpageflags    stat
+100   129  22   636  73   95         diskstats      loadavg       swaps
+101   13   23   645  74   96         driver         locks         sys
+102   130  24   648  765  97         dynamic_debug  meminfo       sysrq-trigger
+103   131  3    65   766  98         execdomains    misc          sysvipc
+109   132  363  66   767  991        fb             modules       thread-self
+11    133  372  664  778  992        filesystems    mounts        timer_list
+1104  134  4    666  8    apm        fs             mtd           tty
+1160  135  5    67   84   buddyinfo  interrupts     net           uptime
+1161  136  529  670  85   bus        iomem          pagetypeinfo  version
+1164  14   530  68   87   cgroups    ioports        partitions    vmallocinfo
+1165  15   579  680  88   cmdline    irq            pressure      vmstat
+118   16   599  69   89   config.gz  kallsyms       pvr           zoneinfo
+1180  17   6    7    9    consoles   keys           sched_debug
+1181  18   603  70   90   cpu        key-users      schedstat
+1186  19   614  71   91   cpuinfo    kmsg           self
+119   2    615  72   92   crypto     kpagecgroup    slabinfo
+debian@aka139-beagle:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@aka139-beagle:/proc$ cat uptime
+323.09 239.15
+debian@aka139-beagle:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061495
+debian@aka139-beagle:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+

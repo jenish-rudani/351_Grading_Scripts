@@ -1,0 +1,71 @@
+debpotato@potatodeb:~/cmpt433/work/as1$ ssh debian@192.168.7.2
+debian@192.168.7.2's password: 
+Linux liyuyul-beagle 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+
+   .-. .----.   .--.  .-. .-..-. .-.  .--.   .----.
+.-.| |/  {}  \ / {} \ |  `| ||  `| | / {} \ { {__  
+| {} |\      //  /\  \| |\  || |\  |/  /\  \.-._} }
+`----' `----' `-'  `-'`-' `-'`-' `-'`-'  `-'`----' 
+.----.  .----.  .---.  .--.  .---.  .----.         
+| {}  }/  {}  \{_   _}/ {} \{_   _}/  {}  \        
+| .--' \      /  | | /  /\  \ | |  \      /        
+`-'     `----'   `-' `-'  `-' `-'   `----'         
+
+Last login: Thu Oct  6 21:51:14 2022 from 192.168.7.1
+Hello embedded world!, from Joanna (yuyu)!
+When LED0 lights up, press the USER button
+Your reaction time: 1716
+The best time so far: 1716
+New best time!
+Your reaction time: 45
+The best time so far: 45
+New best time!
+Your reaction time: 44
+The best time so far: 44
+Your reaction time: 739
+The best time so far: 44
+Your reaction time: 44
+The best time so far: 44
+Your reaction time: 1940
+The best time so far: 44
+Your reaction time: 1462
+The best time so far: 44
+Your reaction time: 45
+The best time so far: 44
+Your reaction time: 952
+The best time so far: 44
+Your reaction time: 1248
+The best time so far: 44
+Your reaction time: 45
+The best time so far: 44
+qutting the program!
+Summary of this around:
+Your current reaction time is 45 ms
+Your best time is: 44 ms
+
+debian@liyuyul-beagle:~$ ./hello 
+Hello embedded world!, from Joanna (yuyu)!
+When LED0 lights up, press the USER button
+cheater!
+You pressed too early, please make sure you press after the LED0 lights up
+qutting the program!
+Summary of this around:
+Your current reaction time is 5000 ms
+Your best time is: 5000 ms
+
+debian@liyuyul-beagle:~$ ./mountNFS.sh 
+[sudo] password for debian: 
+mounting finished
+debian@liyuyul-beagle:~$ cat mountNFS.sh 
+sudo mount -t nfs 192.168.7.1:home/debpotato/cmpt433/public /mnt/remote
+
+echo mounting finished
+debian@liyuyul-beagle:~$ ls /mnt/remote/myApps/
+hello  motd

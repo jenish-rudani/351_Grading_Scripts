@@ -1,0 +1,37 @@
+amaan@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+ _ _ _     _                      _____                  |  |
+| | | |___| |___ ___ _____ ___   |  _  |_____ ___ ___ ___|  |
+| | | | -_| |  _| . |     | -_|  |     |     | .'| .'|   |__|
+|_____|___|_|___|___|_|_|_|___|  |__|__|_|_|_|__,|__,|_|_|__|
+Last login: Tue Oct  4 11:22:38 2022 from 192.168.7.1
+Hello embedded world, from Amaan!
+When LED3 lights up, press the USER button!
+To start playing press the USER button.
+New best time!
+your reaction time was 203ms; best so far in this game is 203ms.
+your reaction time was 688ms; best so far in this game is 203ms.
+your reaction time was 306ms; best so far in this game is 203ms.
+your reaction time was 279ms; best so far in this game is 203ms.
+your reaction time was 5000ms; best so far in this game is 203ms.
+your reaction time was 363ms; best so far in this game is 203ms.
+your reaction time was 219ms; best so far in this game is 203ms.
+your reaction time was 217ms; best so far in this game is 203ms.
+your reaction time was 5000ms; best so far in this game is 203ms.
+your reaction time was 5000ms; best so far in this game is 203ms.
+your reaction time was 322ms; best so far in this game is 203ms.
+your reaction time was 235ms; best so far in this game is 203ms.
+your reaction time was 269ms; best so far in this game is 203ms.
+no input within 5000 ms; quitting!
+debian@aka202-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@aka202-beagle:~$ ls /mnt/remote/
+helloworld_host    helloworld_target  motd               motd.txt           mount-nfs.sh       myApps/            nfs_message.txt
+debian@aka202-beagle:~$ ls /mnt/remote/myApps/
+hello

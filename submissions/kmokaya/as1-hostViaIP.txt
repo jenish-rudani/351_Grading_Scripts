@@ -1,0 +1,84 @@
+keith@abaya-debian:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:c7:d3:8a brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.26.128/24 brd 192.168.26.255 scope global dynamic noprefixroute ens33
+       valid_lft 1452sec preferred_lft 1452sec
+    inet6 fe80::20c:29ff:fec7:d38a/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+keith@abaya-debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=128 time=1.96 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=128 time=2.65 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=128 time=2.85 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=128 time=2.53 ms
+64 bytes from 192.168.7.2: icmp_seq=5 ttl=128 time=2.28 ms
+^C
+--- 192.168.7.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4008ms
+rtt min/avg/max/mdev = 1.955/2.451/2.849/0.309 ms
+keith@abaya-debian:~$ ssh debian@192.168.7.2
+debian@192.168.7.2's password: 
+Linux beaglebone 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Oct  7 01:01:17 2022 from 192.168.7.1
+debian@beaglebone:~$ cd /proc
+debian@beaglebone:/proc$ ls
+1     1153  173   33    6          cgroups      keys          slabinfo
+10    1170  18    34    67         cmdline      key-users     softirqs
+100   1172  19    3497  68         config.gz    kmsg          stat
+1004  1176  2     35    69         consoles     kpagecgroup   swaps
+1005  1186  20    36    7          cpu          kpagecount    sys
+101   12    21    3652  70         cpuinfo      kpageflags    sysrq-trigger
+102   1255  22    3656  73         crypto       loadavg       sysvipc
+1035  1271  23    3657  75         devices      locks         thread-self
+1039  1285  24    3659  8          device-tree  meminfo       timer_list
+1051  1290  25    3662  89         diskstats    misc          timer_stats
+106   13    26    3692  9          driver       modules       tty
+107   1320  27    3696  90         execdomains  mounts        uptime
+1074  1326  28    3698  91         fb           mtd           version
+1092  1330  29    3699  93         filesystems  net           vmallocinfo
+1096  1331  3     37    95         fs           pagetypeinfo  vmstat
+11    14    30    3707  96         interrupts   partitions    zoneinfo
+1138  1442  3066  3708  apm        iomem        sched_debug
+1142  1446  31    3717  asound     ioports      schedstat
+1146  16    32    38    buddyinfo  irq          scsi
+1150  17    3225  5     bus        kallsyms     self
+debian@beaglebone:/proc$ cd ..
+debian@beaglebone:/$ cat version
+cat: version: No such file or directory
+debian@beaglebone:/$ cd /proc
+debian@beaglebone:/proc$ cat version
+Linux version 4.9.78-ti-r94 (root@b2-am57xx-beagle-x15-2gb) (gcc version 6.3.0 20170516 (Debian 6.3.0-18) ) #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018
+debian@beaglebone:/proc$ cat uptime
+10155.29 9922.33
+debian@beaglebone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: 0000000000000000
+debian@beaglebone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+

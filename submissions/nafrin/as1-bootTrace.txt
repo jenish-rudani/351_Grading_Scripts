@@ -1,0 +1,37 @@
+Linux nafrin-beagle 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+------------------------------WELCOME TO HELL NERD-----------------------------
+
+
+            _____________________________________________________
+   _,aad888P""""""""""Y888888888888888888888888888888P"""""""""""Y888baa,_
+  aP'                     `""Ybaa,         ,aadP""'                     `Ya
+ dP                             `"b,     ,d"'                             Yb
+ 8l                               8l_____8l                                8l
+[8l         Nazia                 8l"""""8l              Afrin             8l]
+ 8l                              d8       8b                               8l
+ 8l                             dP/       \Yb                              8l
+ 8l                           ,dP/         \Yb,                            8l
+ 8l                        ,adP'/           \`Yba,                         8l
+ Yb                     ,adP'                   `Yba,                     dP
+  Yb                ,aadP'                         `Ybaa,                dP
+   `Yb          ,aadP'                                 `Ybaa,          dP'
+     `Ybaaaaad8P"'                                         `"Y8baaaaadP'
+
+Last login: Mon Oct 10 02:41:05 2022 from 192.168.7.1
+Enter name : nazia afrin 301401429
+Hello embedded world, from nazia afrin 301401429
+When LED3 lights up, press the USER button!
+3 sec count - 1 2 3!
+Your recation time was  is 466 ms right!; best so far in game is  is 0 ms right!
+Your recation time was  is 124 ms right!; best so far in game is  is 0 ms right!
+Your recation time was  is 0 ms right!; best so far in game is  is 0 ms right!
+Your recation time was  is 0 ms right!; best so far in game is  is 0 ms right!
+Your recation time was  is 449 ms right!; best so far in game is  is 0 ms right!
+Your recation time was  is 300 ms right!; best so far in game is  is 0 ms right!
+Your recation time was  is 967 ms right!; best so far in game is  is 0 ms right!
+Your recation time was  is 699 ms right!; best so far in game is  is 0 ms right!
+No input within 5 s; quitting!
+
+]0;debian@nafrin-beagle: ~[01;32mdebian@nafrin-beagle[00m:[01;34m~[00m$ exit
+logout
+Connection to 192.168.7.2 closed.

@@ -1,0 +1,75 @@
+generalbonapart@node-1w7jr9pqgil0kjpma0r2cvmnn:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: wlp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 14:4f:8a:98:08:73 brd ff:ff:ff:ff:ff:ff
+    inet 142.58.174.78/20 brd 142.58.175.255 scope global dynamic noprefixroute wlp2s0
+       valid_lft 490sec preferred_lft 490sec
+    inet6 fe80::d3e8:ebc7:a5a2:793b/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx3484e403b1fa: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 34:84:e4:03:b1:fa brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx3484e403b1fa
+       valid_lft 621sec preferred_lft 621sec
+    inet6 fe80::5b2c:d8c0:b462:2344/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enx3484e403b1f8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 34:84:e4:03:b1:f8 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx3484e403b1f8
+       valid_lft 634sec preferred_lft 634sec
+    inet6 fe80::a773:ea6f:3387:6df1/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+generalbonapart@node-1w7jr9pqgil0kjpma0r2cvmnn:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=0.626 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=0.674 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=0.775 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=0.751 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3029ms
+rtt min/avg/max/mdev = 0.626/0.706/0.775/0.059 ms
+generalbonapart@node-1w7jr9pqgil0kjpma0r2cvmnn:~$ sudo ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Sep  2 05:30:28 2022 from 192.168.7.1
+debian@BeagleBone:~$ cd /proc
+debian@BeagleBone:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+4381.42 4157.22
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061467
+debian@BeagleBone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+generalbonapart@node-1w7jr9pqgil0kjpma0r2cvmnn:~$ 
+

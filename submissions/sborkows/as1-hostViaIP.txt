@@ -1,0 +1,20 @@
+debian@beaglebone:~$ cd /proc
+debian@beaglebone:/proc$ cat version
+Linux version 4.9.78-ti-r94 (root@b2-am57xx-beagle-x15-2gb) (gcc version 6.3.0 20170516 (Debian 6.3.0-18) ) #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018
+debian@beaglebone:/proc$ cat uptime
+16372.59 16199.01
+debian@beaglebone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: 0000000000000000
+

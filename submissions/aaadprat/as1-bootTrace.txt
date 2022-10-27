@@ -1,0 +1,38 @@
+debian@aaadprat-beagle:/mnt/remote$ exit
+logout
+Connection to 192.168.7.2 closed.
+aadpratap@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+ +-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+-+
+ |H|e|l|l|o| |M|r|.|M|o|n|e|y|H|o|n|e|y|
+ +-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+-+
+Last login: Fri Oct  7 23:04:25 2022 from 192.168.7.1
+Hello embedded world, from Aadpratap
+ 
+When LED3 lights up, press the USER buttonNew best time! 
+Your reaction time is 2293; best so far in the game is 2293 
+New best time! 
+Your reaction time is 797; best so far in the game is 797 
+Your reaction time is 1192; best so far in the game is 797 
+New best time! 
+Your reaction time is 617; best so far in the game is 617 
+New best time! 
+Your reaction time is 207; best so far in the game is 207 
+Uh Oh, Cheating. The reaction time is 5000 
+Uh Oh, Cheating. The reaction time is 5000 
+Uh Oh, Cheating. The reaction time is 5000 
+Your reaction time is 358; best so far in the game is 207 
+Uh Oh, Cheating. The reaction time is 5000 
+Your reaction time is 1369; best so far in the game is 207 
+Your reaction time is 1383; best so far in the game is 207 
+No input witin 5000ms; quitting! 
+debian@aaadprat-beagle:~$ cd /mnt/remote/myApps
+debian@aaadprat-beagle:/mnt/remote/myApps$ ls
+export  hello
+debian@aaadprat-beagle:/mnt/remote/myApps$ 

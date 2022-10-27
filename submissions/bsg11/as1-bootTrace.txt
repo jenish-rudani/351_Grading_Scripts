@@ -1,0 +1,37 @@
+bobby@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Oct  7 22:28:57 2022 from 192.168.7.1
+Hello embedded world, from Bobby!
+when LED3 lights up, press the USER button!
+New high score!
+Your reaction time was: 918ms; The best reaction time so far in this game is: 918ms
+New high score!
+Your reaction time was: 225ms; The best reaction time so far in this game is: 225ms
+Your reaction time was: 1075ms; The best reaction time so far in this game is: 225ms
+Your reaction time was: 285ms; The best reaction time so far in this game is: 225ms
+Your reaction time was: 1016ms; The best reaction time so far in this game is: 225ms
+New high score!
+Your reaction time was: 180ms; The best reaction time so far in this game is: 180ms
+No input within 5000ms, terminating...
+
+
+Program ended. 
+debian@bsg11-beagle:~$ ./mountNFS.sh 
+[sudo] password for debian: 
+debian@bsg11-beagle:~$ cd /mnt/remote/myApps/
+debian@bsg11-beagle:/mnt/remote/myApps$ ls
+hello
+debian@bsg11-beagle:/mnt/remote/myApps$ 

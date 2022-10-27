@@ -1,0 +1,30 @@
+ __          __  _                                               _      
+ \ \        / / | |                              /\             (_)     
+  \ \  /\  / /__| | ___ ___  _ __ ___   ___     /  \   _ __ ___  _ _ __ 
+   \ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \   / /\ \ | '_ ` _ \| | '__|
+    \  /\  /  __/ | (_| (_) | | | | | |  __/  / ____ \| | | | | | | |   
+     \/  \/ \___|_|\___\___/|_| |_| |_|\___| /_/    \_\_| |_| |_|_|_|   
+                                                                        
+Last login: Thu Oct  6 03:36:07 2022 from 192.168.7.1
+--> 
+--> Current mode for P8_43 is:     gpio
+--> 
+---------------------------------------
+Hello embedded world, from Amir Eghbal!
+---------------------------------------
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was 4716 ms; best so far in game is 4716 ms.
+You pressed the button too early. Reaction time recorded is 5000 ms; best so far in game is 4716 ms.
+New best time!
+Your reaction time was 808 ms; best so far in game is 808 ms.
+Your reaction time was 2022 ms; best so far in game is 808 ms.
+You pressed the button too early. Reaction time recorded is 5000 ms; best so far in game is 808 ms.
+New best time!
+Your reaction time was 243 ms; best so far in game is 243 ms.
+No input within 5000ms; quitting!
+debian@aeghbal-beagle:~$ ./mountNFS
+[sudo] password for debian: 
+debian@aeghbal-beagle:~$ cd /mnt/remote/myApps
+debian@aeghbal-beagle:/mnt/remote/myApps$ ls
+hello  hi

@@ -1,0 +1,82 @@
+HOST'S INTERNET CONFIGURATION
+
+avash@351-debian:~$ ping google.ca
+PING google.ca (142.250.217.99) 56(84) bytes of data.
+64 bytes from sea09s30-in-f3.1e100.net (142.250.217.99): icmp_seq=1 ttl=128 time=9.27 ms
+64 bytes from sea09s30-in-f3.1e100.net (142.250.217.99): icmp_seq=2 ttl=128 time=8.98 ms
+64 bytes from sea09s30-in-f3.1e100.net (142.250.217.99): icmp_seq=3 ttl=128 time=9.27 ms
+64 bytes from sea09s30-in-f3.1e100.net (142.250.217.99): icmp_seq=4 ttl=128 time=17.1 ms
+^C
+--- google.ca ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3007ms
+rtt min/avg/max/mdev = 8.980/11.153/17.094/3.432 ms
+
+
+
+PING THE TARGET AND LET IT PING AT LEAST 3 TIMES
+
+avash@351-debian:~/ensc351/public/as1$ ping 192.168.7.1
+PING 192.168.7.1 (192.168.7.1) 56(84) bytes of data.
+64 bytes from 192.168.7.1: icmp_seq=1 ttl=64 time=0.069 ms
+64 bytes from 192.168.7.1: icmp_seq=2 ttl=64 time=0.044 ms
+64 bytes from 192.168.7.1: icmp_seq=3 ttl=64 time=0.051 ms
+64 bytes from 192.168.7.1: icmp_seq=4 ttl=64 time=0.082 ms
+64 bytes from 192.168.7.1: icmp_seq=5 ttl=64 time=0.063 ms
+^C
+--- 192.168.7.1 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4083ms
+rtt min/avg/max/mdev = 0.044/0.061/0.082/0.013 ms
+
+
+SSH TO TARGET
+
+avash@351-debian:~$ ssh debian@192.168.7.2
+
+
+
+PERFORM A DIRECTORY LISTING OF THE /proc DIRECTORY
+
+debian@BeagleBone:~$ cd /proc
+debian@BeagleBone:/proc$ ls
+1     1165  1195  135  23   603  663  72   84  98         cpu            filesystems  kpagecgroup  net           stat           vmallocinfo
+10    1166  1197  136  24   613  666  727  85  988        cpuinfo        fs           kpagecount   pagetypeinfo  swaps          vmstat
+101   118   12    15   3    614  667  728  87  989        crypto         interrupts   kpageflags   partitions    sys            zoneinfo
+102   1181  126   16   362  617  67   73   88  apm        devices        iomem        loadavg      pressure      sysrq-trigger
+103   1182  129   17   369  619  679  74   9   buddyinfo  device-tree    ioports      locks        pvr           sysvipc
+109   1189  13    18   4    639  68   765  92  bus        diskstats      irq          meminfo      sched_debug   thread-self
+11    119   130   2    529  647  69   766  93  cgroups    driver         kallsyms     misc         schedstat     timer_list
+1103  1191  131   20   530  65   7    767  94  cmdline    dynamic_debug  keys         modules      self          tty
+1161  1193  132   21   579  651  70   779  95  config.gz  execdomains    key-users    mounts       slabinfo      uptime
+1162  1194  133   22   599  66   71   8    97  consoles   fb             kmsg         mtd          softirqs      version
+
+
+
+display the kernel's version, up-time, and CPU info:
+
+debian@BeagleBone:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+1222.28 1123.94
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061503
+
+
+
+EXIT THE SSH SESSION USING THE EXIT COMMAND
+
+debian@BeagleBone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+

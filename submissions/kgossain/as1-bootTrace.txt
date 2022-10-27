@@ -1,0 +1,44 @@
+kunal@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+
+
+
+ _   __                  _       _____          _              _     _          _   _____           _                     
+| | / /                 | |  _  |  ___|        | |            | |   | |        | | /  ___|         | |                    
+| |/ / _   _ _ __   __ _| | (_) | |__ _ __ ___ | |__   ___  __| | __| | ___  __| | \ `--. _   _ ___| |_ ___ _ __ ___  ___ 
+|    \| | | | '_ \ / _` | |     |  __| '_ ` _ \| '_ \ / _ \/ _` |/ _` |/ _ \/ _` |  `--. \ | | / __| __/ _ \ '_ ` _ \/ __|
+| |\  \ |_| | | | | (_| | |  _  | |__| | | | | | |_) |  __/ (_| | (_| |  __/ (_| | /\__/ / |_| \__ \ ||  __/ | | | | \__ \
+\_| \_/\__,_|_| |_|\__,_|_| (_) \____/_| |_| |_|_.__/ \___|\__,_|\__,_|\___|\__,_| \____/ \__, |___/\__\___|_| |_| |_|___/
+                                                                                           __/ |                          
+                                                                                          |___/                           
+
+
+Last login: Thu Oct  6 08:49:12 2022 from 192.168.7.1
+Hello embedded world, from Kunal !
+When LED3 lights up, press the USER button ! Pressed button
+Your Response time 1405 ms ,best so far in game is 1405 ms 
+ Pressed button
+Your Response time 960 ms ,best so far in game is 960 ms 
+ Pressed button
+Your Response time 1028 ms ,best so far in game is 960 ms 
+ Pressed button
+No input within 5000ms ; quitting!
+debian@kgossain-beagle:~$ ./mount-nfs.sh
+[sudo] password for debian: 
+debian@kgossain-beagle:~$ ls /mnt/remote/myApps
+hello
+debian@kgossain-beagle:~$ 
+

@@ -1,0 +1,47 @@
+jeremy@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Wed Oct  5 23:18:49 2022 from 192.168.7.1
+Hello embedded world, from Jeremy!
+
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was  2640ms; best so far in game is 2640ms.
+New best time!
+Your reaction time was  673ms; best so far in game is 673ms.
+New best time!
+Your reaction time was  510ms; best so far in game is 510ms.
+New best time!
+Your reaction time was  300ms; best so far in game is 300ms.
+New best time!
+Your reaction time was  221ms; best so far in game is 221ms.
+New best time!
+Your reaction time was  208ms; best so far in game is 208ms.
+Your reaction time was  276ms; best so far in game is 208ms.
+New best time!
+Your reaction time was  187ms; best so far in game is 187ms.
+Your reaction time was  334ms; best so far in game is 187ms.
+Your recation time was 5000ms; best so far in game is 187ms.
+Your reaction time was  1532ms; best so far in game is 187ms.
+No input within 5000ms; quitting!
+debian@jeremya-beagle:~$ ls
+hello  internetToTarget.sh  mount-nfs.sh
+debian@jeremya-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@jeremya-beagle:~$ cd /mnt/remote/myApps/
+debian@jeremya-beagle:/mnt/remote/myApps$ ls
+brightness  hello
+debian@jeremya-beagle:/mnt/remote/myApps$ 
+

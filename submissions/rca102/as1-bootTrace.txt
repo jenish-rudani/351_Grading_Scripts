@@ -1,0 +1,40 @@
+rca102@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+▄▄▌ ▐ ▄▌▄▄▄ .▄▄▌   ▄▄·       • ▌ ▄ ·. ▄▄▄ .    ▄▄▄▄▄                                        
+██· █▌▐█▀▄.▀·██•  ▐█ ▌▪▪     ·██ ▐███▪▀▄.▀·    •██  ▪                                       
+██▪▐█▐▐▌▐▀▀▪▄██▪  ██ ▄▄ ▄█▀▄ ▐█ ▌▐▌▐█·▐▀▀▪▄     ▐█.▪ ▄█▀▄                                   
+▐█▌██▐█▌▐█▄▄▌▐█▌▐▌▐███▌▐█▌.▐▌██ ██▌▐█▌▐█▄▄▌     ▐█▌·▐█▌.▐▌                                  
+ ▀▀▀▀ ▀▪ ▀▀▀ .▀▀▀ ·▀▀▀  ▀█▄▀▪▀▀  █▪▀▀▀ ▀▀▀      ▀▀▀  ▀█▄▀▪                                  
+▄▄▄   ▄▄▄· ▄· ▄▌• ▌ ▄ ·.        ▐ ▄ ·▄▄▄▄  .▄▄ ·     ▄• ▄▌ ▐ ▄ ▪   ▌ ▐·▄▄▄ .▄▄▄  .▄▄ · ▄▄▄ .
+▀▄ █·▐█ ▀█▐█▪██▌·██ ▐███▪▪     •█▌▐███▪ ██ ▐█ ▀.     █▪██▌•█▌▐███ ▪█·█▌▀▄.▀·▀▄ █·▐█ ▀. ▀▄.▀·
+▐▀▀▄ ▄█▀▀█▐█▌▐█▪▐█ ▌▐▌▐█· ▄█▀▄ ▐█▐▐▌▐█· ▐█▌▄▀▀▀█▄    █▌▐█▌▐█▐▐▌▐█·▐█▐█•▐▀▀▪▄▐▀▀▄ ▄▀▀▀█▄▐▀▀▪▄
+▐█•█▌▐█ ▪▐▌▐█▀·.██ ██▌▐█▌▐█▌.▐▌██▐█▌██. ██ ▐█▄▪▐█    ▐█▄█▌██▐█▌▐█▌ ███ ▐█▄▄▌▐█•█▌▐█▄▪▐█▐█▄▄▌
+.▀  ▀ ▀  ▀  ▀ • ▀▀  █▪▀▀▀ ▀█▄▀▪▀▀ █▪▀▀▀▀▀•  ▀▀▀▀      ▀▀▀ ▀▀ █▪▀▀▀. ▀   ▀▀▀ .▀  ▀ ▀▀▀▀  ▀▀▀ 
+Last login: Fri Oct  7 07:10:36 2022 from 192.168.7.1
+Hello embedded world, from Raymond!
+When LED3 lights up, press the USER button!
+Press button to start the game
+New best time!
+Your reaction time was 1691ms; best so far in game is 1691ms.
+New best time!
+Your reaction time was 165ms; best so far in game is 165ms.
+New best time!
+Your reaction time was 158ms; best so far in game is 158ms.
+Your reaction time was 203ms; best so far in game is 158ms.
+New best time!
+Your reaction time was 140ms; best so far in game is 140ms.
+No input within 5000ms; quitting!
+debian@rca102-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@rca102-beagle:~$ ls /mnt/remote/m
+motd          mount-nfs.sh  myApps/       
+debian@rca102-beagle:~$ ls /mnt/remote/myApps/
+hello
+debian@rca102-beagle:~$ 

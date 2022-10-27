@@ -1,0 +1,98 @@
+rca102@debian:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:31:43:78 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.159.128/24 brd 192.168.159.255 scope global dynamic noprefixroute ens33
+       valid_lft 1708sec preferred_lft 1708sec
+    inet6 fe80::20c:29ff:fe31:4378/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx3484e403b1fa: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 34:84:e4:03:b1:fa brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx3484e403b1fa
+       valid_lft 1108sec preferred_lft 1108sec
+    inet6 fe80::4d41:f017:43fa:23b2/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enx3484e403b1f8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 34:84:e4:03:b1:f8 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx3484e403b1f8
+       valid_lft 1108sec preferred_lft 1108sec
+    inet6 fe80::eb06:f4bf:e856:afe1/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+rca102@debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.11 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=1.94 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=2.87 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.87 ms
+64 bytes from 192.168.7.2: icmp_seq=5 ttl=64 time=2.90 ms
+^C
+--- 192.168.7.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4007ms
+rtt min/avg/max/mdev = 1.113/2.137/2.900/0.674 ms
+rca102@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+▄▄▌ ▐ ▄▌▄▄▄ .▄▄▌   ▄▄·       • ▌ ▄ ·. ▄▄▄ .    ▄▄▄▄▄                                        
+██· █▌▐█▀▄.▀·██•  ▐█ ▌▪▪     ·██ ▐███▪▀▄.▀·    •██  ▪                                       
+██▪▐█▐▐▌▐▀▀▪▄██▪  ██ ▄▄ ▄█▀▄ ▐█ ▌▐▌▐█·▐▀▀▪▄     ▐█.▪ ▄█▀▄                                   
+▐█▌██▐█▌▐█▄▄▌▐█▌▐▌▐███▌▐█▌.▐▌██ ██▌▐█▌▐█▄▄▌     ▐█▌·▐█▌.▐▌                                  
+ ▀▀▀▀ ▀▪ ▀▀▀ .▀▀▀ ·▀▀▀  ▀█▄▀▪▀▀  █▪▀▀▀ ▀▀▀      ▀▀▀  ▀█▄▀▪                                  
+▄▄▄   ▄▄▄· ▄· ▄▌• ▌ ▄ ·.        ▐ ▄ ·▄▄▄▄  .▄▄ ·     ▄• ▄▌ ▐ ▄ ▪   ▌ ▐·▄▄▄ .▄▄▄  .▄▄ · ▄▄▄ .
+▀▄ █·▐█ ▀█▐█▪██▌·██ ▐███▪▪     •█▌▐███▪ ██ ▐█ ▀.     █▪██▌•█▌▐███ ▪█·█▌▀▄.▀·▀▄ █·▐█ ▀. ▀▄.▀·
+▐▀▀▄ ▄█▀▀█▐█▌▐█▪▐█ ▌▐▌▐█· ▄█▀▄ ▐█▐▐▌▐█· ▐█▌▄▀▀▀█▄    █▌▐█▌▐█▐▐▌▐█·▐█▐█•▐▀▀▪▄▐▀▀▄ ▄▀▀▀█▄▐▀▀▪▄
+▐█•█▌▐█ ▪▐▌▐█▀·.██ ██▌▐█▌▐█▌.▐▌██▐█▌██. ██ ▐█▄▪▐█    ▐█▄█▌██▐█▌▐█▌ ███ ▐█▄▄▌▐█•█▌▐█▄▪▐█▐█▄▄▌
+.▀  ▀ ▀  ▀  ▀ • ▀▀  █▪▀▀▀ ▀█▄▀▪▀▀ █▪▀▀▀▀▀•  ▀▀▀▀      ▀▀▀ ▀▀ █▪▀▀▀. ▀   ▀▀▀ .▀  ▀ ▀▀▀▀  ▀▀▀ 
+Last login: Fri Oct  7 07:19:01 2022 from 192.168.7.1
+Hello embedded world, from Raymond!
+When LED3 lights up, press the USER button!
+Press button to start the game
+^C
+debian@rca102-beagle:~$ cd /proc/
+debian@rca102-beagle:/proc$ ls
+1     1203  135   17   599  668  766  97         crypto         irq          mounts        swaps
+10    1232  1356  18   605  67   767  98         device-tree    kallsyms     mtd           sys
+100   126   136   2    613  679  778  989        devices        key-users    net           sysrq-trigger
+101   1261  1363  20   615  68   8    990        diskstats      keys         pagetypeinfo  sysvipc
+102   1266  1364  21   618  69   84   apm        driver         kmsg         partitions    thread-self
+103   129   1365  22   619  70   85   buddyinfo  dynamic_debug  kpagecgroup  pressure      timer_list
+109   13    1368  23   639  71   87   bus        execdomains    kpagecount   pvr           tty
+11    130   1369  24   648  72   88   cgroups    fb             kpageflags   sched_debug   uptime
+1105  131   1384  3    65   727  9    cmdline    filesystems    loadavg      schedstat     version
+118   132   1385  4    651  728  90   config.gz  fs             locks        self          vmallocinfo
+119   1322  1393  529  66   73   93   consoles   interrupts     meminfo      slabinfo      vmstat
+12    133   15    530  663  74   94   cpu        iomem          misc         softirqs      zoneinfo
+1202  134   16    579  666  765  95   cpuinfo    ioports        modules      stat
+debian@rca102-beagle:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@rca102-beagle:/proc$ cat uptime
+1381.52 1169.38
+debian@rca102-beagle:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061608
+debian@rca102-beagle:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+rca102@debian:~$ 

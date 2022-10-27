@@ -1,0 +1,47 @@
+aneel@351-debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+
+____    __    ____  ___           _______.     _______. __    __  .______   
+\   \  /  \  /   / /   \         /       |    /       ||  |  |  | |   _  \  
+ \   \/    \/   / /  ^  \       |   (----`   |   (----`|  |  |  | |  |_)  | 
+  \            / /  /_\  \       \   \        \   \    |  |  |  | |   ___/  
+   \    /\    / /  _____  \  .----)   |   .----)   |   |  `--'  | |  |      
+    \__/  \__/ /__/     \__\ |_______/    |_______/     \______/  | _|      
+                                                                            
+     ___      .__   __.  _______  _______  __                               
+    /   \     |  \ |  | |   ____||   ____||  |                              
+   /  ^  \    |   \|  | |  |__   |  |__   |  |                              
+  /  /_\  \   |  . `  | |   __|  |   __|  |  |                              
+ /  _____  \  |  |\   | |  |____ |  |____ |  `----.                         
+/__/     \__\ |__| \__| |_______||_______||_______|                         
+                                                                            
+
+Last login: Mon Oct  3 04:17:11 2022 from 192.168.7.1
+Hello embedded world, from Aneel!
+
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was 426ms; best so far in game is 426ms.
+New best time!
+Your reaction time was 199ms; best so far in game is 199ms.
+Your reaction time was 5000ms; best so far in game is 199ms.
+Your reaction time was 222ms; best so far in game is 199ms.
+Your reaction time was 624ms; best so far in game is 199ms.
+New best time!
+Your reaction time was 192ms; best so far in game is 192ms.
+Your reaction time was 1610ms; best so far in game is 192ms.
+No input within 5000ms, quitting!
+debian@asa304-beagle:~$ ./mount-nfs.sh 
+sudo: unable to resolve host asa304-beagle: Name or service not known
+[sudo] password for debian: 
+debian@asa304-beagle:~$ ls /mnt/remote/myApps/
+active_low  export  hello
+debian@asa304-beagle:~$ 
+

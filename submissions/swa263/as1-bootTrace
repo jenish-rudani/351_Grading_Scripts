@@ -1,0 +1,38 @@
+samanjot@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+   _____                                _____                     __  ___ 
+  / ___/____ _____ ___  ____ _____     / ___/____ ___  _______   / / / (_)
+  \__ \/ __ `/ __ `__ \/ __ `/ __ \    \__ \/ __ `/ / / / ___/  / /_/ / / 
+ ___/ / /_/ / / / / / / /_/ / / / /   ___/ / /_/ / /_/ (__  )  / __  / /  
+/____/\__,_/_/ /_/ /_/\__,_/_/ /_/   /____/\__,_/\__, /____/  /_/ /_/_/   
+                                                /____/                    
+
+Last login: Tue Oct 11 01:59:01 2022 from 192.168.7.1
+Hello embedded world, from Samanjot Waraich!
+
+When LED3 lights up, press the USER button to test your reaction time!
+Your reaction time now is 704; 
+ NEW BEST TIME, best time now is 704 
+Your reaction time now is 2807; Your best time so far is 704 
+Your reaction time now is 297; 
+ NEW BEST TIME, best time now is 297 
+Your reaction time now is 813; Your best time so far is 297 
+Your reaction time now is 206; 
+ NEW BEST TIME, best time now is 206 
+Your reaction time now is 2302; Your best time so far is 206 
+no imput in 5000ms exiting!
+We have exited 
+debian@swa263-beagle:~$ ./mountNFS.sh
+[sudo] password for debian: 
+mount: 192.168.7.1:/home/samanjot/cmpt433/public/mnt/remote: can't find in /etc/fstab.
+debian@swa263-beagle:~$ cd /mnt/remote
+debian@swa263-beagle:/mnt/remote$ ls
+helloworld_target  motd  mount-nfs.sh  myApps  nfs_message.txt
+

@@ -1,0 +1,36 @@
+jmateo@debian:~/cmpt433$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+      _____                        )   ___           
+     (, /           ,     /       (__/_____)    , /) 
+       /     _  _/_  __    _        /       __   (/_ 
+   ___/_(_(_/_)_(__(_/ (_ /_)_     /       / (_(/_)  
+ /   /                            (______)           
+(__ /                                                
+
+Last login: Tue Oct  4 08:10:22 2022 from 192.168.7.1
+Hello embedded world, from Justin!
+The game: Click the button to initiate the game, click again once LED3 lights up. Easy!
+Starting game #1!
+Pressed too early!
+Response Time: 5000 ms, Best Response Time: 5000 ms
+Starting game #2!
+Response Time: 454 ms, Best Response Time: 454 ms
+Starting game #3!
+Response Time: 179 ms, Best Response Time: 179 ms
+Starting game #4!
+Response Time: 150 ms, Best Response Time: 150 ms
+Starting game #5!
+Response Time: 127 ms, Best Response Time: 127 ms
+No input within 5 seconds... Goodbye!
+debian@jmateo-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@jmateo-beagle:~$ ls /mnt/remote/myApps/
+hello
+debian@jmateo-beagle:~$ 

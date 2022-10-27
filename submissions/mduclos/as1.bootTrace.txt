@@ -1,0 +1,43 @@
+megan@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+ __          __  _                            __  __                        
+ \ \        / / | |                          |  \/  |                       
+  \ \  /\  / /__| | ___ ___  _ __ ___   ___  | \  / | ___  __ _  __ _ _ __  
+   \ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | |\/| |/ _ \/ _` |/ _` | '_ \ 
+    \  /\  /  __/ | (_| (_) | | | | | |  __/ | |  | |  __/ (_| | (_| | | | |
+     \/  \/ \___|_|\___\___/|_| |_| |_|\___| |_|  |_|\___|\__, |\__,_|_| |_|
+                                                           __/ |            
+                                                          |___/             
+
+Last login: Fri Oct  7 01:39:05 2022 from 192.168.7.1
+Hello embedded world, from Megan!
+
+When LED3 lights up, press the USER button.
+New Best Time!
+Current response time: 649 ms
+Best response time: 649 ms
+New Best Time!
+Current response time: 224 ms
+Best response time: 224 ms
+New Best Time!
+Current response time: 204 ms
+Best response time: 204 ms
+Current response time: 800 ms
+Best response time: 204 ms
+Current response time: 5000 ms
+Best response time: 204 ms
+Exiting program.
+Current response time: 5000 ms
+Best response time: 204 ms
+ian@mduclos-beagle:~$ ./mount-nfs.sh
+debian@mduclos-beagle:~$ cd /mnt/remote/myApps
+debian@mduclos-beagle:/mnt/remote/myApps$ ls
+hello
+debian@mduclos-beagle:/mnt/remote/myApps$ 

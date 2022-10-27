@@ -1,0 +1,37 @@
+armaanb@armaan-virtualbox:~$ ./Shell_Scripts/sshToBBG.sh 
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+__      __          _                                                     
+\ \    / / ___     | |     __      ___    _ __     ___      _       o O O 
+ \ \/\/ / / -_)    | |    / _|    / _ \  | '  \   / -_)    ( )     o      
+  \_/\_/  \___|   _|_|_   \__|_   \___/  |_|_|_|  \___|   _|/__   TS__[O] 
+_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| {======| 
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'./o--000' 
+   ___                                                                    
+  /   \     _ _   _ __    __ _    __ _    _ _                             
+  | - |    | '_| | '  \  / _` |  / _` |  | ' \                            
+  |_|_|   _|_|_  |_|_|_| \__,_|  \__,_|  |_||_|                           
+_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|                          
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'  
+Last login: Tue Oct 11 03:49:52 2022 from 192.168.7.1
+Hello embedded world, from Armaan!
+
+When LED3 lights up, press the USER button
+New best time!
+Your reaction time was 347ms; best so far in game is 347ms.
+New best time!
+Your reaction time was 186ms; best so far in game is 186ms.
+Your reaction time was 1362ms; best so far in game is 186ms.
+Your reaction time was 5000ms; best so far in game is 186ms.
+Your reaction time was 202ms; best so far in game is 186ms.
+Your reaction time was 192ms; best so far in game is 186ms.
+No input within 5000ms; quitting!
+debian@abandali-beagle:~$ ./Shell_Scripts/nfs_mount.sh 
+debian@abandali-beagle:~$ ls /mnt/remote/myApps/
+hello
+debian@abandali-beagle:~$ 
+

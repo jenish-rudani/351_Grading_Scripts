@@ -1,0 +1,35 @@
+generalbonapart@node-1w7jr9pqgil0kjpma0r2cvmnn:~$ sudo ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+ __ __  ____  __ __    ___      _   __    ___  ___ ___  ____   ___  ____     ___  __ __  ____  
+|  |  ||    ||  |  |  /  _]    | | |  |  /  _]|   |   ||    \ /  _]|    \   /  _]|  |  ||    \ 
+|  |  | |  | |  |  | /  [_     | | |_ | /  [_ | _   _ ||  o  )  [_ |  D  ) /  [_ |  |  ||  D  )
+|  |  | |  | |  |  ||    _]    | |___\||    _]|  \_/  ||   _/    _]|    / |    _]|  |  ||    / 
+|  :  | |  | |  :  ||   [_     |     | |   [_ |   |   ||  | |   [_ |    \ |   [_ |  :  ||    \ 
+ \   /  |  |  \   / |     |    |     | |     ||   |   ||  | |     ||  .  \|     ||     ||  .  \
+  \_/  |____|  \_/  |_____|    |_____| |_____||___|___||__| |_____||__|\_||_____| \__,_||__|\_|
+                                                                                               
+
+
+Last login: Wed Oct  5 11:16:53 2022 from 192.168.7.1
+Hello embedded world, from Alex!
+New best time!
+Your reaction time was 432; best so far in game is 432.
+New best time!
+Your reaction time was 347; best so far in game is 347.
+Too soon. Be careful!
+Too soon. Be careful!
+New best time!
+Your reaction time was 185; best so far in game is 185.
+No input within 5000ms; quitting!
+debian@akopylov-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@akopylov-beagle:~$ cd /mnt/remote/myApps/
+debian@akopylov-beagle:/mnt/remote/myApps$ ls
+hello
+debian@akopylov-beagle:/mnt/remote/myApps$ 

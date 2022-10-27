@@ -1,0 +1,72 @@
+ruth@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Sep 26 07:52:36 2022 from 192.168.7.1
+--> 
+--> Current mode for P8_43 is:     gpio
+--> 
+Hello embedded world, from Ruth!
+
+Once LED3 lights up, press the user button to record your reaction speed!! Press to early and you're automatically slow :(
+
+GO!!
+
+Your reaction time was 509ms, the best time is 509ms!
+
+GO!!
+
+Your reaction time was 179ms, the best time is 179ms!
+
+GO!!
+
+Your reaction time was 324ms, the best time is 179ms!
+
+GO!!
+
+Your reaction time was 120ms, the best time is 120ms!
+
+GO!!
+
+Your reaction time was 241ms, the best time is 120ms!
+
+GO!!
+
+Your reaction time was 223ms, the best time is 120ms!
+
+GO!!
+
+You hit the user button before LED3 lit up:(
+ Penalty: your reaction time is 5000ms. The best time was 120ms.
+
+GO!!
+
+Your reaction time was 153ms, the best time is 120ms!
+
+GO!!
+
+Oops, way too slow ;)!!
+
+debian@rda51-beagle:~$ cd /mnt/rempte
+-bash: cd: /mnt/rempte: No such file or directory
+debian@rda51-beagle:~$ cd /mnt/remote
+debian@rda51-beagle:/mnt/remote$ ls
+hello              motd.txt      myApps           testleds
+helloworld_target  mount-nfs.sh  nfs_message.txt
+debian@rda51-beagle:/mnt/remote$ cd myApps
+debian@rda51-beagle:/mnt/remote/myApps$ ls
+hello  mount-nfs.sh  testleds
+debian@rda51-beagle:/mnt/remote/myApps$ exit
+logout
+Connection to 192.168.7.2 closed.

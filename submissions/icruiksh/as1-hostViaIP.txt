@@ -1,0 +1,100 @@
+ian@Debian-351:~$ sudo ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.17.128  netmask 255.255.255.0  broadcast 192.168.17.255
+        inet6 fe80::2804:9ec2:913a:7c7c  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:89:33:83  txqueuelen 1000  (Ethernet)
+        RX packets 219  bytes 27897 (27.2 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 114  bytes 12154 (11.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx20d7787c60aa: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.7.1  netmask 255.255.255.0  broadcast 192.168.7.255
+        inet6 fe80::b25c:2a52:ed43:b726  prefixlen 64  scopeid 0x20<link>
+        ether 20:d7:78:7c:60:aa  txqueuelen 1000  (Ethernet)
+        RX packets 209  bytes 27003 (26.3 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 288  bytes 45940 (44.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx20d7787c60ac: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.6.1  netmask 255.255.255.0  broadcast 192.168.6.255
+        inet6 fe80::22d7:78ff:fe7c:60ac  prefixlen 64  scopeid 0x20<link>
+        ether 20:d7:78:7c:60:ac  txqueuelen 1000  (Ethernet)
+        RX packets 30  bytes 4583 (4.4 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 50  bytes 5858 (5.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 28  bytes 2820 (2.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 28  bytes 2820 (2.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ian@Debian-351:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.14 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.39 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=2.65 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=2.11 ms
+64 bytes from 192.168.7.2: icmp_seq=5 ttl=64 time=2.36 ms
+^C
+--- 192.168.7.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4009ms
+rtt min/avg/max/mdev = 1.138/2.130/2.654/0.525 ms
+ian@Debian-351:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+ _       __     __                               ____          
+| |     / /__  / /________  ____ ___  ___       /  _/___ _____ 
+| | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \      / // __ `/ __ \
+| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/    _/ // /_/ / / / /
+|__/|__/\___/_/\___/\____/_/ /_/ /_/\___( )  /___/\__,_/_/ /_/ 
+                                        |/                     
+Last login: Tue Oct  4 05:13:53 2022 from 192.168.7.1
+debian@icruiksh-beagle:~$ cd /proc
+debian@icruiksh-beagle:/proc$ ls
+1    1103  13   136   1473  1539  17  24   604  651  678  727  8   93   buddyinfo  cpuinfo        execdomains  irq          kpageflags  mtd           schedstat  sysrq-trigger  vmallocinfo
+10   117   130  1364  1479  1542  18  3    613  653  68   73   84  94   bus        crypto         fb           kallsyms     loadavg     net           self       sysvipc        vmstat
+100  118   131  1365  1480  1543  2   4    614  66   69   74   85  96   cgroups    device-tree    filesystems  key-users    locks       pagetypeinfo  slabinfo   thread-self    zoneinfo
+101  12    132  1402  1487  1558  20  529  618  662  70   764  87  97   cmdline    devices        fs           keys         meminfo     partitions    softirqs   timer_list
+102  126   133  1438  15    1559  21  530  619  665  71   765  88  989  config.gz  diskstats      interrupts   kmsg         misc        pressure      stat       tty
+108  1266  134  1445  1521  1562  22  579  644  666  72   766  9   990  consoles   driver         iomem        kpagecgroup  modules     pvr           swaps      uptime
+11   129   135  1463  1538  16    23  600  65   67   721  778  92  apm  cpu        dynamic_debug  ioports      kpagecount   mounts      sched_debug   sys        version
+debian@icruiksh-beagle:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@icruiksh-beagle:/proc$ cat uptime
+16107.03 15767.39
+debian@icruiksh-beagle:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061824
+debian@icruiksh-beagle:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.

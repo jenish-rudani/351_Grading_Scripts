@@ -1,0 +1,49 @@
+owen@351-Debian:~/cmpt433/public$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+     ___     ___     ___     ___     ___     ___     ___     ___     ___     
+ ___(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)___ 
+(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)
+    (___)   (___)   (___)   (___)   (___)   (___)   (___)   (___)   (___)    
+ _    _  ____  __    ___  _____  __  __  ____    __  __  ___  ____  ____ /\  
+( \/\/ )( ___)(  )  / __)(  _  )(  \/  )( ___)  (  )(  )/ __)( ___)(  _ \)(  
+ )    (  )__)  )(__( (__  )(_)(  )    (  )__)    )(__)( \__ \ )__)  )   /\/  
+(__/\__)(____)(____)\___)(_____)(_/\/\_)(____)  (______)(___/(____)(_)\_)()  
+     ___     ___     ___     ___     ___     ___     ___     ___     ___     
+ ___(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)___ 
+(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)___(___)
+    (___)   (___)   (___)   (___)   (___)   (___)   (___)   (___)   (___)    
+Last login: Fri Oct  7 10:45:23 2022 from 192.168.7.1
+Hello embedded world, from Owen!
+Your reaction time was 3156ms; best so far this game is 3156ms 
+Your reaction time was 783ms; best so far this game is 783ms 
+Your reaction time was 5000ms; best so far this game is 783ms 
+Your reaction time was 1164ms; best so far this game is 783ms 
+Your reaction time was 43ms; best so far this game is 43ms 
+Your reaction time was 721ms; best so far this game is 43ms 
+Your reaction time was 1771ms; best so far this game is 43ms 
+Your reaction time was 5000ms; best so far this game is 43ms 
+No input within 5000ms; quitting!
+
+debian@orc-beagle:~$ ls
+hello  internetToTarget.sh  mountNFS.sh
+debian@orc-beagle:~$ ./mountNFS.sh 
+[sudo] password for debian: 
+debian@orc-beagle:~$ cd ..
+debian@orc-beagle:/home$ ls
+helloworld_target  motd  mount-nfs.sh  mountNFS.sh  myApps  nfs_message.txt
+debian@orc-beagle:/home$ cd myApps/
+debian@orc-beagle:/home/myApps$ ls
+hello
+debian@orc-beagle:/home/myApps$ cd /mnt/remote/
+debian@orc-beagle:/mnt/remote$ ls
+helloworld_target  motd  mount-nfs.sh  mountNFS.sh  myApps  nfs_message.txt
+debian@orc-beagle:/mnt/remote$ cd myApps/
+debian@orc-beagle:/mnt/remote/myApps$ ls
+hello
+debian@orc-beagle:/mnt/remote/myApps$ 

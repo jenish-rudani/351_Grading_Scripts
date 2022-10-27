@@ -1,0 +1,17 @@
+Last login: Mon Oct  3 03:37:08 2022 from 192.168.7.1
+Hello embedded world, from SRINATH GANAPATHY!!!
+When LED3 Lights Up, press the 'USER' button.
+Your reaction time was 5000 ms; best so far in game is 5000 ms!
+
+New best time!
+Your reaction time was 243 ms; best so far in game is 243 ms!
+Your reaction time was 594 ms; best so far in game is 243 ms!
+No input within 5000ms; quitting!!!
+debian@sganapat-beagle:~$
+debian@sganapat-beagle:~$ cd /mnt/remote/myApps
+debian@sganapat-beagle:/mnt/remote/myApps$ ls
+active_low  brightness_off  gpiotest  submithello  trigger
+brightness  export          hello     timing
+debian@sganapat-beagle:/mnt/remote/myApps$ 
+
+

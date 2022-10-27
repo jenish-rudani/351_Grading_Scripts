@@ -1,0 +1,98 @@
+danielkim@ENSC351:~$ ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.0.60  netmask 255.255.255.0  broadcast 10.0.0.255
+        inet6 2604:3d08:657e:3370:b597:c4f8:2d7d:808  prefixlen 64  scopeid 0x0<global>
+        inet6 2604:3d08:657e:3370::b659  prefixlen 128  scopeid 0x0<global>
+        inet6 2604:3d08:657e:3370:20c:29ff:fee3:e5e  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::20c:29ff:fee3:e5e  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:e3:0e:5e  txqueuelen 1000  (Ethernet)
+        RX packets 7784  bytes 5736629 (5.4 MiB)
+        RX errors 0  dropped 1  overruns 0  frame 0
+        TX packets 5973  bytes 1448444 (1.3 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx3484e403b1f8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.7.1  netmask 255.255.255.0  broadcast 192.168.7.255
+        inet6 fe80::5a6:bd44:9146:86ae  prefixlen 64  scopeid 0x20<link>
+        ether 34:84:e4:03:b1:f8  txqueuelen 1000  (Ethernet)
+        RX packets 1972  bytes 232598 (227.1 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2543  bytes 498071 (486.3 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx3484e403b1fa: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.6.1  netmask 255.255.255.0  broadcast 192.168.6.255
+        inet6 fe80::573a:2a4d:ca86:5cb6  prefixlen 64  scopeid 0x20<link>
+        ether 34:84:e4:03:b1:fa  txqueuelen 1000  (Ethernet)
+        RX packets 66  bytes 9565 (9.3 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 64  bytes 8475 (8.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 43  bytes 3860 (3.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 43  bytes 3860 (3.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+danielkim@ENSC351:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=2.11 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.21 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=2.72 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.66 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.661/2.174/2.715/0.374 ms
+danielkim@ENSC351:~$ ssh debian@192.168.7.2
+The authenticity of host '192.168.7.2 (192.168.7.2)' can't be established.
+ECDSA key fingerprint is SHA256:JTm1+LW1zmLYUZzMYDUuIQFiA+MXs21Q2tP2FQa1Zbc.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Failed to add the host to the list of known hosts (/home/danielkim/.ssh/known_hosts).
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+Permission denied, please try again.
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Oct  6 18:19:47 2022 from 192.168.7.1
+
+debian@BeagleBone:~$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+
+debian@BeagleBone:~$ cat uptime
+2841.97 2627.34
+
+debian@BeagleBone:~$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061801
+
+debian@BeagleBone:~$ exit
+logout
+Connection to 192.168.7.2 closed.
+

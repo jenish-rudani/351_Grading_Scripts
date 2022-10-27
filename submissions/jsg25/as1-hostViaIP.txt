@@ -1,0 +1,59 @@
+[jg26@jg:  ~: 12:58 PM]$ ip -4 addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    altname enp2s1
+    inet 192.168.153.128/24 brd 192.168.153.255 scope global dynamic noprefixroute ens33
+       valid_lft 1026sec preferred_lft 1026sec
+5: enx20d77886749c: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx20d77886749c
+       valid_lft 1118sec preferred_lft 1118sec
+6: enx20d77886749e: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx20d77886749e
+       valid_lft 1118sec preferred_lft 1118sec
+[jg26@jg:  ~: 12:58 PM]$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.66 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=1.69 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=2.16 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.75 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.664/1.813/2.155/0.199 ms
+[jg26@jg:  ~: 12:58 PM]$ ./sshDebian.sh 
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+                                                              
+Last login: Tue Sep 27 01:05:40 2022 from 192.168.7.1
+debian@jsg25-beagle:~$ cd /proc && cat version && cat uptime && cat cpuinfo
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+6705.22 6428.44
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061741
+debian@jsg25-beagle:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.

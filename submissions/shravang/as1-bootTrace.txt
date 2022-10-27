@@ -1,0 +1,39 @@
+shravan@351-debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+   _____ _                                _      __          __        _     _ 
+  / ____| |                              ( )     \ \        / /       | |   | |
+ | (___ | |__  _ __ __ ___   ____ _ _ __ |/ ___   \ \  /\  / /__  _ __| | __| |
+  \___ \| '_ \| '__/ _` \ \ / / _` | '_ \  / __|   \ \/  \/ / _ \| '__| |/ _` |
+  ____) | | | | | | (_| |\ V / (_| | | | | \__ \    \  /\  / (_) | |  | | (_| |
+ |_____/|_| |_|_|  \__,_| \_/ \__,_|_| |_| |___/     \/  \/ \___/|_|  |_|\__,_|
+                                                                               
+                                                                               
+
+Last login: Thu Oct  6 03:58:48 2022 from 192.168.7.1
+Hello embedded world, from Shravan!
+ 
+When LED 0 lights up, press the USER button!
+New best time!
+Your reaction time was 2493ms; best so far in game is 2493ms.
+New best time!
+Your reaction time was 244ms; best so far in game is 244ms.
+Your reaction time was 965ms; best so far in game is 244ms.
+Your reaction time was 5000ms; best so far in game is 5000ms.
+debian@shravang-beagle:~$ ./mount-nfs.sh 
+sudo: unable to resolve host shravang-beagle: Temporary failure in name resolution
+[sudo] password for debian: 
+debian@shravang-beagle:~$ ls
+hello  mount-nfs.sh
+debian@shravang-beagle:~$ cd /mnt/remote/myApps/
+debian@shravang-beagle:/mnt/remote/myApps$ ls
+hello
+debian@shravang-beagle:/mnt/remote/myApps$ 
+
+

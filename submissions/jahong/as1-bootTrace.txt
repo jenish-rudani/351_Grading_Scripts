@@ -1,0 +1,48 @@
+jason@351-Debian:~$ ssh debian@192.168.7.2
+
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+ _   _      _ _           ___                         
+| | | |    | | |         |_  |                        
+| |_| | ___| | | ___       | | __ _ ___  ___  _ __    
+|  _  |/ _ \ | |/ _ \      | |/ _` / __|/ _ \| '_ \   
+| | | |  __/ | | (_) | /\__/ / (_| \__ \ (_) | | | |_ 
+\_| |_/\___|_|_|\___/  \____/ \__,_|___/\___/|_| |_(_)
+                                                      
+                                                      
+
+
+Last login: Fri Oct  7 03:00:30 2022 from 192.168.7.1
+Hello embedded world, from Jason!
+
+When LED3 lights up, press the USER button!
+Your current time is 1713ms; Your best time is 1713ms
+Your current time is 1394ms; Your best time is 1394ms
+Your current time is 581ms; Your best time is 581ms
+Your current time is 5000ms; Your best time is 581ms
+Your current time is 5000ms; Your best time is 581ms
+Your current time is 336ms; Your best time is 336ms
+Your current time is 1574ms; Your best time is 336ms
+Your current time is 1677ms; Your best time is 336ms
+No input within 5000ms. Exiting 
+debian@jahong-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+Sorry, try again.
+[sudo] password for debian: 
+debian@jahong-beagle:~$ cd /mnt/remote
+debian@jahong-beagle:/mnt/remote$ cd /myApps
+-bash: cd: /myApps: No such file or directory
+debian@jahong-beagle:/mnt/remote$ ls
+helloworld_host  helloworld_target  motd  myApps  nfs_message.txt
+debian@jahong-beagle:/mnt/remote$ cd myApps
+debian@jahong-beagle:/mnt/remote/myApps$ ls
+brightness  hello  trigger
+debian@jahong-beagle:/mnt/remote/myApps$ ^C
+debian@jahong-beagle:/mnt/remote/myApps$ 
+
+

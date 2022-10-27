@@ -1,0 +1,41 @@
+colin@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+   ___  ___  __  _  _ __
+  //--||| || | ||_| |V _\
+  ||   || || | | _  | | ||
+  ||   || || | || | | | ||  O 0
+  ||__ ||_|| | || | | | ||  \_/
+  \___|\___/ |_||_| |_| ||  
+Last login: Sat Oct  8 01:11:54 2022 from 192.168.7.1
+
+Current mode for P8_43 is:     gpio
+
+Hello embedded world, from Colin!
+When LED3 light up, press the USER button!
+New best time!
+Best score: 107ms current score: 107ms
+Too fast!
+Best score: 107ms current score: 5000ms
+Best score: 107ms current score: 1353ms
+Best score: 107ms current score: 155ms
+Best score: 107ms current score: 967ms
+No input within 5s, quitting!
+Best score: 107ms current score: 5000ms
+debian@cbuchko-beagle:~$ ls
+hello  mount-nfs.sh
+debian@cbuchko-beagle:~$ ./mount-nfs.sh
+[sudo] password for debian: 
+debian@cbuchko-beagle:~$ cd /mnt/remote
+debian@cbuchko-beagle:/mnt/remote$ ls
+motd.txt  myApps  nfs_message.txt
+debian@cbuchko-beagle:/mnt/remote$ cd myApps
+debian@cbuchko-beagle:/mnt/remote/myApps$ ls
+hello
+

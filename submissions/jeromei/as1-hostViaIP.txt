@@ -1,0 +1,89 @@
+jeromei@debian:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:1a:84:9d brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.136.128/24 brd 192.168.136.255 scope global dynamic noprefixroute ens33
+       valid_lft 1460sec preferred_lft 1460sec
+    inet6 fe80::20c:29ff:fe1a:849d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx98f07bffede5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 98:f0:7b:ff:ed:e5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx98f07bffede5
+       valid_lft 1166sec preferred_lft 1166sec
+    inet6 fe80::c12b:c5eb:35ca:2252/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enx98f07bffede3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 98:f0:7b:ff:ed:e3 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx98f07bffede3
+       valid_lft 1165sec preferred_lft 1165sec
+    inet6 fe80::849f:e587:3cfd:a2c0/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+jeromei@debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.13 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=1.02 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=1.56 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.49 ms
+64 bytes from 192.168.7.2: icmp_seq=5 ttl=64 time=1.46 ms
+^C
+--- 192.168.7.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 1.018/1.330/1.558/0.214 ms
+jeromei@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Oct  6 17:10:40 2022 from 192.168.7.1
+debian@BeagleBone:~$ cd /proc
+debian@BeagleBone:/proc$ ls
+1     1228  136   2050  529  655  74   93         consoles       interrupts   meminfo       slabinfo       vmstat
+10    1232  1453  2054  530  657  757  94         cpu            iomem        misc          softirqs       zoneinfo
+100   1233  15    2056  574  66   758  96         cpuinfo        ioports      modules       stat
+101   1248  16    2059  591  67   759  97         crypto         irq          mounts        swaps
+102   1249  17    2060  596  671  771  980        devices        kallsyms     mtd           sys
+108   126   1742  2063  605  68   8    981        device-tree    keys         net           sysrq-trigger
+1096  129   18    21    610  69   84   99         diskstats      key-users    pagetypeinfo  sysvipc
+11    13    2     22    612  70   85   apm        driver         kmsg         partitions    thread-self
+117   130   20    23    623  71   87   buddyinfo  dynamic_debug  kpagecgroup  pressure      timer_list
+1175  131   2009  24    630  715  88   bus        execdomains    kpagecount   pvr           tty
+118   132   2010  3     631  72   9    cgroups    fb             kpageflags   sched_debug   uptime
+1190  133   2016  366   649  721  91   cmdline    filesystems    loadavg      schedstat     version
+12    135   2048  4     65   73   92   config.gz  fs             locks        self          vmallocinfo
+debian@BeagleBone:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+1355.56 1172.03
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061799
+debian@BeagleBone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.

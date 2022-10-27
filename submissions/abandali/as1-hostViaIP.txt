@@ -1,0 +1,93 @@
+armaanb@armaan-virtualbox:~$ ip -4 a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 85823sec preferred_lft 85823sec
+3: enx3484e403b1fa: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx3484e403b1fa
+       valid_lft 832sec preferred_lft 832sec
+4: enx3484e403b1f8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx3484e403b1f8
+       valid_lft 832sec preferred_lft 832sec
+armaanb@armaan-virtualbox:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=15.4 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.92 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=8.27 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=7.84 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 2.921/8.606/15.393/4.446 ms
+armaanb@armaan-virtualbox:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+__      __          _                                                     
+\ \    / / ___     | |     __      ___    _ __     ___      _       o O O 
+ \ \/\/ / / -_)    | |    / _|    / _ \  | '  \   / -_)    ( )     o      
+  \_/\_/  \___|   _|_|_   \__|_   \___/  |_|_|_|  \___|   _|/__   TS__[O] 
+_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| {======| 
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'./o--000' 
+   ___                                                                    
+  /   \     _ _   _ __    __ _    __ _    _ _                             
+  | - |    | '_| | '  \  / _` |  / _` |  | ' \                            
+  |_|_|   _|_|_  |_|_|_| \__,_|  \__,_|  |_||_|                           
+_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|_|"""""|                          
+"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'  
+Last login: Tue Oct 11 03:44:36 2022 from 192.168.7.1
+Hello embedded world, from Armaan!
+
+When LED3 lights up, press the USER button
+No input within 5000ms; quitting!
+debian@abandali-beagle:~$ ls /proc/
+1     1252  16   620  767        cmdline        keys          softirqs
+10    1253  17   633  768        config.gz      kmsg          stat
+100   126   18   639  769        consoles       kpagecgroup   swaps
+101   1276  2    641  782        cpu            kpagecount    sys
+102   1280  20   65   8          cpuinfo        kpageflags    sysrq-trigger
+108   1284  21   659  84         crypto         loadavg       sysvipc
+11    1285  22   66   85         device-tree    locks         thread-self
+1106  129   23   666  87         devices        meminfo       timer_list
+1162  1293  24   669  88         diskstats      misc          tty
+1165  1294  3    67   9          driver         modules       uptime
+1166  1298  375  68   92         dynamic_debug  mounts        version
+117   13    4    682  93         execdomains    mtd           vmallocinfo
+118   130   530  69   94         fb             net           vmstat
+1181  131   531  7    96         filesystems    pagetypeinfo  zoneinfo
+1182  132   580  70   97         fs             partitions
+12    133   6    71   993        interrupts     pressure
+1223  134   600  72   994        iomem          pvr
+1225  135   604  725  apm        ioports        sched_debug
+1230  136   612  73   buddyinfo  irq            schedstat
+1244  14    613  730  bus        kallsyms       self
+1248  15    617  74   cgroups    key-users      slabinfo
+debian@abandali-beagle:~$ cd /proc/
+debian@abandali-beagle:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@abandali-beagle:/proc$ cat uptime
+905.59 793.87
+debian@abandali-beagle:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061613
+debian@abandali-beagle:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+

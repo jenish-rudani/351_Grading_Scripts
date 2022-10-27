@@ -1,0 +1,60 @@
+owen@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Oct  7 04:24:42 2022 from 192.168.7.1
+debian@BeagleBone:~$ cd /proc/
+debian@BeagleBone:/proc$ ls
+1     135   2409  611  757        cgroups        kallsyms      schedstat
+10    136   2417  621  758        cmdline        keys          self
+100   1415  2418  627  759        config.gz      key-users     slabinfo
+101   15    2453  631  771        consoles       kmsg          softirqs
+102   16    2454  648  8          cpu            kpagecgroup   stat
+108   17    2455  65   84         cpuinfo        kpagecount    swaps
+1096  18    2458  655  85         crypto         kpageflags    sys
+11    2     2459  657  87         devices        loadavg       sysrq-trigger
+117   20    2474  66   88         device-tree    locks         sysvipc
+118   2022  2475  67   9          diskstats      meminfo       thread-self
+12    21    2480  672  92         driver         misc          timer_list
+1216  22    3     68   93         dynamic_debug  modules       tty
+126   2285  4     69   94         execdomains    mounts        uptime
+1261  2286  529   70   96         fb             mtd           version
+129   2298  530   71   97         filesystems    net           vmallocinfo
+13    23    574   719  980        fs             pagetypeinfo  vmstat
+130   2335  591   72   981        interrupts     partitions    zoneinfo
+131   2367  596   720  apm        iomem          pressure
+132   2373  605   73   buddyinfo  ioports        pvr
+133   24    609   74   bus        irq            sched_debug
+debian@BeagleBone:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+6249.37 5954.78
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061828
+debian@BeagleBone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+

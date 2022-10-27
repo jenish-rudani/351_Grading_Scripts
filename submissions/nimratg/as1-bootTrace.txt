@@ -1,0 +1,20 @@
+nimrat@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+╦ ╦┌─┐┬  ┬  ┌─┐  ╔╗╔┬┌┬┐┬─┐┌─┐┌┬┐┬
+╠═╣├┤ │  │  │ │  ║║║││││├┬┘├─┤ │ │
+╩ ╩└─┘┴─┘┴─┘└─┘  ╝╚╝┴┴ ┴┴└─┴ ┴ ┴ o
+
+Last login: Sun Oct  9 05:10:25 2022 from 192.168.7.1
+-bash: /home/nimrat/ensc351/work/as1: No such file or directory
+make: *** No targets specified and no makefile found.  Stop.
+debian@nimratg-beagle:~$ cd /mnt/remote/myApps
+debian@nimratg-beagle:/mnt/remote/myApps$ ls
+hello
+

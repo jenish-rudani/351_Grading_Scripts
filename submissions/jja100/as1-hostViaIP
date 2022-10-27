@@ -1,0 +1,68 @@
+justin@Justin-351:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:0a:db:74 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 83586sec preferred_lft 83586sec
+    inet6 fe80::a00:27ff:fe0a:db74/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+9: enx98f07bfe8e91: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 98:f0:7b:fe:8e:91 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/30 brd 192.168.7.3 scope global dynamic noprefixroute enx98f07bfe8e91
+       valid_lft 117sec preferred_lft 117sec
+    inet6 fe80::bdeb:a868:25e3:895/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+10: enx98f07bfe8e94: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 98:f0:7b:fe:8e:94 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/30 brd 192.168.6.3 scope global dynamic noprefixroute enx98f07bfe8e94
+       valid_lft 113sec preferred_lft 113sec
+    inet6 fe80::4205:763b:1213:eff/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+justin@Justin-351:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=12.8 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=6.08 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=16.5 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=5.67 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3013ms
+rtt min/avg/max/mdev = 5.672/10.269/16.549/4.592 ms
+justin@Justin-351:~$ ssh debian@192.168.7.2
+debian@192.168.7.2's password: 
+Linux beaglebone 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Oct  3 02:21:18 2022 from 192.168.7.1
+debian@beaglebone:~$ cd /proc
+debian@beaglebone:/proc$ cat version
+Linux version 4.9.78-ti-r94 (root@b2-am57xx-beagle-x15-2gb) (gcc version 6.3.0 20170516 (Debian 6.3.0-18) ) #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018
+debian@beaglebone:/proc$ cat uptime
+2693.75 2510.86
+debian@beaglebone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: 0000000000000000
+debian@beaglebone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.

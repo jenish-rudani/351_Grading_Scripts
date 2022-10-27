@@ -1,0 +1,90 @@
+aneet@351-Debian:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:13:2a:b2 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 172.16.107.128/24 brd 172.16.107.255 scope global dynamic noprefixroute ens33
+       valid_lft 1722sec preferred_lft 1722sec
+    inet6 fe80::7c2b:b6ed:83ea:5bdd/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx98f07bfe8a01: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether 98:f0:7b:fe:8a:01 brd ff:ff:ff:ff:ff:ff
+4: enx98f07bfe8aff: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 98:f0:7b:fe:8a:ff brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::338f:9861:4ee0:d424/64 scope link tentative noprefixroute 
+       valid_lft forever preferred_lft forever
+aneet@351-Debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=2.11 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.15 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=1.65 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.92 ms
+64 bytes from 192.168.7.2: icmp_seq=5 ttl=64 time=1.99 ms
+^C
+--- 192.168.7.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4013ms
+rtt min/avg/max/mdev = 1.648/1.964/2.152/0.178 ms
+aneet@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Sep 29 23:06:48 2022 from 192.168.7.1
+debian@BeagleBone:~$ cd /proc
+debian@BeagleBone:/proc$ ls
+1     12   20   619  72   92         crypto         kpagecgroup   slabinfo
+10    126  21   620  727  93         devices        kpagecount    softirqs
+100   129  22   635  73   94         device-tree    kpageflags    stat
+101   13   23   638  735  95         diskstats      loadavg       swaps
+102   130  24   646  74   96         driver         locks         sys
+108   131  3    649  765  97         dynamic_debug  meminfo       sysrq-trigger
+11    132  365  65   766  986        execdomains    misc          sysvipc
+1102  133  375  66   767  987        fb             modules       thread-self
+1103  134  4    664  777  99         filesystems    mounts        timer_list
+1160  135  5    666  8    apm        fs             mtd           tty
+1163  136  529  667  84   buddyinfo  interrupts     net           uptime
+1164  14   530  67   85   bus        iomem          pagetypeinfo  version
+117   15   579  679  87   cgroups    ioports        partitions    vmallocinfo
+1179  16   599  68   88   cmdline    irq            pressure      vmstat
+118   17   6    69   89   config.gz  kallsyms       pvr           zoneinfo
+1180  18   604  7    9    consoles   keys           sched_debug
+1183  19   612  70   90   cpu        key-users      schedstat
+119   2    614  71   91   cpuinfo    kmsg           self
+debian@BeagleBone:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+105.08 25.16
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061797
+debian@BeagleBone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+aneet@351-Debian:~$ gedit as1-hostViaIP.txt
+

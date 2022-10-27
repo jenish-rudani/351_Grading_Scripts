@@ -1,0 +1,94 @@
+jeremiah2911@351-Debian:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:b9:ed:c1 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.188.128/24 brd 192.168.188.255 scope global dynamic noprefixroute ens33
+       valid_lft 1204sec preferred_lft 1204sec
+    inet6 fe80::b5af:b363:48b7:d8f6/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx98f07bffed88: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 98:f0:7b:ff:ed:88 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/30 brd 192.168.6.3 scope global dynamic noprefixroute enx98f07bffed88
+       valid_lft 111sec preferred_lft 111sec
+    inet6 fe80::f8bb:c911:9250:71ad/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enx98f07bffed85: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 98:f0:7b:ff:ed:85 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/30 brd 192.168.7.3 scope global dynamic noprefixroute enx98f07bffed85
+       valid_lft 113sec preferred_lft 113sec
+    inet6 fe80::9af0:7bff:feff:ed85/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+
+jeremiah2911@351-Debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.60 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=1.88 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=1.42 ms
+^C
+--- 192.168.7.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2005ms
+rtt min/avg/max/mdev = 1.417/1.629/1.876/0.188 ms
+
+
+debian@beaglebone:/$ ls
+bbb-uEnv.txt  boot  etc   ID.txt  lost+found  mnt           opt   root  sbin  sys  usr
+bin           dev   home  lib     media       nfs-uEnv.txt  proc  run   srv   tmp  var
+
+
+debian@beaglebone:/$ ls -l
+total 84
+-rw-r--r--   1 root root  1359 Jan 28  2018 bbb-uEnv.txt
+drwxr-xr-x   2 root root  4096 Oct  7 04:31 bin
+drwxr-xr-x   4 root root  4096 Jan  1  2000 boot
+drwxr-xr-x  13 root root  3200 May  8  2018 dev
+drwxr-xr-x  99 root root  4096 Oct  7 04:31 etc
+drwxr-xr-x   3 root root  4096 Jan 28  2018 home
+-rw-r--r--   1 root root    40 Jan 28  2018 ID.txt
+drwxr-xr-x  13 root root  4096 Jan 28  2018 lib
+drwx------   2 root root 16384 Jan  1  2000 lost+found
+drwxr-xr-x   2 root root  4096 Jan 28  2018 media
+drwxr-xr-x   3 root root  4096 Oct  7 04:29 mnt
+-rw-r--r--   1 root root  1008 Jan 28  2018 nfs-uEnv.txt
+drwxr-xr-x   6 root root  4096 Jan 28  2018 opt
+dr-xr-xr-x 106 root root     0 Jan  1  1970 proc
+drwx------   5 root root  4096 May  8  2018 root
+drwxr-xr-x  22 root root   720 Oct  7 04:31 run
+drwxr-xr-x   2 root root  4096 Oct  7 04:31 sbin
+drwxr-xr-x   2 root root  4096 Jan 28  2018 srv
+dr-xr-xr-x  12 root root     0 Jan  1  2000 sys
+drwxrwxrwt  10 root root  4096 Oct  7 06:25 tmp
+drwxr-xr-x  10 root root  4096 Jan 28  2018 usr
+drwxr-xr-x  12 root root  4096 Jan 28  2018 var
+
+
+debian@beaglebone:/$ cd proc
+
+
+debian@beaglebone:/proc$ cat version
+Linux version 4.9.78-ti-r94 (root@b2-am57xx-beagle-x15-2gb) (gcc version 6.3.0 20170516 (Debian 6.3.0-18) ) #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018
+
+
+debian@beaglebone:/proc$ cat uptime
+22921.91 22654.32
+
+
+debian@beaglebone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: 0000000000000000

@@ -1,0 +1,50 @@
+daniel@debian:~/cmpt433/Scripts$ ./ssh.sh
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+                                  
+  _____              _      _    _____           _      _
+ |  __ \            (_)    | |  / ____|         | |    | |
+ | |  | | __ _ _ __  _  ___| | | |     __ _ _ __| | ___| |_ ___  _ __
+ | |  | |/ _` | '_ \| |/ _ \ | | |    / _` | '__| |/ _ \ __/ _ \| '_ \
+ | |__| | (_| | | | | |  __/ | | |___| (_| | |  | |  __/ || (_) | | | |
+ |_____/ \__,_|_| |_|_|\___|_|  \_____\__,_|_|  |_|\___|\__\___/|_| |_|
+  ______ _   _  _____  _____     ____  _____ __
+ |  ____| \ | |/ ____|/ ____|   |___ \| ____/_ |
+ | |__  |  \| | (___ | |   ______ __) | |__  | |
+ |  __| | . ` |\___ \| |  |______|__ <|___ \ | |
+ | |____| |\  |____) | |____     ___) |___) || |
+ |______|_|_\_|_____/ \_____|   |____/|____/ |_|        _     _
+ \ \    / (_)    | |             | | |  \/  |          | |   (_)
+  \ \  / / _ _ __| |_ _   _  __ _| | | \  / | __ _  ___| |__  _ _ __   ___
+   \ \/ / | | '__| __| | | |/ _` | | | |\/| |/ _` |/ __| '_ \| | '_ \ / _ \
+    \  /  | | |  | |_| |_| | (_| | | | |  | | (_| | (__| | | | | | | |  __/
+     \/   |_|_|   \__|\__,_|\__,_|_| |_|  |_|\__,_|\___|_| |_|_|_| |_|\___|
+
+Last login: Fri Oct  7 01:21:30 2022 from 192.168.7.1
+Hello embedded world, from Daniel Carleton! 
+NEW BEST TIME!
+Your reaction time was 2432 ms; Best time this session: 2432 ms 
+NEW BEST TIME!
+Your reaction time was 1211 ms; Best time this session: 1211 ms 
+NEW BEST TIME!
+Your reaction time was 993 ms; Best time this session: 993 ms 
+NEW BEST TIME!
+Your reaction time was 89 ms; Best time this session: 89 ms 
+Your Reaction time was 5000 ms; Too early you cheater!; Best time this session: 89 ms 
+Your reaction time was 1032 ms; Best time this session: 89 ms 
+Your reaction time was 1734 ms; Best time this session: 89 ms 
+Your reaction time was 403 ms; Best time this session: 89 ms 
+Your Reaction time was 5000 ms; Too early you cheater!; Best time this session: 89 ms 
+No input within 5000 ms; quitting
+debian@dcarleto-beagle:~$ ./mountNFS.sh 
+[sudo] password for debian: 
+debian@dcarleto-beagle:~$ /mnt/remote/myApps
+-bash: /mnt/remote/myApps: Is a directory
+debian@dcarleto-beagle:~$ cd /mnt/remote/myApps
+debian@dcarleto-beagle:/mnt/remote/myApps$ ls
+helloWorld
+debian@dcarleto-beagle:/mnt/remote/myApps$ 

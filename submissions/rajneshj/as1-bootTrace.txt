@@ -1,0 +1,36 @@
+rajnesh@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+/______/\  /_____/\  /_____/\ /_____/\ /________/\/_______/\/__/\ /__/\ /______/\  /_____/\     
+\::::__\/__\:::_ \ \ \::::_\/_\::::_\/_\__.::.__\/\__.::._\/\::\_\\  \ \\::::__\/__\::::_\/_    
+ \:\ /____/\\:(_) ) )_\:\/___/\\:\/___/\  \::\ \     \::\ \  \:. `-\  \ \\:\ /____/\\:\/___/\   
+  \:\\_  _\/ \: __ `\ \\::___\/_\::___\/_  \::\ \    _\::\ \__\:. _    \ \\:\\_  _\/ \_::._\:\  
+   \:\_\ \ \  \ \ `\ \ \\:\____/\\:\____/\  \::\ \  /__\::\__/\\. \`-\  \ \\:\_\ \ \   /____\:\ 
+    \_____\/   \_\/ \_\/ \_____\/ \_____\/   \__\/  \________\/ \__\/ \__\/ \_____\/   \_____\/
+Last login: Fri Oct  7 20:26:33 2022 from 192.168.7.1
+[sudo] password for debian: 
+When LED3 lights up, press the USER button
+Your reaction time was 207, best so far in game was 207 
+When LED3 lights up, press the USER button
+Your reaction time was 213, best so far in game was 207 
+When LED3 lights up, press the USER button
+Your reaction time was 287, best so far in game was 207 
+When LED3 lights up, press the USER button
+Your reaction time was 295, best so far in game was 207 
+When LED3 lights up, press the USER button
+Your reaction time was 76, best so far in game was 76 
+When LED3 lights up, press the USER button
+No input within 5000ms; quitting!
+When LED3 lights up, press the USER button
+No input within 5000ms; quitting!
+debian@rajneshj-beagle:~$ sh mountNFS.sh
+debian@rajneshj-beagle:~$ cd /mnt/remote/myApps
+debian@rajneshj-beagle:/mnt/remote/myApps$ ls
+direction  export  hello
+debian@rajneshj-beagle:/mnt/remote/myApps$ 
+

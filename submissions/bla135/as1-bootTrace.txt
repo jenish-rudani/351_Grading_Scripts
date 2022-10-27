@@ -1,0 +1,61 @@
+bryce@DesktopVM:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+$$\      $$\           $$\                                                   $$$$$$$\                                                    $$$\   
+$$ | $\  $$ |          $$ |                                                  $$  __$$\                                                    \$$\  
+$$ |$$$\ $$ | $$$$$$\  $$ | $$$$$$$\  $$$$$$\  $$$$$$\$$$$\   $$$$$$\        $$ |  $$ | $$$$$$\  $$\   $$\  $$$$$$$\  $$$$$$\        $$\   \$$\ 
+$$ $$ $$\$$ |$$  __$$\ $$ |$$  _____|$$  __$$\ $$  _$$  _$$\ $$  __$$\       $$$$$$$\ |$$  __$$\ $$ |  $$ |$$  _____|$$  __$$\       \__|   $$ |
+$$$$  _$$$$ |$$$$$$$$ |$$ |$$ /      $$ /  $$ |$$ / $$ / $$ |$$$$$$$$ |      $$  __$$\ $$ |  \__|$$ |  $$ |$$ /      $$$$$$$$ |             $$ |
+$$$  / \$$$ |$$   ____|$$ |$$ |      $$ |  $$ |$$ | $$ | $$ |$$   ____|      $$ |  $$ |$$ |      $$ |  $$ |$$ |      $$   ____|      $$\   $$  |
+$$  /   \$$ |\$$$$$$$\ $$ |\$$$$$$$\ \$$$$$$  |$$ | $$ | $$ |\$$$$$$$\       $$$$$$$  |$$ |      \$$$$$$$ |\$$$$$$$\ \$$$$$$$\       \__|$$$  / 
+\__/     \__| \_______|\__| \_______| \______/ \__| \__| \__| \_______|      \_______/ \__|       \____$$ | \_______| \_______|          \___/  
+                                                                                                 $$\   $$ |                                     
+                                                                                                 \$$$$$$  |                                     
+                                                                                                  \______/                                      
+Last login: Wed Oct  5 22:19:34 2022 from 192.168.7.1
+Hello embedded world, from Bryce Leung 
+
+When LED3 lights up, press the USER button! 
+New best time!
+Your reaction time was 2031ms; best so far in game is 2031ms
+New best time!
+Your reaction time was  317ms; best so far in game is 317ms
+Your reaction time was  392ms; best so far in game is 317ms
+Early button press detected!
+Your reaction time was 5000ms; best so far in game is 317ms
+Your reaction time was  648ms; best so far in game is 317ms
+Early button press detected!
+Your reaction time was 5000ms; best so far in game is 317ms
+Early button press detected!
+Your reaction time was 5000ms; best so far in game is 317ms
+New best time!
+Your reaction time was  177ms; best so far in game is 177ms
+Your reaction time was  350ms; best so far in game is 177ms
+Your reaction time was  228ms; best so far in game is 177ms
+Early button press detected!
+Your reaction time was 5000ms; best so far in game is 177ms
+Your reaction time was  788ms; best so far in game is 177ms
+Early button press detected!
+Your reaction time was 5000ms; best so far in game is 177ms
+Your reaction time was  190ms; best so far in game is 177ms
+Your reaction time was  644ms; best so far in game is 177ms
+New best time!
+Your reaction time was  167ms; best so far in game is 167ms
+New best time!
+Your reaction time was  148ms; best so far in game is 148ms
+Your reaction time was  914ms; best so far in game is 148ms
+Early button press detected!
+Your reaction time was 5000ms; best so far in game is 148ms
+Your reaction time was  300ms; best so far in game is 148ms
+No input within 5000ms; quitting!
+
+debian@bla135-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@bla135-beagle:~$ ls /mnt/remote/myApps
+hello
+debian@bla135-beagle:~$ 

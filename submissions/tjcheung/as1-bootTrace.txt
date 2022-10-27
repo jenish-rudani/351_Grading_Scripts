@@ -1,0 +1,55 @@
+tim@tim:~/Desktop$ ssh debian@192.168.7.2
+debian@192.168.7.2's password: 
+Linux tjcheung-beagle 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+ ______   __     __    __     ______        ______     __    __     ______   ______     ______     __     __  __     __    __    
+/\__  _\ /\ \   /\ "-./  \   /\  ___\      /\  ___\   /\ "-./  \   /\  == \ /\  __ \   /\  == \   /\ \   /\ \/\ \   /\ "-./  \   
+\/_/\ \/ \ \ \  \ \ \-./\ \  \ \___  \     \ \  __\   \ \ \-./\ \  \ \  _-/ \ \ \/\ \  \ \  __<   \ \ \  \ \ \_\ \  \ \ \-./\ \  
+   \ \_\  \ \_\  \ \_\ \ \_\  \/\_____\     \ \_____\  \ \_\ \ \_\  \ \_\    \ \_____\  \ \_\ \_\  \ \_\  \ \_____\  \ \_\ \ \_\ 
+    \/_/   \/_/   \/_/  \/_/   \/_____/      \/_____/   \/_/  \/_/   \/_/     \/_____/   \/_/ /_/   \/_/   \/_____/   \/_/  \/_/ 
+                                                                                                                                 
+Last login: Mon Oct 10 05:44:24 2022 from 192.168.7.1
+Hello embedded world, from Tim! 
+
+When the LED3 lights up, press the button!
+New best time!
+Reaction time:  218 ms | Best time:  218 ms
+
+New best time!
+Reaction time:  193 ms | Best time:  193 ms
+
+Reaction time:  248 ms | Best time:  193 ms
+
+New best time!
+Reaction time:   96 ms | Best time:   96 ms
+
+Reaction time:  277 ms | Best time:   96 ms
+
+Reaction time:  765 ms | Best time:   96 ms
+
+Reaction time: 5000 ms | Best time:   96 ms
+
+Reaction time:  397 ms | Best time:   96 ms
+
+New best time!
+Reaction time:   94 ms | Best time:   94 ms
+
+Reaction time:  757 ms | Best time:   94 ms
+
+Reaction time: 5000 ms | Best time:   94 ms
+
+Reaction time: 5000 ms | Best time:   94 ms
+
+Reaction time: 5000 ms | Best time:   94 ms
+
+No response within 5000ms. Exiting...
+debian@tjcheung-beagle:~$ cd ..
+debian@tjcheung-beagle:/home$ ls
+debian  mountNFS.sh
+debian@tjcheung-beagle:/home$ sh mountNFS.sh 
+[sudo] password for debian: 
+debian@tjcheung-beagle:/home$ cd /mnt/remote/myApps
+debian@tjcheung-beagle:/mnt/remote/myApps$ ls
+hello
+debian@tjcheung-beagle:/mnt/remote/myApps$ cd ..
+debian@tjcheung-beagle:/mnt/remote$ ls
+motd.txt  mount-nfs.sh  myApps  nfs_message.txt

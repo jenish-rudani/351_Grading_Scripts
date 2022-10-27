@@ -1,0 +1,30 @@
+bowie@351-Debian:~/Desktop$ ssh debian@192.168.7.2
+debian@192.168.7.2's password: 
+Linux bgian-beagle 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+
+ /$$   /$$           /$$ /$$                 /$$$$$$$                          /$$          
+| $$  | $$          | $$| $$                | $$__  $$                        |__/          
+| $$  | $$  /$$$$$$ | $$| $$  /$$$$$$       | $$  \ $$  /$$$$$$  /$$  /$$  /$$ /$$  /$$$$$$ 
+| $$$$$$$$ /$$__  $$| $$| $$ /$$__  $$      | $$$$$$$  /$$__  $$| $$ | $$ | $$| $$ /$$__  $$
+| $$__  $$| $$$$$$$$| $$| $$| $$  \ $$      | $$__  $$| $$  \ $$| $$ | $$ | $$| $$| $$$$$$$$
+| $$  | $$| $$_____/| $$| $$| $$  | $$      | $$  \ $$| $$  | $$| $$ | $$ | $$| $$| $$_____/
+| $$  | $$|  $$$$$$$| $$| $$|  $$$$$$/      | $$$$$$$/|  $$$$$$/|  $$$$$/$$$$/| $$|  $$$$$$$
+|__/  |__/ \_______/|__/|__/ \______/       |_______/  \______/  \_____/\___/ |__/ \_______/
+                                                                                            
+                                                                                            
+                                                                                            
+Last login: Fri Oct  7 02:07:45 2022 from 192.168.7.1
+Hello embedded world, from Bowie!
+
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was  297ms; best so far in game is  297ms.
+Your reaction time was  657ms; best so far in game is  297ms.
+New best time!
+Your reaction time was  240ms; best so far in game is  240ms.
+No input within 5000ms; quitting!
+debian@bgian-beagle:~$ ./mountNFS 
+[sudo] password for debian: 
+debian@bgian-beagle:~$ cd /mnt/remote/myApps/
+debian@bgian-beagle:/mnt/remote/myApps$ ls
+hello

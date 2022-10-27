@@ -1,0 +1,46 @@
+sam@debian:~$ ssh debian@192.168.7.2
+debian@192.168.7.2's password: 
+Linux skaspar-beagle 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+
+ _    _ _____ _     _____ ________  ___ _____   _____  ___  ___  ______  ____   ___ 
+| |  | |  ___| |   /  __ \  _  |  \/  ||  ___| /  ___|/ _ \ |  \/  ||  \/  \ \ / / |
+| |  | | |__ | |   | /  \/ | | | .  . || |__   \ `--./ /_\ \| .  . || .  . |\ V /| |
+| |/\| |  __|| |   | |   | | | | |\/| ||  __|   `--. \  _  || |\/| || |\/| | \ / | |
+\  /\  / |___| |___| \__/\ \_/ / |  | || |___  /\__/ / | | || |  | || |  | | | | |_|
+ \/  \/\____/\_____/\____/\___/\_|  |_/\____/  \____/\_| |_/\_|  |_/\_|  |_/ \_/ (_)
+                                                                                    
+                                                                                    
+ _   _   ___  _   _ _____  ______ _   _ _   _ _                                     
+| | | | / _ \| | | |  ___| |  ___| | | | \ | | |                                    
+| |_| |/ /_\ \ | | | |__   | |_  | | | |  \| | |                                    
+|  _  ||  _  | | | |  __|  |  _| | | | | . ` | |                                    
+| | | || | | \ \_/ / |___  | |   | |_| | |\  |_|                                    
+\_| |_/\_| |_/\___/\____/  \_|    \___/\_| \_(_)                                    
+                                                                                    
+                                                                                    
+Last login: Fri Sep 30 06:19:56 2022 from 192.168.7.1
+Hello embedded world, from Sammy Kaspar!
+
+When LED3 lights up, press the USER button!
+New best time!
+Your recation time was 308ms; best so far in game is 308ms;
+New best time!
+Your recation time was 169ms; best so far in game is 169ms;
+Your recation time was 181ms; best so far in game is 169ms;
+Your recation time was 1883ms; best so far in game is 169ms;
+New best time!
+Your recation time was 52ms; best so far in game is 52ms;
+Your recation time was 1671ms; best so far in game is 52ms;
+Your recation time was 689ms; best so far in game is 52ms;
+Your recation time was 341ms; best so far in game is 52ms;
+Your recation time was 5000ms; best so far in game is 52ms;
+Your recation time was 589ms; best so far in game is 52ms;
+Your recation time was 302ms; best so far in game is 52ms;
+No input within 5000ms; quitting!
+debian@skaspar-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@skaspar-beagle:~$ cd /mnt/remote/
+debian@skaspar-beagle:/mnt/remote$ cd myApps/
+debian@skaspar-beagle:/mnt/remote/myApps$ ls
+hello
+debian@skaspar-beagle:/mnt/remote/myApps$ 

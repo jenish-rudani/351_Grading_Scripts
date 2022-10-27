@@ -1,0 +1,78 @@
+drowsell@ensc-351:~/cmpt433$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:06:6f:91 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 172.16.110.128/24 brd 172.16.110.255 scope global dynamic noprefixroute ens33
+       valid_lft 1571sec preferred_lft 1571sec
+    inet6 fe80::f2f3:d40b:982e:b9e4/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+27: enx20d7787c6092: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 20:d7:78:7c:60:92 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx20d7787c6092
+       valid_lft 617sec preferred_lft 617sec
+    inet6 fe80::22d7:78ff:fe7c:6092/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+28: enx20d7787c6094: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 20:d7:78:7c:60:94 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx20d7787c6094
+       valid_lft 611sec preferred_lft 611sec
+    inet6 fe80::86f9:533:4df5:e260/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+drowsell@ensc-351:~/cmpt433$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.68 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.36 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=1.92 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.44 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.435/1.847/2.361/0.342 ms
+drowsell@ensc-351:~/cmpt433$ sshpass -p temppwd ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+   __ __                      ___  _     __  __      __            ___       __        
+  / // /__ ____  ___  __ __  / _ )(_)___/ /_/ /  ___/ /__ ___ __  / _ \__ __/ /__ ____ 
+ / _  / _ `/ _ \/ _ \/ // / / _  / / __/ __/ _ \/ _  / _ `/ // / / // / // / / _ `/ _ \
+/_//_/\_,_/ .__/ .__/\_, / /____/_/_/  \__/_//_/\_,_/\_,_/\_, / /____/\_, /_/\_,_/_//_/
+         /_/  /_/   /___/                                /___/       /___/             
+
+Last login: Tue Oct  4 02:59:26 2022 from 192.168.7.1
+Hello embedded world, from Dylan!
+When LED3 lights up, press the USER button!
+^C
+debian@drowsell-beagle:~$ cat /proc/version 
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@drowsell-beagle:~$ cat /proc/uptime 
+750.90 640.11
+debian@drowsell-beagle:~$ cat /proc/cpu
+cpu/     cpuinfo  
+debian@drowsell-beagle:~$ cat /proc/cpu
+cpu/     cpuinfo  
+debian@drowsell-beagle:~$ cat /proc/cpuinfo 
+processor       : 0
+model name      : ARMv7 Processor rev 2 (v7l)
+BogoMIPS        : 995.32
+Features        : half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x3
+CPU part        : 0xc08
+CPU revision    : 2
+
+Hardware        : Generic AM33XX (Flattened Device Tree)
+Revision        : 0000
+Serial          : BBG122055586
+debian@drowsell-beagle:~$ exit
+logout
+Connection to 192.168.7.2 closed.

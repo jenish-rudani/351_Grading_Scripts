@@ -1,0 +1,49 @@
+debian@jcz3-beagle:~$ exit
+logout
+Connection to 192.168.7.2 closed.
+leon@351-Debian:~/cmpt433/work/as1$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+ /$$                                               /$$   /$$           /$$ /$$                 /$$      /$$                     /$$       /$$
+| $$                                              | $$  | $$          | $$| $$                | $$  /$ | $$                    | $$      | $$
+| $$        /$$$$$$   /$$$$$$  /$$$$$$$           | $$  | $$  /$$$$$$ | $$| $$  /$$$$$$       | $$ /$$$| $$  /$$$$$$   /$$$$$$ | $$  /$$$$$$$
+| $$       /$$__  $$ /$$__  $$| $$__  $$          | $$$$$$$$ /$$__  $$| $$| $$ /$$__  $$      | $$/$$ $$ $$ /$$__  $$ /$$__  $$| $$ /$$__  $$
+| $$      | $$$$$$$$| $$  \ $$| $$  \ $$          | $$__  $$| $$$$$$$$| $$| $$| $$  \ $$      | $$$$_  $$$$| $$  \ $$| $$  \__/| $$| $$  | $$
+| $$      | $$_____/| $$  | $$| $$  | $$          | $$  | $$| $$_____/| $$| $$| $$  | $$      | $$$/ \  $$$| $$  | $$| $$      | $$| $$  | $$
+| $$$$$$$$|  $$$$$$$|  $$$$$$/| $$  | $$ /$$      | $$  | $$|  $$$$$$$| $$| $$|  $$$$$$/      | $$/   \  $$|  $$$$$$/| $$      | $$|  $$$$$$$
+|________/ \_______/ \______/ |__/  |__/| $/      |__/  |__/ \_______/|__/|__/ \______/       |__/     \__/ \______/ |__/      |__/ \_______/
+                                        |_/                                                                                                  
+                                                                                                                                             
+                                                                                                                                             
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Oct  6 23:36:05 2022 from 192.168.7.1
+Hello embedded world, from Leon!
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was 825; best so far in game is 825 
+New best time!
+Your reaction time was 338; best so far in game is 338 
+Your reaction time was 5000; best so far in game is 338 
+Your reaction time was 5000; best so far in game is 338 
+New best time!
+Your reaction time was 239; best so far in game is 239 
+No input within 5000ms; quitting!
+debian@jcz3-beagle:~$ cat mountNFS.sh 
+sudo mount -t nfs 192.168.7.1:/home/leon/cmpt433/public /mnt/remote
+
+debian@jcz3-beagle:~$ ./mountNFS.sh 
+[sudo] password for debian: 
+debian@jcz3-beagle:~$ ls /mnt/remote/myApps
+export   hello   unexport

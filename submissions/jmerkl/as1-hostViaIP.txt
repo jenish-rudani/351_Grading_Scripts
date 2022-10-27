@@ -1,0 +1,117 @@
+root@351-Debian:/home/jake# sudo ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.133.128  netmask 255.255.255.0  broadcast 192.168.133.255
+        inet6 fe80::9536:afeb:eeab:8a6  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:9c:f2:cc  txqueuelen 1000  (Ethernet)
+        RX packets 319169  bytes 478462490 (456.2 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 159340  bytes 9667024 (9.2 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx3484e403b1f8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.7.1  netmask 255.255.255.0  broadcast 192.168.7.255
+        inet6 fe80::bd4:dae7:8b28:6068  prefixlen 64  scopeid 0x20<link>
+        ether 34:84:e4:03:b1:f8  txqueuelen 1000  (Ethernet)
+        RX packets 255  bytes 30424 (29.7 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 369  bytes 54245 (52.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enx3484e403b1fa: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.6.1  netmask 255.255.255.0  broadcast 192.168.6.255
+        inet6 fe80::3684:e4ff:fe03:b1fa  prefixlen 64  scopeid 0x20<link>
+        ether 34:84:e4:03:b1:fa  txqueuelen 1000  (Ethernet)
+        RX packets 48  bytes 7772 (7.5 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 38  bytes 6362 (6.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 69  bytes 6779 (6.6 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 69  bytes 6779 (6.6 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@351-Debian:/home/jake# ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=0.714 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=1.20 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=2.10 ms
+^C
+--- 192.168.7.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2013ms
+rtt min/avg/max/mdev = 0.714/1.336/2.096/0.572 ms
+root@351-Debian:/home/jake# /proc
+bash: /proc: Is a directory
+root@351-Debian:/home/jake# sudo /proc
+sudo: /proc: command not found
+root@351-Debian:/home/jake# ls
+Desktop  Documents  Downloads  internetToTarget.sh  Music  Pictures  Public  Templates	Videos
+root@351-Debian:/home/jake# cs ..
+bash: cs: command not found
+root@351-Debian:/home/jake# cd ..
+root@351-Debian:/home# ls
+jake
+root@351-Debian:/home# cd jake
+root@351-Debian:/home/jake# ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Oct  6 18:36:38 2022 from 192.168.7.1
+debian@BeagleBone:~$ ls
+internetToTarget.sh
+debian@BeagleBone:~$ /proc
+-bash: /proc: Is a directory
+debian@BeagleBone:~$ cd /proc
+debian@BeagleBone:/proc$ ls
+1     1254  1320  16   574  67   772  apm          dynamic_debug  kpagecount    sched_debug    version
+10    1255  1325  17   591  672  8    buddyinfo    execdomains    kpageflags    schedstat      vmallocinfo
+100   126   133   18   598  68   84   bus          fb             loadavg       self           vmstat
+101   1260  1343  2    605  69   85   cgroups      filesystems    locks         slabinfo       zoneinfo
+102   1287  135   20   608  70   87   cmdline      fs             meminfo       softirqs
+103   129   1358  21   609  71   88   config.gz    interrupts     misc          stat
+109   1290  1359  22   627  718  9    consoles     iomem          modules       swaps
+1096  1291  136   23   635  719  93   cpu          ioports        mounts        sys
+11    13    1363  24   639  72   94   cpuinfo      irq            mtd           sysrq-trigger
+118   130   1366  3    65   73   95   crypto       kallsyms       net           sysvipc
+119   1306  1370  373  656  74   97   devices      keys           pagetypeinfo  thread-self
+1194  1307  1371  4    659  758  98   device-tree  key-users      partitions    timer_list
+12    131   1376  529  66   759  981  diskstats    kmsg           pressure      tty
+1253  132   15    530  660  760  982  driver       kpagecgroup    pvr           uptime
+debian@BeagleBone:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+2081.99 1954.24
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061614
+debian@BeagleBone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+root@351-Debian:/home/jake# 
+

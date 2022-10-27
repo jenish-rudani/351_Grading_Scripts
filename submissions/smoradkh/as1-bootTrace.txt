@@ -1,0 +1,43 @@
+samin@debian:~$ ./connectToBBG.sh 
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+
+                                      _     _    _      _           ____                     _         
+  _   _   ___   _   _    __ _   ___  | |_  | |_ | |__  (_) ___     / ___|   __ _  _ __ ___  (_) _ __   
+ | | | | / _ \ | | | |  / _` | / _ \ | __| | __|| '_ \ | |/ __|    \___ \  / _` || '_ ` _ \ | || '_ \  
+ | |_| || (_) || |_| | | (_| || (_) || |_  | |_ | | | || |\__ \ _   ___) || (_| || | | | | || || | | | 
+  \__, | \___/  \__,_|  \__, | \___/  \__|  \__||_| |_||_||___/( ) |____/  \__,_||_| |_| |_||_||_| |_| 
+  |___/                 |___/                                  |/                                      
+
+Last login: Thu Oct  6 23:48:37 2022 from 192.168.7.1
+-bash: /home/debian: Is a directory
+Hello embedded world, from Samin!
+
+When LED3 lights up, press the USER button!
+New best time!
+Reaction time was  1205ms;  best so far in game is 1205ms;
+New best time!
+Reaction time was  597ms;  best so far in game is 597ms;
+Reaction time was  1002ms;  best so far in game is 597ms;
+New best time!
+Reaction time was  184ms;  best so far in game is 184ms;
+New best time!
+Reaction time was  138ms;  best so far in game is 138ms;
+New best time!
+Reaction time was  121ms;  best so far in game is 121ms;
+Reaction time is 5000 ms;  best so far in game is 121ms;
+Reaction time was  769ms;  best so far in game is 121ms;
+Reaction time was  269ms;  best so far in game is 121ms;
+Reaction time was  121ms;  best so far in game is 121ms;
+Reaction time was  505ms;  best so far in game is 121ms;
+No input within 5000 ms; quitting!
+debian@smoradkh-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@smoradkh-beagle:~$ cd /mnt/remote/myApps/
+debian@smoradkh-beagle:/mnt/remote/myApps$ ls
+direction  hello  trigger
+debian@smoradkh-beagle:/mnt/remote/myApps$ 

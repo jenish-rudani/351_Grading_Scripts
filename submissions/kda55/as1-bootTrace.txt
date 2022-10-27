@@ -1,0 +1,42 @@
+kenton@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+
+  _    _        _  _          _  __             _                
+ | |  | |      | || |        | |/ /            | |               
+ | |__| |  ___ | || |  ___   | ' /  ___  _ __  | |_  ___   _ __  
+ |  __  | / _ \| || | / _ \  |  <  / _ \| '_ \ | __|/ _ \ | '_ \ 
+ | |  | ||  __/| || || (_) | | . \|  __/| | | || |_| (_) || | | |
+ |_|  |_| \___||_||_| \___/  |_|\_\\___||_| |_| \__|\___/ |_| |_|
+                                                                 
+                                                                 
+
+Last login: Sat Oct  8 03:59:19 2022 from 192.168.7.1
+1-----------------------------------------
+Hello embedded world, from Kenton!
+When LED3 lights up, press the USER button!
+Good luck!
+sh: 1: cd: can't cd to sys/class/gpio/gpio72
+Unable to execute command:: Success
+ command: cd sys/class/gpio/gpio72
+ exit code: 2
+*** New best time! ***
+Your reaction time was 280 ms. The best time so far is 280 ms. 
+*** New best time! ***
+Your reaction time was 5 ms. The best time so far is 5 ms. 
+Your reaction time was 855 ms. The best time so far is 5 ms. 
+You flinched!. The best time so far is 5 ms. 
+Your reaction time was 911 ms. The best time so far is 5 ms. 
+You took too long to react!
+debian@kda55-beagle:~$ ./mount-nfs.sh
+[sudo] password for debian: 
+debian@kda55-beagle:~$ cd /mnt/remote
+debian@kda55-beagle:/mnt/remote$ ls
+hello
+

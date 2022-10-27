@@ -1,0 +1,77 @@
+aura@debian:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:2c:e7:cd brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.154.128/24 brd 192.168.154.255 scope global dynamic noprefixroute ens33
+       valid_lft 1761sec preferred_lft 1761sec
+    inet6 fe80::dade:79bd:ad4c:68f4/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx20d7787c60f7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 20:d7:78:7c:60:f7 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx20d7787c60f7
+       valid_lft 1161sec preferred_lft 1161sec
+    inet6 fe80::22d7:78ff:fe7c:60f7/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enx20d7787c60f5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 20:d7:78:7c:60:f5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx20d7787c60f5
+       valid_lft 1161sec preferred_lft 1161sec
+    inet6 fe80::8b34:b694:ce04:8eeb/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+laura@debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=2.45 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.27 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=2.40 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.61 ms
+64 bytes from 192.168.7.2: icmp_seq=5 ttl=64 time=1.41 ms
+^C
+--- 192.168.7.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4018ms
+rtt min/avg/max/mdev = 1.409/2.028/2.454/0.432 ms
+laura@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Sep 29 07:12:23 2022 from 192.168.7.1
+debian@BeagleBone:~$ cd /proc
+debian@BeagleBone:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+439.72 348.78
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061798
+debian@BeagleBone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+laura@debian:~$ 
+

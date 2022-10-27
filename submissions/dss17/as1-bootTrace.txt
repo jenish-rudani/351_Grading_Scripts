@@ -1,0 +1,33 @@
+devon@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+ (                         
+ )\ )                      
+(()/(    (   )             
+ /(_))  ))\ /((  (   (     
+(_))_  /((_|_))\ )\  )\ )  
+ |   \(_)) _)((_|(_)_(_/(  
+ | |) / -_)\ V / _ \ ' \)) 
+ |___/\___| \_/\___/_||_|  
+                           
+Last login: Fri Oct  7 01:33:31 2022 from 192.168.7.1
+Hello embedded world, from Devon Sandhu!
+When LED3 lights up, press the USER button.
+Too soon!
+Your reaction time was 582 ms
+Best time so far is 582 ms
+Your reaction time was 220 ms
+Best time so far is 220 ms
+Took too long (5 seconds), quitting!
+debian@dss17-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@dss17-beagle:~$ cd /mnt/remote/myApps
+debian@dss17-beagle:/mnt/remote/myApps$ ls
+direction  hello  helloworld
+debian@dss17-beagle:/mnt/remote/myApps$ 
+

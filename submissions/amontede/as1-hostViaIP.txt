@@ -1,0 +1,94 @@
+abigail@351-Debian:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:b5:cb:00 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.117.128/24 brd 192.168.117.255 scope global dynamic noprefixroute ens33
+       valid_lft 1620sec preferred_lft 1620sec
+    inet6 fe80::20c:29ff:feb5:cb00/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+27: enx20d778fe309c: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 20:d7:78:fe:30:9c brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx20d778fe309c
+       valid_lft 1020sec preferred_lft 1020sec
+    inet6 fe80::78e5:421c:7478:dcea/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+28: enx20d778fe309e: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 20:d7:78:fe:30:9e brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx20d778fe309e
+       valid_lft 1008sec preferred_lft 1008sec
+    inet6 fe80::104e:a74f:1f7c:4a50/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+abigail@351-Debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.91 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.11 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=2.22 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.35 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+rtt min/avg/max/mdev = 1.352/1.899/2.224/0.335 ms
+abigail@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+       _    _           _ _                                
+  __ _| |__(_)__ _ __ _(_) |_ __  ___ ______ __ _ __ _ ___ 
+ / _` | '_ \ / _` / _` | | | '  \/ -_|_-<_-</ _` / _` / -_)
+ \__,_|_.__/_\__, \__,_|_|_|_|_|_\___/__/__/\__,_\__, \___|
+             |___/                               |___/     
+Last login: Sat Sep 24 22:27:37 2022 from 192.168.7.1
+debian@BeagleBone:~$ ls /proc
+1     12   20   616  72   92         cpuinfo        kmsg          self
+10    126  21   617  726  93         crypto         kpagecgroup   slabinfo
+100   129  22   637  728  94         devices        kpagecount    softirqs
+101   13   23   640  73   95         device-tree    kpageflags    stat
+102   130  24   65   74   96         diskstats      loadavg       swaps
+108   131  3    650  765  964        driver         locks         sys
+11    132  371  652  766  97         dynamic_debug  meminfo       sysrq-trigger
+1103  133  373  66   767  989        execdomains    misc          sysvipc
+1104  134  4    663  779  99         fb             modules       thread-self
+1161  135  5    666  8    990        filesystems    mounts        timer_list
+1164  136  529  667  84   apm        fs             mtd           tty
+1165  14   530  67   85   buddyinfo  interrupts     net           uptime
+117   15   579  679  87   bus        iomem          pagetypeinfo  version
+118   16   599  68   88   cgroups    ioports        partitions    vmallocinfo
+1180  17   6    69   89   cmdline    irq            pressure      vmstat
+1181  18   604  7    9    config.gz  kallsyms       pvr           zoneinfo
+1184  19   612  70   90   consoles   keys           sched_debug
+119   2    613  71   91   cpu        key-users      schedstat
+debian@BeagleBone:~$ cd /proc
+debian@BeagleBone:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+323.35 239.54
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061616
+abigail@351-Debian:/proc$ exit
+exit
+There are stopped jobs.
+
+# NOTE: I forgot to include the output for the commands prior to the "ls /proc" line. Therefore, I reran the earlier commands
+# and attached the outputs into this file 

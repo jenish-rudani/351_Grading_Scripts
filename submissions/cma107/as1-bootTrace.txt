@@ -1,0 +1,58 @@
+mmcctt@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+#   +-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+
+#   |Y|o|u| |a|r|e| |c|o|n|n|e|c|t|e|d| |t|o| |C|h|e|n|t|i|n|g| |M|a|o|'|s| |b|e|a|g|l|e|b|o|n|e|.|
+#   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+ +-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+
+#   |F|i|n|d| |t|h|e| |T|R|E|A|S|U|R|E|!|                                                          
+#   +-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+                                                          
+
+Last login: Sat Oct  1 07:47:24 2022 from 192.168.7.1
+
+Welcome to my embedded world!
+
+Let's play a little game ... 
+
+When LED3 lights up, press the USER button!
+
+New Best Time! 
+Your recation time was 810ms; best so far in game is 810ms. 
+
+New Best Time! 
+Your recation time was 219ms; best so far in game is 219ms. 
+
+Your recation time was 242ms; best so far in game is 219ms. 
+
+New Best Time! 
+Your recation time was 145ms; best so far in game is 145ms. 
+
+Your recation time was 163ms; best so far in game is 145ms. 
+
+Your recation time was 5000ms; best so far in game is 145ms. 
+
+Your recation time was 216ms; best so far in game is 145ms. 
+
+Times Up. Bye Bye!
+
+debian@cma107-beagle:~$ ./internetToHost.sh 
+[sudo] password for debian: 
+SIOCADDRT: File exists
+nameserver 8.8.8.8
+debian@cma107-beagle:~$ ./mountNFS.sh 
+debian@cma107-beagle:~$ ls /mnt/remote/myApps/
+hello
+debian@cma107-beagle:~$ 
+
+
+
+
+
+
+
+

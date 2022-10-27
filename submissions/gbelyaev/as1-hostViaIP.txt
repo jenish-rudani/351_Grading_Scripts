@@ -1,0 +1,79 @@
+gmin@351d:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:a0:30:0f brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.59.128/24 brd 192.168.59.255 scope global dynamic noprefixroute ens33
+       valid_lft 1748sec preferred_lft 1748sec
+    inet6 fe80::16c9:3160:34a4:8664/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx98f07bfff5ef: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 98:f0:7b:ff:f5:ef brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/30 brd 192.168.6.3 scope global dynamic noprefixroute enx98f07bfff5ef
+       valid_lft 68sec preferred_lft 68sec
+    inet6 fe80::722:b393:8abd:3de1/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enx98f07bfff5ec: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 98:f0:7b:ff:f5:ec brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/30 brd 192.168.7.3 scope global dynamic noprefixroute enx98f07bfff5ec
+       valid_lft 68sec preferred_lft 68sec
+    inet6 fe80::9af0:7bff:feff:f5ec/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+gmin@351d:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=2.15 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.55 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=1.52 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=2.50 ms
+^C
+--- 192.168.7.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.524/2.180/2.546/0.408 ms
+gmin@351d:~$ ssh debian@192.168.7.2
+debian@192.168.7.2's password: 
+Linux beaglebone 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Wed Oct  5 23:32:45 2022 from 192.168.7.1
+debian@beaglebone:~$ ls /proc
+1     1036  11    1179  1258  1340  16   21    2452  28  34  6   73  91         bus        crypto       filesystems  keys         locks    pagetypeinfo  softirqs       timer_list   zoneinfo
+10    1041  1100  1182  1281  1342  17   22    2460  29  35  67  74  94         cgroups    devices      fs           key-users    meminfo  partitions    stat           timer_stats
+100   1045  1107  1188  1287  14    171  23    2461  3   36  68  75  95         cmdline    device-tree  interrupts   kmsg         misc     sched_debug   swaps          tty
+1008  1057  1112  1190  1297  1427  18   24    2470  30  37  69  8   96         config.gz  diskstats    iomem        kpagecgroup  modules  schedstat     sys            uptime
+1009  106   1146  1191  13    1453  19   2427  25    31  38  7   89  apm        consoles   driver       ioports      kpagecount   mounts   scsi          sysrq-trigger  version
+101   107   1163  1198  1328  1455  2    2449  26    32  4   70  9   asound     cpu        execdomains  irq          kpageflags   mtd      self          sysvipc        vmallocinfo
+103   1086  1175  12    1336  15    20   2451  27    33  5   71  90  buddyinfo  cpuinfo    fb           kallsyms     loadavg      net      slabinfo      thread-self    vmstat
+debian@beaglebone:~$ cd /proc
+debian@beaglebone:/proc$ cat version
+Linux version 4.9.78-ti-r94 (root@b2-am57xx-beagle-x15-2gb) (gcc version 6.3.0 20170516 (Debian 6.3.0-18) ) #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018
+debian@beaglebone:/proc$ cat uptime
+315.32 231.32
+debian@beaglebone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: 0000000000000000
+debian@beaglebone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+gmin@351d:~$ gedit
+

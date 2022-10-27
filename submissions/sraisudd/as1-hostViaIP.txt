@@ -1,0 +1,34 @@
+ls /proc
+1     12    136   1635  23   619  68   768  94         consoles       filesystems  kpagecount    partitions   sysrq-trigger
+10    1201  1387  1636  24   621  680  769  96         cpu            fs           kpageflags    pressure     sysvipc
+100   1230  1475  1661  3    641  69   781  97         cpuinfo        interrupts   loadavg       pvr          thread-self
+101   126   1487  17    4    65   70   8    991        crypto         iomem        locks         sched_debug  timer_list
+102   129   15    1710  530  651  71   84   992        device-tree    ioports      meminfo       schedstat    tty
+108   13    1563  1730  531  654  72   85   apm        devices        irq          misc          self         uptime
+11    130   1567  18    580  66   724  87   buddyinfo  diskstats      kallsyms     modules       slabinfo     version
+1105  131   16    2     600  665  73   88   bus        driver         key-users    mounts        softirqs     vmallocinfo
+117   132   1615  20    604  668  730  9    cgroups    dynamic_debug  keys         mtd           stat         vmstat
+118   133   1619  21    613  669  74   92   cmdline    execdomains    kmsg         net           swaps        zoneinfo
+1185  135   1620  22    615  67   767  93   config.gz  fb             kpagecgroup  pagetypeinfo  sys
+debian@sraisudd-beagle:~$ cat version
+cat: version: No such file or directory
+debian@sraisudd-beagle:~$ cd /proc
+debian@sraisudd-beagle:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@sraisudd-beagle:/proc$ cat uptime
+2943.37 2714.56
+debian@sraisudd-beagle:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061826
+debian@sraisudd-beagle:/proc$ 

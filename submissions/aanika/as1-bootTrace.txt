@@ -1,0 +1,33 @@
+aanika@debian351:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+╦ ╦┌─┐┬  ┌─┐┌─┐┌┬┐┌─┐  ┌┬┐┌─┐  ╔═╗┌┐┌┬┬┌─┌─┐┌─┐  ╦ ╦┬ ┬┌┬┐
+║║║├┤ │  │  │ ││││├┤    │ │ │  ╠═╣││││├┴┐├─┤└─┐  ╠═╣│ │ │ 
+╚╩╝└─┘┴─┘└─┘└─┘┴ ┴└─┘   ┴ └─┘  ╩ ╩┘└┘┴┴ ┴┴ ┴└─┘  ╩ ╩└─┘ ┴ 
+
+Last login: Thu Oct  6 07:49:56 2022 from 192.168.7.1
+Hello embedded world, from Anika Sheikh!
+
+When LED3 lights up, press the USER button!
+New best time!
+Your recation time was 317ms; best so far in game is 317ms.
+New best time!
+Your recation time was 255ms; best so far in game is 255ms.
+Your recation time was 337ms; best so far in game is 255ms.
+No input within 5000ms; quitting!
+
+debian@aanika-beagle:~$ ./mountNFS.sh 
+[sudo] password for debian: 
+debian@aanika-beagle:~$ cd /mnt/remote/myApps/
+debian@aanika-beagle:/mnt/remote/myApps$ ls
+hello
+debian@aanika-beagle:/mnt/remote/myApps$ 
+
+
+

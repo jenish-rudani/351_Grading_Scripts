@@ -1,0 +1,48 @@
+1. Login Message
+danielkim@ENSC351:~$ ssh debian@192.168.7.2
+The authenticity of host '192.168.7.2 (192.168.7.2)' can't be established.
+ECDSA key fingerprint is SHA256:JTm1+LW1zmLYUZzMYDUuIQFiA+MXs21Q2tP2FQa1Zbc.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Failed to add the host to the list of known hosts (/home/danielkim/.ssh/known_hosts).
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Oct  6 18:30:18 2022 from 192.168.7.1
+
+2. Hello Program
+
+Hello embedded world, from Daniel! :D :D
+
+When LED3 lights up, press the USER button
+New best time!
+Your reaction time was  209ms; best so far in game is  209ms.
+Your reaction time was  218ms; best so far in game is  209ms.
+Your reaction time was  687ms; best so far in game is  209ms.
+New best time!
+Your reaction time was  197ms; best so far in game is  197ms.
+Your reaction time was 2832ms; best so far in game is  197ms.
+Your reaction time was 5000ms; best so far in game is  197ms.
+^C
+
+3. Mounting NFS shared directory
+
+debian@BeagleBone:~$ ./mount-nfs.sh
+[sudo] password for debian: 
+debian@BeagleBone:~$ cd /mnt/remote/myApps
+debian@BeagleBone:/mnt/remote/myApps$ 
+
+4. ls-ing to display content of shared directory
+
+debian@BeagleBone:/mnt/remote/myApps$ ls
+hello

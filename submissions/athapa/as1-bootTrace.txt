@@ -1,0 +1,46 @@
+avash@351-debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+
+                     __   ___  ___  ______  __                 
+ ___ __  _____ ____ / /  / _ \/ _ \/_  / /_/ /  ___ ____  ___ _
+/ _ `/ |/ / _ `(_-</ _ \/ // / // / / / __/ _ \/ _ `/ _ \/ _ `/
+\_,_/|___/\_,_/___/_//_/\___/\___/ /_/\__/_//_/\_,_/ .__/\_,_/ 
+                                                  /_/          
+
+
+Last login: Fri Oct  7 07:30:18 2022 from 192.168.7.1
+Hello embedded world!
+
+When LED3 lights up, press the USER button!
+Pressed too early!
+Your reaction time was 5000ms, and your record is 5000ms
+When LED3 lights up, press the USER button!
+Your reaction time was 187ms, and your record is 187ms
+When LED3 lights up, press the USER button!
+Your reaction time was 352ms, and your record is 187ms
+When LED3 lights up, press the USER button!
+Your reaction time was 176ms, and your record is 176ms
+When LED3 lights up, press the USER button!
+Your reaction time was 195ms, and your record is 176ms
+When LED3 lights up, press the USER button!
+Your reaction time was 282ms, and your record is 176ms
+When LED3 lights up, press the USER button!
+Your reaction time was 177ms, and your record is 176ms
+When LED3 lights up, press the USER button!
+Pressed too early!
+Your reaction time was 5000ms, and your record is 176ms
+When LED3 lights up, press the USER button!
+took longer than 5 seconds!
+Your reaction time was 5000ms, and your record is 176ms
+debian@athapa-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@athapa-beagle:~$ ls /mnt/remote/myApps
+hello
+debian@athapa-beagle:~$ 
