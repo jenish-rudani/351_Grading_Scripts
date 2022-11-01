@@ -1,0 +1,84 @@
+divyam@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+ __          __  _                              _____  _                             _ 
+ \ \        / / | |                            |  __ \(_)                           | |
+  \ \  /\  / /__| | ___ ___  _ __ ___   ___    | |  | |___   ___   _  __ _ _ __ ___ | |
+   \ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \   | |  | | \ \ / / | | |/ _` | '_ ` _ \| |
+    \  /\  /  __/ | (_| (_) | | | | | |  __/_  | |__| | |\ V /| |_| | (_| | | | | | |_|
+     \/  \/ \___|_|\___\___/|_| |_| |_|\___( ) |_____/|_| \_/  \__, |\__,_|_| |_| |_(_)
+                                           |/                   __/ |                  
+                                                               |___/                   
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Oct  7 03:22:27 2022 from 192.168.7.1
+Hello embedded world, from Divyam!
+Instructions: When LED3 lights up, press the USER button!
+
+New Best Time!
+Your reaction time was: 2747 ms; Your best so far in the game is 2747 ms.
+Waiting 1 second before starting next game!
+
+Your reaction time was: 5000 ms; Your best so far in the game is 2747 ms.
+Waiting 1 second before starting next game!
+
+New Best Time!
+Your reaction time was: 587 ms; Your best so far in the game is 587 ms.
+Waiting 1 second before starting next game!
+
+New Best Time!
+Your reaction time was: 253 ms; Your best so far in the game is 253 ms.
+Waiting 1 second before starting next game!
+
+Your reaction time was: 435 ms; Your best so far in the game is 253 ms.
+Waiting 1 second before starting next game!
+
+Your reaction time was: 5000 ms; Your best so far in the game is 253 ms.
+Waiting 1 second before starting next game!
+
+Your reaction time was: 5000 ms; Your best so far in the game is 253 ms.
+Waiting 1 second before starting next game!
+
+Your reaction time was: 814 ms; Your best so far in the game is 253 ms.
+Waiting 1 second before starting next game!
+
+Your reaction time was: 309 ms; Your best so far in the game is 253 ms.
+Waiting 1 second before starting next game!
+
+New Best Time!
+Your reaction time was: 216 ms; Your best so far in the game is 216 ms.
+Waiting 1 second before starting next game!
+
+Your reaction time was: 5000 ms; Your best so far in the game is 216 ms.
+Waiting 1 second before starting next game!
+
+No input within 5000ms; quitting!
+debian@divyams-beagle:~$ ./scripts/mount-nfs.sh 
+[sudo] password for debian: 
+debian@divyams-beagle:~$ ls /mnt/remote/
+helloworld_target  mount-nfs.sh  myApps  nfs_message.txt
+debian@divyams-beagle:~$ ls /mnt/remote/myApps/
+hello
+debian@divyams-beagle:~$ ls -a /mnt/remote/
+.  ..  helloworld_target  mount-nfs.sh  myApps  nfs_message.txt
+debian@divyams-beagle:~$ ls -l /mnt/remote/
+total 24
+-rwxr-xr-x 1 debian debian 8268 Oct  6 20:04 helloworld_target
+-rwxr-xr-x 1 debian debian   66 Oct  6 19:18 mount-nfs.sh
+drwxr-xr-x 2 debian debian 4096 Oct  7 01:22 myApps
+-rw-r--r-- 1 debian debian   14 Oct  6 19:13 nfs_message.txt
+debian@divyams-beagle:~$ ls -l /mnt/remote/myApps/
+total 20
+-rwxr-xr-x 1 debian debian 18848 Oct  7 05:42 hello
+debian@divyams-beagle:~$ 

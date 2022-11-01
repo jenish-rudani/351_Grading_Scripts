@@ -1,0 +1,40 @@
+jaspreet@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+
+ +-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+
+ |H|a|v|e| |f|u|n| |J|a|s|p|r|e|e|t|!|
+ +-+-+-+-+ +-+-+-+ +-+-+-+-+-+-+-+-+-+
+
+
+Last login: Sat Oct  1 20:35:50 2022 from 192.168.7.1
+Hello embedded world, from Jaspreet!
+
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was 1693ms; best so far in the game is 1693ms 
+New best time!
+Your reaction time was  999ms; best so far in the game is  999ms 
+New best time!
+Your reaction time was  166ms; best so far in the game is  166ms 
+Your reaction time was 1156ms; best so far in the game is  166ms 
+New best time!
+Your reaction time was   81ms; best so far in the game is   81ms 
+Your reaction time was 5000ms; best so far in the game is   81ms 
+Your reaction time was  507ms; best so far in the game is   81ms 
+Your reaction time was 2829ms; best so far in the game is   81ms 
+No input within 5000ms; quitting!
+debian@jkshergi-beagle:~$ cd /mnt/remote
+debian@jkshergi-beagle:/mnt/remote$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@jkshergi-beagle:/mnt/remote$ cd ../..
+debian@jkshergi-beagle:/$ cd /mnt/remote/myApps/
+debian@jkshergi-beagle:/mnt/remote/myApps$ ls
+hello
+

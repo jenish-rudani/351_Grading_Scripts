@@ -1,0 +1,42 @@
+abigail@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+       _    _           _ _                                
+  __ _| |__(_)__ _ __ _(_) |_ __  ___ ______ __ _ __ _ ___ 
+ / _` | '_ \ / _` / _` | | | '  \/ -_|_-<_-</ _` / _` / -_)
+ \__,_|_.__/_\__, \__,_|_|_|_|_|_\___/__/__/\__,_\__, \___|
+             |___/                               |___/     
+Last login: Sat Sep 24 22:17:41 2022 from 192.168.7.1
+Hello embedded world, from Abigail!
+Click the USER button to start the game!
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was: 684 ms
+Best time so far in game is: 684 ms
+Press the USER button to play again!
+When LED3 lights up, press the USER button!
+Your reaction time was: 1699 ms
+Best time so far in game is: 684 ms
+Press the USER button to play again!
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was: 653 ms
+Best time so far in game is: 653 ms
+Press the USER button to play again!
+When LED3 lights up, press the USER button!
+Your reaction time was: 5000 ms
+Best time so far in game is: 653 ms
+Press the USER button to play again!
+When LED3 lights up, press the USER button!
+No input within 5000ms; quitting!
+debian@amontede-beagle:~$ cd /mnt/remote
+debian@amontede-beagle:/mnt/remote$ ./mountNFS.sh
+[sudo] password for debian: 
+debian@amontede-beagle:/mnt/remote$ cd myApps
+debian@amontede-beagle:/mnt/remote/myApps$ ls
+brightness  export  hello  trigger

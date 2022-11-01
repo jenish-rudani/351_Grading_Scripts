@@ -1,0 +1,42 @@
+sahajs@rpi4-20220121:~$ ./connectToBBG.sh
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+
+██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ███████╗ █████╗ ██╗  ██╗ █████╗      ██╗   ███████╗██╗
+██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ██╔════╝██╔══██╗██║  ██║██╔══██╗     ██║   ██╔════╝██║
+██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗      ███████╗███████║███████║███████║     ██║   ███████╗██║
+██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝      ╚════██║██╔══██║██╔══██║██╔══██║██   ██║   ╚════██║╚═╝
+╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗    ███████║██║  ██║██║  ██║██║  ██║╚█████╔╝██╗███████║██╗
+ ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝ ╚═╝╚══════╝╚═╝
+                                                                                                                        
+
+Last login: Thu Oct  6 08:10:35 2022 from 192.168.7.1
+Hello embedded world, from Sahaj Singh!
+
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was 1619 ms; best so far in game is 1619 ms
+Your reaction time was 1886 ms; best so far in game is 1619 ms
+New best time!
+Your reaction time was 1331 ms; best so far in game is 1331 ms
+New best time!
+Your reaction time was 117 ms; best so far in game is 117 ms
+Your reaction time was 5000 ms; best so far in game is 117 ms
+Your reaction time was 2216 ms; best so far in game is 117 ms
+Your reaction time was 5000 ms; best so far in game is 117 ms
+Your reaction time was 5000 ms; best so far in game is 117 ms
+Your reaction time was 325 ms; best so far in game is 117 ms
+Your reaction time was 773 ms; best so far in game is 117 ms
+Your reaction time was 209 ms; best so far in game is 117 ms
+Your reaction time was 377 ms; best so far in game is 117 ms
+Your reaction time was 515 ms; best so far in game is 117 ms
+No input within 5000ms; Quitting.
+debian@ssa365-beagle:~$ ./mount-nfs.sh 
+debian@ssa365-beagle:~$ cd /mnt/remote/myApps
+debian@ssa365-beagle:/mnt/remote/myApps$ ls
+hello
+debian@ssa365-beagle:/mnt/remote/myApps$ 

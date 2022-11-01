@@ -1,0 +1,67 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:4c:56:74 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.254.128/24 brd 192.168.254.255 scope global dynamic noprefixroute ens33
+       valid_lft 990sec preferred_lft 990sec
+    inet6 fe80::41ed:d025:a7b3:f8b0/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx20d7787cdc18: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 20:d7:78:7c:dc:18 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/30 brd 192.168.6.3 scope global dynamic noprefixroute enx20d7787cdc18
+       valid_lft 118sec preferred_lft 118sec
+    inet6 fe80::f9fb:7816:5760:a879/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enx20d7787cdc15: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 20:d7:78:7c:dc:15 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/30 brd 192.168.7.3 scope global dynamic noprefixroute enx20d7787cdc15
+       valid_lft 117sec preferred_lft 117sec
+    inet6 fe80::22d7:78ff:fe7c:dc15/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+
+
+
+
+
+ping 192.168.7.1
+PING 192.168.7.1 (192.168.7.1) 56(84) bytes of data.
+64 bytes from 192.168.7.1: icmp_seq=1 ttl=64 time=0.024 ms
+64 bytes from 192.168.7.1: icmp_seq=2 ttl=64 time=0.050 ms
+64 bytes from 192.168.7.1: icmp_seq=3 ttl=64 time=0.045 ms
+64 bytes from 192.168.7.1: icmp_seq=4 ttl=64 time=0.050 ms
+^C
+--- 192.168.7.1 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3076ms
+rtt min/avg/max/mdev = 0.024/0.042/0.050/0.010 ms
+
+
+
+
+
+
+
+debian@jml44-beagle:/proc$ cat version
+Linux version 4.9.78-ti-r94 (root@b2-am57xx-beagle-x15-2gb) (gcc version 6.3.0 20170516 (Debian 6.3.0-18) ) #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018
+debian@jml44-beagle:/proc$ cat uptime
+20967.36 20808.20
+debian@jml44-beagle:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: 0000000000000000
+

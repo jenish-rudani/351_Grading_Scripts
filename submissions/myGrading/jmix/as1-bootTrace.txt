@@ -1,0 +1,31 @@
+jake@351-Debian:~$ sshpass -p temppwd ssh debian@192.168.7.2
+Linux jmix-beagle 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+
+ __    __     _                             __        _          _ 
+/ / /\ \ \___| | ___ ___  _ __ ___   ___    \ \  __ _| | _____  / \
+\ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \    \ \/ _` | |/ / _ \/  /
+ \  /\  /  __/ | (_| (_) | | | | | |  __/ /\_/ / (_| |   <  __/\_/ 
+  \/  \/ \___|_|\___\___/|_| |_| |_|\___| \___/ \__,_|_|\_\___\/   
+                                                                   
+
+Last login: Thu Oct  6 18:21:50 2022 from 192.168.7.1
+Hello embedded world, from Jake!
+When LED3 lights up, press USER button.
+New best time of: 687ms!
+Your reaction speed was: 687ms. Best time so far is: 687ms
+New best time of: 370ms!
+Your reaction speed was: 370ms. Best time so far is: 370ms
+Your reaction speed was: 975ms. Best time so far is: 370ms
+Your reaction speed was: 887ms. Best time so far is: 370ms
+Your reaction speed was: 451ms. Best time so far is: 370ms
+Your reaction speed was: 537ms. Best time so far is: 370ms
+Your reaction speed was: >5000ms. Best time so far is: 370ms
+New best time of: 173ms!
+Your reaction speed was: 173ms. Best time so far is: 173ms
+No input detected within 5s, program quitting
+debian@jmix-beagle:~$ ./nfsMount 
+[sudo] password for debian: 
+debian@jmix-beagle:~$ cd /mnt/remote/myApps/
+debian@jmix-beagle:/mnt/remote/myApps$ ls
+hello
+debian@jmix-beagle:/mnt/remote/myApps$

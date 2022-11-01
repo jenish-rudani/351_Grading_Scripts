@@ -1,0 +1,42 @@
+jake@351-Debian:~/cmpt433/work/as1$ sudo ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+ _    _        _                                  ___         _         
+| |  | |      | |                                |_  |       | |        
+| |  | |  ___ | |  ___  ___   _ __ ___    ___      | |  __ _ | | __ ___ 
+| |/\| | / _ \| | / __|/ _ \ | '_ ` _ \  / _ \     | | / _` || |/ // _ \
+\  /\  /|  __/| || (__| (_) || | | | | ||  __/ /\__/ /| (_| ||   <|  __/
+ \/  \/  \___||_| \___|\___/ |_| |_| |_| \___| \____/  \__,_||_|\_\\___|
+                                                                        
+                                                                        
+
+Last login: Fri Oct  7 23:51:23 2022 from 192.168.7.1
+Hello embedded world, from Jake!
+
+When LED3 lights up, press the USER button!
+New High Score!!
+Your reaction time was: 230ms; Best so far in game is 230ms
+Your reaction time was 5000ms; Your best reaction time so far is 230ms
+New High Score!!
+Your reaction time was: 224ms; Best so far in game is 224ms
+Your reaction time was: 2842ms ; Your best reaction time so far is : 224ms
+No input within 5000ms! quitting . . .
+
+debian@jmerkl-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+Sorry, try again.
+[sudo] password for debian: 
+debian@jmerkl-beagle:~$ ls
+direction  hello  internetToTarget.sh  mount-nfs.sh
+debian@jmerkl-beagle:~$ cd ..
+debian@jmerkl-beagle:/home$ cd ..
+debian@jmerkl-beagle:/$ cd /mnt/remote/myApps/
+debian@jmerkl-beagle:/mnt/remote/myApps$ ls
+direction  hello
+debian@jmerkl-beagle:/mnt/remote/myApps$ 

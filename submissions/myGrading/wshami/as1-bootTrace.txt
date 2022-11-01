@@ -1,0 +1,15 @@
+debian@wshami-beagle:~$ ls
+bbginetconf4.sh  bbginetconf5.sh  mountNFS
+
+debian@wshami-beagle:~$ ./mountNFS
+
+debian@wshami-beagle:~$ cd /mnt/remote
+
+debian@wshami-beagle:/mnt/remote$ ls
+helloworld_host  helloworld_target  motd  mount-nfs.sh  myApps  nfs_message.txt
+
+debian@wshami-beagle:/mnt/remote$ cd myApps
+
+debian@wshami-beagle:/mnt/remote/myApps$ ls
+as1-helloWorld.tar.gz
+

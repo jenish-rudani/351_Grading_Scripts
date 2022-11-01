@@ -1,0 +1,47 @@
+zak@Zosmond:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+,---,     ,                  ,-.                      . 
+   /      |                 /   \                     | 
+  /   ,-: | , ;-. . . ,-.   |   | ,-. ;-.-. ,-. ;-. ,-| 
+ /    | | |<  |   | | |-'   \   / `-. | | | | | | | | | 
+'---' `-` ' ` '   `-| `-'    `-'  `-' ' ' ' `-' ' ' `-' 
+                  `-'                                   
+                    ,-.  ,-.   ,-.                      
+                    |  ) |  ) /                         
+                    |-<  |-<  | -.                      
+                    |  ) |  ) \  |                      
+                    `-'  `-'   `-'                      
+                                                        
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Oct  8 03:06:21 2022 from 192.168.7.1
+Hello embedded world, from Zak! 
+ 
+When LED3 lights up, press the USER button!
+New Best Time!
+Your recation time was 758 ms; best so far in game is 758 ms!
+New Best Time!
+Your recation time was 626 ms; best so far in game is 626 ms!
+Your recation time was 1365 ms; best so far in game is 626 ms!
+Your recation time was 1193 ms; best so far in game is 626 ms!
+Your recation time was 5000 ms; best so far in game is 626 ms!
+New Best Time!
+Your recation time was 370 ms; best so far in game is 370 ms!
+Your recation time was 801 ms; best so far in game is 370 ms!
+No input within 5000ms; quitting!
+debian@zosmond-beagle:~$ ./mount-nfs.sh
+[sudo] password for debian: 
+debian@zosmond-beagle:~$ cd /mnt/remote/myApps
+debian@zosmond-beagle:/mnt/remote/myApps$ ls
+hello
+debian@zosmond-beagle:/mnt/remote/myApps$ 

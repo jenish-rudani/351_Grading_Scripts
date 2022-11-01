@@ -1,0 +1,50 @@
+ken@Debian:~$ ./sshTarget.sh 
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+
+$$\   $$\     $$$$$$\  $$\       $$\ $$\                 
+$$ | $$  |   $$  __$$\ \__|      $$ |$$ |                
+$$ |$$  /    $$ /  \__|$$\  $$$$$$$ |$$$$$$$\  $$\   $$\ 
+$$$$$  /     \$$$$$$\  $$ |$$  __$$ |$$  __$$\ $$ |  $$ |
+$$  $$<       \____$$\ $$ |$$ /  $$ |$$ |  $$ |$$ |  $$ |
+$$ |\$$\     $$\   $$ |$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |
+$$ | \$$\ $$\\$$$$$$  |$$ |\$$$$$$$ |$$ |  $$ |\$$$$$$  |
+\__|  \__|\__|\______/ \__| \_______|\__|  \__| \______/ 
+                                                         
+                                                         
+                                                     
+Last login: Sat Oct  8 02:12:51 2022 from 192.168.7.1
+Hello embedded world, from Ken
+When LED3 lights up, press the user button!
+Your recation time was  2452 ms;
+New best time !
+Your recation time was  228 ms;
+New best time !
+Your recation time was  879 ms;best so far in game is  228  ms.
+Your recation time was  731 ms;best so far in game is  228  ms.
+Your recation time was  1048 ms;best so far in game is  228  ms.
+Your recation time was  209 ms;
+New best time !
+Your recation time was  1777 ms;best so far in game is  209  ms.
+Your recation time was  1202 ms;best so far in game is  209  ms.
+Your recation time was  323 ms;best so far in game is  209  ms.
+Your recation time was  314 ms;best so far in game is  209  ms.
+Your recation time was 5000  ms;
+Your recation time was  1135 ms;best so far in game is  209  ms.
+Your recation time was  51 ms;
+New best time !
+No input within 5000ms;quitting
+debian@Ksa170-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@Ksa170-beagle:~$ ls
+cmpt433  hello  internetToTarget.sh  mount-nfs.sh
+debian@Ksa170-beagle:~$ ls /mnt/remote/myApps
+brightness  do_this  export  folder  function  function1  function2  function3  game1  hello  test  timing  trigger
+debian@Ksa170-beagle:~$ gedit 
+
+
+

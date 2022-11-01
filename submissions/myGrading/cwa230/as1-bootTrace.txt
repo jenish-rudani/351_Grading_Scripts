@@ -1,0 +1,32 @@
+clinton@351-Debian:~$ ./internetToTarget.sh 
+[sudo] password for clinton: 
+1
+clinton@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+ _     _  _    _     ___  _   _      ____  _      _____   _  ____    ____  _     _  _      _____  ____  _      _ 
+/ \ /|/ \/ \  / \__/|\  \//  / \  /|/  _ \/ \__/|/  __/  / \/ ___\  /   _\/ \   / \/ \  /|/__ __\/  _ \/ \  /|/ \
+| |_||| || |  | |\/|| \  /   | |\ ||| / \|| |\/|||  \    | ||    \  |  /  | |   | || |\ ||  / \  | / \|| |\ ||| |
+| | ||| |\_/  | |  || / /    | | \||| |-||| |  |||  /_   | |\___ |  |  \__| |_/\| || | \||  | |  | \_/|| | \||\_/
+\_/ \|\_/(_)  \_/  \|/_/     \_/  \|\_/ \|\_/  \|\____\  \_/\____/  \____/\____/\_/\_/  \|  \_/  \____/\_/  \|(_)
+                                                                                                                 
+Last login: Fri Oct  7 05:15:06 2022 from 192.168.7.1
+Hello embedded world, from Clinton!
+When LED3 lights up, press the USER button!
+New best time!
+Your reaction time was 1251; best so far in game is 1251 
+New best time!
+Your reaction time was 289; best so far in game is 289 
+Your reaction time was 874; best so far in game is 289 
+Your reaction time was 5000; best so far in game is 289 
+No input within 5000ms; quitting!
+debian@cwa230-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@cwa230-beagle:~$ ls /mnt/remote/myApps/
+hello

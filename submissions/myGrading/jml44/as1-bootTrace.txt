@@ -1,0 +1,51 @@
+james@James-Debian:~$ cat beaglebone.sh
+#!/bin/sh
+ssh debian@192.168.7.2
+james@James-Debian:~$ ./beaglebone.sh
+debian@192.168.7.2's password: 
+Linux jml44-beagle 4.9.78-ti-r94 #1 SMP PREEMPT Fri Jan 26 21:26:24 UTC 2018 armv7l
+
+  ____   ____  ___ ___    ___  _____     _      ____ 
+ |    | /    ||   |   |  /  _]/ ___/    | |    |    |
+ |__  ||  o  || _   _ | /  [_(   \_     | |     |  | 
+ __|  ||     ||  \_/  ||    _]\__  |    | |___  |  | 
+/  |  ||  _  ||   |   ||   [_ /  \ |    |     | |  | 
+\  `  ||  |  ||   |   ||     |\    |    |     | |  | 
+ \____j|__|__||___|___||_____| \___|    |_____||____|                                         
+⠄⠄⠄⢀⡀⠄⠄⢀⣀⠄⠄⠄⠄⠄⠄⢀⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⢿⣿⣾⡿⣘⣛⣫⡥⠤⠔⠻⢿⣿⣟⣭⠶⢖⣂⣠⣤⡀⠄⠄⠄⠄⠄⠄
+⠄⠄⢀⣼⣿⣿⣧⢛⡡⠔⣚⣛⣛⣛⠣⠌⠛⢁⣫⣥⣤⣤⠤⠬⢃⢾⣦⠄⠄⠄
+⠄⣰⣿⠟⣡⡮⢉⣤⣶⣿⣿⣿⡟⠁⢀⡀⢢⢻⣿⣿⣿⡇⠄⢠⠄⠂⣷⣄⠄⠄
+⢠⣿⢣⣾⣿⣷⣮⠛⣿⣿⣿⣿⣧⠄⠈⠁⢸⠂⠻⢿⣿⣷⣤⣀⡠⡆⠙⢿⣧⠄
+⢸⣿⢸⣿⣿⣿⣯⣛⠶⣭⣙⣛⣛⣛⣓⣪⢩⣾⣿⣖⣒⣒⠶⠶⠖⠂⠄⠈⣿⡇
+⢸⣿⢸⣿⣿⣿⣿⣿⣿⣶⣶⣭⣭⣵⡶⠶⠿⢛⣛⣛⣭⣝⣛⡻⠷⠄⠄⢀⣿⡇
+⢸⣿⡌⣿⣿⣿⣿⣿⣿⠿⣛⣛⣭⣥⡶⠶⠞⠛⠛⠛⠛⠉⠉⢻⡷⠂⠄⢸⣿⡇
+⢸⣿⡇⣿⣿⣿⣿⣿⡏⣾⠟⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⠄⣼⣿⡇
+⢸⣿⣇⢿⣿⣿⣿⣿⣧⢻⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⠄⠄⢀⣿⣿⡇
+⢸⣿⣿⢸⣿⣿⣿⣿⣿⣷⣝⢷⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⢀⣶⣿⣿⠟⠄
+⠈⣿⣿⣇⡉⢛⠻⣿⣿⣿⣿⣶⡙⢷⣦⣄⠄⠄⠄⠄⠄⠄⣠⣿⣦⠛⠋⠁⠄⠄
+⠄⠘⢿⣿⣿⢸⣿⣦⣭⣛⣛⣛⣛⣒⣉⣙⣛⣛⣛⣛⣛⣛⣛⣫⣴⣄⠄⠄⠄⠄
+⠄⢀⣤⣙⢛⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠄⠄
+Last login: Sat Oct  8 14:54:07 2022 from 192.168.7.1
+Hello embedded world, from James Li!
+Press the USR button to start the game
+^[Your reaction time was 599ms; your best time is 599ms.
+Your reaction time was 660ms; your best time is 599ms.
+Your reaction time was 1083ms; your best time is 599ms.
+Your reaction time was 521ms; your best time is 521ms.
+Your reaction time was 5000ms; your best time is 521ms.
+Your reaction time was 5000ms; your best time is 521ms.
+Your reaction time was 5000ms; your best time is 521ms.
+Your reaction time was 1748ms; your best time is 521ms.
+No input within 5000ms; quitting!
+debian@jml44-beagle:~$ ls
+bin  hello  internetToTarget.sh  mount-nfs.sh
+debian@jml44-beagle:~$ ./mount-nfs.sh
+[sudo] password for debian: 
+debian@jml44-beagle:~$ cd /mnt/remote
+debian@jml44-beagle:/mnt/remote$ ls
+motd.txt  mount-nfs.sh  myApps  nfs_message.txt
+debian@jml44-beagle:/mnt/remote$ cd myApps
+debian@jml44-beagle:/mnt/remote/myApps$ ls
+hello
+debian@jml44-beagle:/mnt/remote/myApps$ 

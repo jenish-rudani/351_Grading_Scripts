@@ -1,0 +1,108 @@
+Script started on 2022-10-09 22:48:44-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="36"]
+[?2004h]0;brayden@debian: ~/cmpt433/work[01;32mbrayden@debian[00m:[01;34m~/cmpt433/work[00m$ ip addr
+[?2004l1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:8e:f8:f1 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.252.128/24 brd 192.168.252.255 scope global dynamic noprefixroute ens33
+       valid_lft 1010sec preferred_lft 1010sec
+    inet6 fe80::8864:cba0:6c36:8faa/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+7: enx3484e4001871: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 34:84:e4:00:18:71 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx3484e4001871
+       valid_lft 779sec preferred_lft 779sec
+    inet6 fe80::3684:e4ff:fe00:1871/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+8: enx3484e4001873: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 34:84:e4:00:18:73 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx3484e4001873
+       valid_lft 774sec preferred_lft 774sec
+    inet6 fe80::b007:eeaa:8503:3621/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+[?2004h]0;brayden@debian: ~/cmpt433/work[01;32mbrayden@debian[00m:[01;34m~/cmpt433/work[00m$ ping 192.168.7.2
+[?2004lPING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.51 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=1.55 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=3.37 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.65 ms
+64 bytes from 192.168.7.2: icmp_seq=5 ttl=64 time=1.72 ms
+^C
+--- 192.168.7.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4009ms
+rtt min/avg/max/mdev = 1.507/1.957/3.366/0.708 ms
+[?2004h]0;brayden@debian: ~/cmpt433/work[01;32mbrayden@debian[00m:[01;34m~/cmpt433/work[00m$ ssh debian@192.168.7.2
+[?2004lDebian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+  _    _      _ _         ____                      _            
+ | |  | |    | | |       |  _ \                    | |           
+ | |__| | ___| | | ___   | |_) |_ __ __ _ _   _  __| | ___ _ __  
+ |  __  |/ _ \ | |/ _ \  |  _ <| '__/ _` | | | |/ _` |/ _ \ '_ \ 
+ | |  | |  __/ | | (_) | | |_) | | | (_| | |_| | (_| |  __/ | | |
+ |_|  |_|\___|_|_|\___/  |____/|_|  \__,_|\__, |\__,_|\___|_| |_|
+                                           __/ |                 
+                                          |___/                 
+
+Last login: Mon Oct 10 05:44:55 2022 from 192.168.7.1
+Hello embedded world, from Brayden
+
+When LED3 lights up, press the USER button
+No input within 5000ms; Quitting
+[?2004h]0;debian@bmckeen-beagle: ~[01;32mdebian@bmckeen-beagle[00m:[01;34m~[00m$ cd /proc
+[?2004l[?2004h]0;debian@bmckeen-beagle: /proc[01;32mdebian@bmckeen-beagle[00m:[01;34m/proc[00m$ ls
+[?2004l[0m[01;34m1[0m     [01;34m133[0m   [01;34m17[0m   [01;34m643[0m  [01;34m767[0m        [01;31mconfig.gz[0m      keys          slabinfo
+[01;34m10[0m    [01;34m135[0m   [01;34m18[0m   [01;34m648[0m  [01;34m779[0m        consoles       kmsg          softirqs
+[01;34m101[0m   [01;34m136[0m   [01;34m2[0m    [01;34m65[0m   [01;34m8[0m          [01;34mcpu[0m            kpagecgroup   stat
+[01;34m102[0m   [01;34m1436[0m  [01;34m20[0m   [01;34m66[0m   [01;34m84[0m         cpuinfo        kpagecount    swaps
+[01;34m103[0m   [01;34m1456[0m  [01;34m21[0m   [01;34m663[0m  [01;34m85[0m         crypto         kpageflags    [01;34msys[0m
+[01;34m109[0m   [01;34m1459[0m  [01;34m22[0m   [01;34m666[0m  [01;34m87[0m         [01;36mdevice-tree[0m    loadavg       sysrq-trigger
+[01;34m11[0m    [01;34m1463[0m  [01;34m23[0m   [01;34m667[0m  [01;34m88[0m         devices        locks         [01;34msysvipc[0m
+[01;34m1103[0m  [01;34m15[0m    [01;34m24[0m   [01;34m67[0m   [01;34m9[0m          diskstats      meminfo       [01;36mthread-self[0m
+[01;34m1105[0m  [01;34m1546[0m  [01;34m3[0m    [01;34m679[0m  [01;34m93[0m         [01;34mdriver[0m         misc          timer_list
+[01;34m118[0m   [01;34m1547[0m  [01;34m4[0m    [01;34m68[0m   [01;34m94[0m         [01;34mdynamic_debug[0m  modules       [01;34mtty[0m
+[01;34m119[0m   [01;34m1553[0m  [01;34m529[0m  [01;34m69[0m   [01;34m95[0m         execdomains    [01;36mmounts[0m        uptime
+[01;34m1197[0m  [01;34m1554[0m  [01;34m530[0m  [01;34m70[0m   [01;34m97[0m         fb             mtd           version
+[01;34m1198[0m  [01;34m1595[0m  [01;34m579[0m  [01;34m71[0m   [01;34m98[0m         filesystems    [01;36mnet[0m           vmallocinfo
+[01;34m12[0m    [01;34m1599[0m  [01;34m599[0m  [01;34m72[0m   [01;34m990[0m        [01;34mfs[0m             pagetypeinfo  vmstat
+[01;34m126[0m   [01;34m16[0m    [01;34m603[0m  [01;34m727[0m  [01;34m991[0m        interrupts     partitions    zoneinfo
+[01;34m129[0m   [01;34m1600[0m  [01;34m613[0m  [01;34m728[0m  apm        iomem          [01;34mpressure[0m
+[01;34m13[0m    [01;34m1601[0m  [01;34m614[0m  [01;34m73[0m   buddyinfo  ioports        [01;34mpvr[0m
+[01;34m130[0m   [01;34m1616[0m  [01;34m617[0m  [01;34m74[0m   [01;34mbus[0m        [01;34mirq[0m            sched_debug
+[01;34m131[0m   [01;34m1617[0m  [01;34m619[0m  [01;34m765[0m  cgroups    kallsyms       schedstat
+[01;34m132[0m   [01;34m1629[0m  [01;34m635[0m  [01;34m766[0m  cmdline    key-users      [01;36mself[0m
+[?2004h]0;debian@bmckeen-beagle: /proc[01;32mdebian@bmckeen-beagle[00m:[01;34m/proc[00m$ cat version
+[?2004lLinux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+[?2004h]0;debian@bmckeen-beagle: /proc[01;32mdebian@bmckeen-beagle[00m:[01;34m/proc[00m$ cat uptime
+[?2004l7151.79 6893.07
+[?2004h]0;debian@bmckeen-beagle: /proc[01;32mdebian@bmckeen-beagle[00m:[01;34m/proc[00m$ cat cpuif nfo
+[?2004lprocessor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061859
+[?2004h]0;debian@bmckeen-beagle: /proc[01;32mdebian@bmckeen-beagle[00m:[01;34m/proc[00m$ exit
+[?2004llogout
+Connection to 192.168.7.2 closed.
+[?2004h]0;brayden@debian: ~/cmpt433/work[01;32mbrayden@debian[00m:[01;34m~/cmpt433/work[00m$ exit
+[?2004lexit
+
+Script done on 2022-10-09 22:50:19-07:00 [COMMAND_EXIT_CODE="0"]

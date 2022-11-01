@@ -1,0 +1,32 @@
+cat version:
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+cat uptime:
+410.75 325.36
+cat cpuinfo:
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122053504
+
+internet config:
+#!/bin/sh
+sudo iptables --table nat --append POSTROUTING --out-interface ens33 -j MASQUER>
+sudo iptables --append FORWARD --in-interface enx98f07bfe8eb3 -j ACCEPT
+echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward
+
+ping target:
+leon@351-Debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=2.29 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=1.45 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=1.67 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.27 ms

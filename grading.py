@@ -1,6 +1,7 @@
+import imp
 import os
-from tkinter import EXCEPTION
 import json
+import subprocess
 
 grades = {
   "marks": []
@@ -13,7 +14,7 @@ listOfOutputs = ['ls' ,'/mnt/remote/myApps/' ,'cd /mnt/remote/myApps/','./mount-
 listOfSubmissions = "zdurani, tka74,akopylov,llagerwe,hlebumfa,sukhal,bla135,tla152,liyuyul,jml44,rmakita,asm18,cma107,jmateo,bmckeen,jmerkl,jmix,kmokaya,amontede,smoradkh,mmsaki,tnookut,zosmond,epa25,tpa35,sraisudd,drashid,drowsell,dss17,hssekhon,wshami,divyams,jkshergi,nss11,ksa170,ssa365,alons,aspeers,athapa,ktoering,ezt,dumpherv,jvanloo,swa263,cwa230,cya110,ruoyiz,jcz3"
 listOfSubmissions = listOfSubmissions.split(',')
 
-subfolders = [ f.path for f in os.scandir('./submissions/') if f.is_dir() if f.name in listOfSubmissions ]
+subfolders = [ f.path for f in os.scandir('./submissions/myGrading/') if f.is_dir() if f.name in listOfSubmissions ]
 # print(subfolders, "\n\n\n")
 
 subfolders = sorted(subfolders)
@@ -111,5 +112,65 @@ def gradeNFSLogin():
   # Writing to sample.json
   with open("output.json", "w") as outfile:
       outfile.write(json_object)
+
+# print(subfolders)
+
+def gradeHello():
+  try:
+    currentRootDir = os.getcwd()
+    for subfolder in subfolders:
+      os.chdir(currentRootDir)
+      templateGrade = {
+      "userid": "",
+      # "establish-communication": {"mark": 5.00, "comment": "Covers all/most"},
+      # "nfs-and-custom-login-message": {"mark": 12.00, "comment": ""},
+      "hello": {"mark": 48.00, "comment": ""},
+      # "good-quality-code": {"mark": 0.00, "comment": "..."}
+      }
+      count = 0
+      templateGrade['userid'] = subfolder.split('/')[-1]
+      commentForGrade = ""
+      tempGradMarks = 0
       
-gradeNFSLogin()
+      # Run this first time
+      # command = 'cp -R {} {}'.format(subfolder,"./submissions/myGrading/")
+      # os.system(command)
+      
+      removeHelloCommand = 'rm /home/debian/cmpt433/public/myApps/hello'
+      os.system(removeHelloCommand)
+
+      os.chdir(subfolder)
+      cmd = "tar -xvf as1-helloWorld.tar.gz"
+      output = subprocess.Popen(cmd,shell=True, stdout=subprocess.PIPE,stderr=subprocess.STDOUT).stdout.read()
+      print(output.decode('utf-8').split())
+      extractedFolder = output.decode('utf-8').split()[1]
+      os.chdir(extractedFolder)
+      print(os.getcwd())
+      output = subprocess.Popen("make",shell=True, stdout=subprocess.PIPE,stderr=subprocess.STDOUT).stdout.read()
+      print(output.decode('utf-8'))
+      
+      c = input("Did makefile generate hello? Y/n").lower()
+      if(c=='y'):
+        commentForGrade += "[+5] | "
+        tempGradMarks += 5
+        print("Hello -> Yes")
+      else:
+        break
+      
+      tempGradMarks['hello']['mark'] = tempGradMarks
+      tempGradMarks['hello']['comment'] = commentForGrade
+      grades["marks"].append(templateGrade) 
+  except Exception as e:
+    print(e)
+    # Serializing json
+    # json_object = json.dumps(grades, indent=4)
+    
+    # # Writing to sample.json
+    # with open("hello.json", "w") as outfile:
+    #     outfile.write(json_object)
+
+
+         
+      
+print(len(subfolders))
+gradeHello()

@@ -1,0 +1,38 @@
+tao@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+ █     █░▓█████  ██▓     ▄████▄   ▒█████   ███▄ ▄███▓▓█████    ▄▄▄█████▓ ▄▄▄       ▒█████   ▐██▌  ▐██▌  ▐██▌ 
+▓█░ █ ░█░▓█   ▀ ▓██▒    ▒██▀ ▀█  ▒██▒  ██▒▓██▒▀█▀ ██▒▓█   ▀    ▓  ██▒ ▓▒▒████▄    ▒██▒  ██▒ ▐██▌  ▐██▌  ▐██▌ 
+▒█░ █ ░█ ▒███   ▒██░    ▒▓█    ▄ ▒██░  ██▒▓██    ▓██░▒███      ▒ ▓██░ ▒░▒██  ▀█▄  ▒██░  ██▒ ▐██▌  ▐██▌  ▐██▌ 
+░█░ █ ░█ ▒▓█  ▄ ▒██░    ▒▓▓▄ ▄██▒▒██   ██░▒██    ▒██ ▒▓█  ▄    ░ ▓██▓ ░ ░██▄▄▄▄██ ▒██   ██░ ▓██▒  ▓██▒  ▓██▒ 
+░░██▒██▓ ░▒████▒░██████▒▒ ▓███▀ ░░ ████▓▒░▒██▒   ░██▒░▒████▒     ▒██▒ ░  ▓█   ▓██▒░ ████▓▒░ ▒▄▄   ▒▄▄   ▒▄▄  
+░ ▓░▒ ▒  ░░ ▒░ ░░ ▒░▓  ░░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ░  ░░░ ▒░ ░     ▒ ░░    ▒▒   ▓▒█░░ ▒░▒░▒░  ░▀▀▒  ░▀▀▒  ░▀▀▒ 
+  ▒ ░ ░   ░ ░  ░░ ░ ▒  ░  ░  ▒     ░ ▒ ▒░ ░  ░      ░ ░ ░  ░       ░      ▒   ▒▒ ░  ░ ▒ ▒░  ░  ░  ░  ░  ░  ░ 
+  ░   ░     ░     ░ ░   ░        ░ ░ ░ ▒  ░      ░      ░        ░        ░   ▒   ░ ░ ░ ▒      ░     ░     ░ 
+    ░       ░  ░    ░  ░░ ░          ░ ░         ░      ░  ░                  ░  ░    ░ ░   ░     ░     ░    
+                        ░                                                                                    
+Last login: Thu Oct  6 01:29:39 2022 from 192.168.7.1
+Hello embedded world, from Tao!
+
+When LED3 lights up, press the USER buttom!
+New best time!
+Your rection time was 5000 ms, best so far in game is 5000 ms.
+New best time!
+Your rection time was 525 ms, best so far in game is 525 ms.
+Your rection time was 1668 ms, best so far in game is 525 ms.
+Your rection time was 2633 ms, best so far in game is 525 ms.
+Your rection time was 1953 ms, best so far in game is 525 ms.
+New best time!
+Your rection time was 292 ms, best so far in game is 292 ms.
+No input within 5000 ms; quitting!
+debian@tla152-beagle:~$ sudo mount -t nfs 192.168.7.1:/home/tao/cmpt433/public /mnt/remote 
+[sudo] password for debian: 
+debian@tla152-beagle:~$ ls /mnt/remote/myApps/
+export  hello  unexport
+

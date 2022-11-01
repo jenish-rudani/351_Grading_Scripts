@@ -1,0 +1,35 @@
+sukha@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+   _____       _    _           
+  / ____|     | |  | |          
+ | (___  _   _| | _| |__   __ _ 
+  \___ \| | | | |/ / '_ \ / _` |
+  ____) | |_| |   <| | | | (_| |
+ |_____/ \__,_|_|\_\_| |_|\__,_|
+Last login: Thu Oct  6 19:16:31 2022 from 192.168.7.1
+Hello embedded world, from Sukha!
+
+When LED3 lights up, press the USER button!
+New Record!
+Your recation time was 704; best so far in game is 704
+Your recation time was 1360; best so far in game is 704
+Your recation time was 2051; best so far in game is 704
+New Record!
+Your recation time was 232; best so far in game is 232
+No input within 5000ms; quitting!
+debian@sukhal-beagle:~$ ./mount-nfs.sh 
+[sudo] password for debian: 
+debian@sukhal-beagle:~$ ./internetToTarget.sh 
+SIOCADDRT: File exists
+nameserver 8.8.8.8
+debian@sukhal-beagle:~$ cd /mnt/remote/myApps/
+debian@sukhal-beagle:/mnt/remote/myApps$ ls
+hello
+

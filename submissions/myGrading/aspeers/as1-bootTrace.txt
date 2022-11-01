@@ -1,0 +1,51 @@
+andrew@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+  ______                   __                                   __         
+ /      \                 |  \                                 |  \        
+|  $$$$$$\ _______    ____| $$  ______    ______   __   __   __| $$_______ 
+| $$__| $$|       \  /      $$ /      \  /      \ |  \ |  \ |  \\$/       \
+| $$    $$| $$$$$$$\|  $$$$$$$|  $$$$$$\|  $$$$$$\| $$ | $$ | $$ |  $$$$$$$
+| $$$$$$$$| $$  | $$| $$  | $$| $$   \$$| $$    $$| $$ | $$ | $$  \$$    \ 
+| $$  | $$| $$  | $$| $$__| $$| $$      | $$$$$$$$| $$_/ $$_/ $$  _\$$$$$$\
+| $$  | $$| $$  | $$ \$$    $$| $$       \$$     \ \$$   $$   $$ |       $$
+ \$$   \$$ \$$   \$$  \$$$$$$$ \$$        \$$$$$$$  \$$$$$\$$$$   \$$$$$$$ 
+                                                                           
+                                                                           
+                                                                           
+ __                                      __                                
+|  \                                    |  \                               
+| $$____    ______    ______    ______  | $$  ______                       
+| $$    \  /      \  |      \  /      \ | $$ /      \                      
+| $$$$$$$\|  $$$$$$\  \$$$$$$\|  $$$$$$\| $$|  $$$$$$\                     
+| $$  | $$| $$    $$ /      $$| $$  | $$| $$| $$    $$                     
+| $$__/ $$| $$$$$$$$|  $$$$$$$| $$__| $$| $$| $$$$$$$$                     
+| $$    $$ \$$     \ \$$    $$ \$$    $$| $$ \$$     \                     
+ \$$$$$$$   \$$$$$$$  \$$$$$$$ _\$$$$$$$ \$$  \$$$$$$$                     
+                              |  \__| $$                                   
+                               \$$    $$                                   
+                                \$$$$$$                                    
+Last login: Wed Oct  5 07:39:08 2022 from 192.168.7.1
+Hello embedded world, from Andrew Speers 
+
+ when light lights up pres USER button 
+
+ Your reaction time was  492;  The best time so far is  492
+ when light lights up pres USER button 
+
+ Your reaction time was  196;  The best time so far is  196
+ when light lights up pres USER button 
+
+ Your reaction time was  223;  The best time so far is  196
+ when light lights up pres USER button 
+ No input with 5 seconds; Terminating program! 
+debian@aspeers-beagle:~$ sh mount-nfs.sh 
+[sudo] password for debian: 
+debian@aspeers-beagle:~$ cd /mnt/remote/myApps/
+debian@aspeers-beagle:/mnt/remote/myApps$ ls
+hello

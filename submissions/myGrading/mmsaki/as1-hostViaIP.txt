@@ -1,0 +1,62 @@
+mercygold@debian:~$ cat /etc/network/interfaces
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+mercygold@debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.14 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.16 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=1.39 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=2.09 ms
+64 bytes from 192.168.7.2: icmp_seq=5 ttl=64 time=1.51 ms
+64 bytes from 192.168.7.2: icmp_seq=6 ttl=64 time=2.78 ms
+64 bytes from 192.168.7.2: icmp_seq=7 ttl=64 time=2.18 ms
+^C
+--- 192.168.7.2 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6013ms
+rtt min/avg/max/mdev = 1.142/1.892/2.778/0.526 ms
+mercygold@debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat Oct  8 14:02:17 2022 from 192.168.7.1
+debian@BeagleBone:~$ cd /proc
+debian@BeagleBone:/proc$  cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+12947.00 12683.81
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061817
+debian@BeagleBone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+mercygold@debian: 
+

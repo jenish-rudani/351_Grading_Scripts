@@ -1,0 +1,97 @@
+colin@351-Debian:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:9f:ea:cd brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.253.128/24 brd 192.168.253.255 scope global dynamic noprefixroute ens33
+       valid_lft 1291sec preferred_lft 1291sec
+    inet6 fe80::20c:29ff:fe9f:eacd/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enx98f07bfff5f5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 98:f0:7b:ff:f5:f5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.6.1/24 brd 192.168.6.255 scope global dynamic noprefixroute enx98f07bfff5f5
+       valid_lft 991sec preferred_lft 991sec
+    inet6 fe80::ab0a:c024:a1b7:6084/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: enx98f07bfff5f3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 98:f0:7b:ff:f5:f3 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.7.1/24 brd 192.168.7.255 scope global dynamic noprefixroute enx98f07bfff5f3
+       valid_lft 991sec preferred_lft 991sec
+    inet6 fe80::a733:9d3b:cb11:a58c/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+colin@351-Debian:~$ ping 192.168.7.2
+PING 192.168.7.2 (192.168.7.2) 56(84) bytes of data.
+64 bytes from 192.168.7.2: icmp_seq=1 ttl=64 time=1.41 ms
+64 bytes from 192.168.7.2: icmp_seq=2 ttl=64 time=2.83 ms
+64 bytes from 192.168.7.2: icmp_seq=3 ttl=64 time=1.71 ms
+64 bytes from 192.168.7.2: icmp_seq=4 ttl=64 time=1.98 ms
+64 bytes from 192.168.7.2: icmp_seq=5 ttl=64 time=1.65 ms
+^C
+--- 192.168.7.2 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4008ms
+rtt min/avg/max/mdev = 1.406/1.914/2.825/0.490 ms
+colin@351-Debian:~$ ssh debian@192.168.7.2
+Debian GNU/Linux 11
+
+BeagleBoard.org Debian Bullseye IoT Image 2022-09-02
+Support: https://bbb.io/debian
+default username:password is [debian:temppwd]
+
+debian@192.168.7.2's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Oct  6 00:29:07 2022 from 192.168.7.1
+debian@BeagleBone:~$ cd /proc
+debian@BeagleBone:/proc$ ls
+1     15    2232  620  766        cgroups        kallsyms      schedstat
+10    1570  2238  629  767        cmdline        keys          self
+100   16    2240  636  768        config.gz      key-users     slabinfo
+101   17    2243  639  780        consoles       kmsg          softirqs
+102   1781  2244  65   8          cpu            kpagecgroup   stat
+108   18    2259  657  84         cpuinfo        kpagecount    swaps
+11    1962  2260  66   85         crypto         kpageflags    sys
+1105  2     2263  662  87         devices        loadavg       sysrq-trigger
+117   20    23    665  88         device-tree    locks         sysvipc
+118   2062  24    67   9          diskstats      meminfo       thread-self
+12    21    3     68   92         driver         misc          timer_list
+126   2172  4     680  93         dynamic_debug  modules       tty
+129   2186  529   69   94         execdomains    mounts        uptime
+13    2187  530   70   96         fb             mtd           version
+130   2188  579   71   97         filesystems    net           vmallocinfo
+131   22    599   72   991        fs             pagetypeinfo  vmstat
+132   2203  604   728  993        interrupts     partitions    zoneinfo
+133   2204  612   73   apm        iomem          pressure
+135   2206  613   74   buddyinfo  ioports        pvr
+136   2231  619   740  bus        irq            sched_debug
+debian@BeagleBone:/proc$ cat version
+Linux version 5.10.131-ti-r49 (voodoo@rpi4b4g-05) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1bullseye SMP PREEMPT Tue Aug 30 20:34:58 UTC 2022
+debian@BeagleBone:/proc$ cat uptime
+12394.86 12070.69
+debian@BeagleBone:/proc$ cat cpuinfo
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 995.32
+Features	: half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Generic AM33XX (Flattened Device Tree)
+Revision	: 0000
+Serial		: BBG122061635
+debian@BeagleBone:/proc$ exit
+logout
+Connection to 192.168.7.2 closed.
+
