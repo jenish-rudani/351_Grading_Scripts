@@ -143,34 +143,97 @@ def gradeHello():
       cmd = "tar -xvf as1-helloWorld.tar.gz"
       output = subprocess.Popen(cmd,shell=True, stdout=subprocess.PIPE,stderr=subprocess.STDOUT).stdout.read()
       print(output.decode('utf-8').split())
-      extractedFolder = output.decode('utf-8').split()[1]
+      extractedFolder = output.decode('utf-8').split()[0]
       os.chdir(extractedFolder)
       print(os.getcwd())
       output = subprocess.Popen("make",shell=True, stdout=subprocess.PIPE,stderr=subprocess.STDOUT).stdout.read()
       print(output.decode('utf-8'))
       
+      # # [5]  Makefile which builds 'hello' and puts executable in public folder
       c = input("Did makefile generate hello? Y/n").lower()
       if(c=='y'):
         commentForGrade += "[+5] | "
         tempGradMarks += 5
         print("Hello -> Yes")
       else:
-        break
+        commentForGrade += "hello not in myApps | "
       
-      tempGradMarks['hello']['mark'] = tempGradMarks
-      tempGradMarks['hello']['comment'] = commentForGrade
+      # # [3]  Displays welcome message
+      c = input("Did welcome message appear? Y/n").lower()
+      if(c=='y'):
+        commentForGrade += "[+3] | "
+        tempGradMarks += 3
+        print("Hello -> Yes")
+      else:
+        commentForGrade += "No welcome Message | "
+      
+      # [5]  Light up LED 0 and wait 0.5 - 3.0s
+      c = input("Did LED0 Light up? Y/n").lower()
+      if(c=='y'):
+        commentForGrade += "[+5] | "
+        tempGradMarks += 5
+        print("Hello -> Yes")
+      else:
+        commentForGrade += "LED0 didn't lightup | "
+        
+      # [10] Test user response time (turn on LED 3, start time, stop when button pressed)
+      c = input("Test user response time (turn on LED 3, start time, stop when button pressed)? Y/n").lower()
+      if(c=='y'):
+        commentForGrade += "[+10] | "
+        tempGradMarks += 10
+        print("Hello -> Yes")
+      else:
+        commentForGrade += "Issues in User Response | "
+        
+      # [5]  Display summary showing current response time and best so far this run
+      c = input("Display summary? Y/n").lower()
+      if(c=='y'):
+        commentForGrade += "[+5] | "
+        tempGradMarks += 5
+        print("Hello -> Yes")
+      else:
+        commentForGrade += "Issues in Summary | "
+        
+      # [5]  Repeat playing game until user exits
+      c = input("Did Game Repeat? Y/n").lower()
+      if(c=='y'):
+        commentForGrade += "[+5] | "
+        tempGradMarks += 5
+        print("Hello -> Yes")
+      else:
+        commentForGrade += "Didn;t repeat | "
+      
+      # [10] Exit game if no button press within 5s
+      c = input("Exited on no press in 5Seconds? Y/n").lower()
+      if(c=='y'):
+        commentForGrade += "[+10] | "
+        tempGradMarks += 10
+        print("Hello -> Yes")
+      else:
+        commentForGrade += "Didn't Exit | "
+      
+      tempGradMarks += 5
+      commentForGrade += "[+5]"
+      templateGrade['hello']['mark'] = tempGradMarks
+      templateGrade['hello']['comment'] = commentForGrade
       grades["marks"].append(templateGrade) 
+      
   except Exception as e:
+    import traceback
+    traceback.print_exc()
     print(e)
     # Serializing json
-    # json_object = json.dumps(grades, indent=4)
+    json_object = json.dumps(grades, indent=4)
     
-    # # Writing to sample.json
-    # with open("hello.json", "w") as outfile:
-    #     outfile.write(json_object)
+    # Writing to sample.json
+    with open("hello.json", "w") as outfile:
+        outfile.write(json_object)
 
 
          
       
 print(len(subfolders))
 gradeHello()
+
+
+#     - Optional: seed random number generator (srand) by timer
