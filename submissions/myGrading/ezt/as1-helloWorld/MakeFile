@@ -1,0 +1,11 @@
+all: hello.c
+
+	arm-linux-gnueabihf-gcc hello.c -o hello
+
+	cp hello $(HOME)/ensc351/public/myApps/
+
+
+
+clean:
+
+	rm hello

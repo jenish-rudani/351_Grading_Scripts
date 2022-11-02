@@ -1,6 +1,5 @@
 {
-    "marks": [
-        {
+    "marks": [{
             "userid": "akopylov",
             "hello": {
                 "mark": 48,
@@ -52,8 +51,8 @@
         {
             "userid": "bmckeen",
             "hello": {
-                "mark": 5,
-                "comment": "hello not in myApps | No welcome Message | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+                "mark": 0,
+                "comment": "hello not in myApps | No welcome Message | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit"
             }
         },
         {
@@ -94,8 +93,8 @@
         {
             "userid": "drowsell",
             "hello": {
-                "mark": 48,
-                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+                "mark": 41,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+3] [-7] no busy wait | [+5] "
             }
         },
         {
@@ -109,7 +108,7 @@
             "userid": "dumpherv",
             "hello": {
                 "mark": 38,
-                "comment": "[+5] | [+3] | [+5] | Issues in User Response | [+5] | [+5] | [+10] | [+5]"
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response no busy wait | [+5] | [+5] | [+10] | [+5]"
             }
         },
         {
@@ -117,6 +116,195 @@
             "hello": {
                 "mark": 48,
                 "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            }
+        },
+        {
+            "userid": "ezt",
+            "hello": {
+                "mark": 0,
+                "comment": "Did not compile"
+            }
+        },
+        {
+            "userid": "hlebumfa",
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "hssekhon",
+            "hello": {
+                "mark": 13,
+                "comment": "hello not in myApps | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "jcz3",
+            "hello": {
+                "mark": 21,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response [+3] [-7] | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "jkshergi",
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "jmateo",
+            "hello": {
+                "mark": 43,
+                "comment": "hello not in myApps | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            }
+        },
+        {
+            "userid": "jmerkl",
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            }
+        },
+        {
+            "userid": "jmix",
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "jml44",
+            "hello": {
+                "mark": 13,
+                "comment": "[+5] | [+3] | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "jvanloo",
+            "hello": {
+                "mark": 13,
+                "comment": "hello not in myApps | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "kmokaya",
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "ksa170",
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "ktoering",
+            "hello": {
+                "mark": 13,
+                "comment": "hello not in myApps | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "liyuyul",
+            "hello": {
+                "mark": 0,
+                "comment": "hello not in myApps | No welcome Message | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit"
+            }
+        },
+        {
+            "userid": "llagerwe",
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "mmsaki",
+            "hello": {
+                "mark": 0,
+                "comment": "hello not in myApps | No welcome Message | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit"
+            }
+        },
+        {
+            "userid": "nss11",
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "rmakita",
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            }
+        },
+        {
+            "userid": "smoradkh",
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "sraisudd",
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            }
+        },
+        {
+            "userid": "ssa365",
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            }
+        },
+        {
+            "userid": "sukhal",
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            }
+        },
+        {
+            "userid": "swa263",
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            }
+        },
+        {
+            "userid": "tla152",
+            "hello": {
+                "mark": 38,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | Didn't Exit | [+5]"
+            }
+        },
+        {
+            "userid": "tpa35",
+            "hello": {
+                "mark": 43,
+                "comment": "hello not in myApps | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            }
+        },
+        {
+            "userid": "wshami",
+            "hello": {
+                "mark": 0,
+                "comment": "hello not in myApps | No welcome Message | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit"
+            }
+        },
+        {
+            "userid": "zosmond",
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
             }
         }
     ]
