@@ -11,7 +11,7 @@ listOfCommands = ["ip addr", "ip -4 addr", "ifconfig", "ping", "ssh", "version",
 
 listOfOutputs = ['ls' ,'/mnt/remote/myApps/' ,'cd /mnt/remote/myApps/','./mount-nfs.sh','Hello embedded world, from ','Your reaction time is', 'Your reaction time was' , 'best so far in game is', 'ls /mnt/remote/myApps' ,'best so far in the game is', 'When LED3 lights up, press the USER button!', 'New best time!', 'No input within 5000ms; quitting!', './mountNFS.sh']
 
-listOfSubmissions = "zdurani, tka74,akopylov,llagerwe,hlebumfa,sukhal,bla135,tla152,liyuyul,jml44,rmakita,asm18,cma107,jmateo,bmckeen,jmerkl,jmix,kmokaya,amontede,smoradkh,mmsaki,tnookut,zosmond,epa25,tpa35,sraisudd,drashid,drowsell,dss17,hssekhon,wshami,divyams,jkshergi,nss11,ksa170,ssa365,alons,aspeers,athapa,ktoering,ezt,dumpherv,jvanloo,swa263,cwa230,cya110,ruoyiz,jcz3"
+listOfSubmissions = "akopylov,llagerwe,hlebumfa,sukhal,bla135,tla152,liyuyul,jml44,rmakita,asm18,cma107,jmateo,bmckeen,jmerkl,jmix,kmokaya,amontede,smoradkh,mmsaki,tnookut,zosmond,epa25,tpa35,sraisudd,drashid,drowsell,dss17,hssekhon,wshami,divyams,jkshergi,nss11,ksa170,ssa365,alons,aspeers,athapa,ktoering,ezt,dumpherv,jvanloo,swa263,cwa230,cya110,ruoyiz,jcz3"
 listOfSubmissions = listOfSubmissions.split(',')
 
 subfolders = [ f.path for f in os.scandir('./submissions/myGrading/') if f.is_dir() if f.name in listOfSubmissions ]

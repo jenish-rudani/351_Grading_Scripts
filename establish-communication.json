@@ -1,124 +1,5 @@
 {
     "marks": [{
-            "userid": "alons",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "cya110",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "hlebumfa",
-            "establish-communication": {
-                "mark": 4,
-                "comment": "missing commands"
-            }
-        },
-        {
-            "userid": "ssa365",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "zosmond",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "divyams",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "bmckeen",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "sraisudd",
-            "establish-communication": {
-                "mark": 4,
-                "comment": "missing commands"
-            }
-        },
-        {
-            "userid": "sukhal",
-            "establish-communication": {
-                "mark": 4,
-                "comment": "missing commands"
-            }
-        },
-        {
-            "userid": "asm18",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "tpa35",
-            "establish-communication": {
-                "mark": 4,
-                "comment": "missing commands"
-            }
-        },
-        {
-            "userid": "jmerkl",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "liyuyul",
-            "establish-communication": {
-                "mark": 4.5,
-                "comment": "missing command"
-            }
-        },
-        {
-            "userid": "drashid",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "rmakita",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "tla152",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "dumpherv",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
             "userid": "akopylov",
             "establish-communication": {
                 "mark": 5,
@@ -126,126 +7,7 @@
             }
         },
         {
-            "userid": "wshami",
-            "establish-communication": {
-                "mark": 4,
-                "comment": "missing commands"
-            }
-        },
-        {
-            "userid": "jmix",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "smoradkh",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "kmokaya",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "cwa230",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "athapa",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "jmateo",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "bla135",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "mmsaki",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "jkshergi",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "jvanloo",
-            "establish-communication": {
-                "mark": 0.0,
-                "comment": "EXCEPTION | Empty file"
-            }
-        },
-        {
-            "userid": "nss11",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "llagerwe",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "ktoering",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "tka74",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "ezt",
-            "establish-communication": {
-                "mark": 4,
-                "comment": "missing commands"
-            }
-        },
-        {
-            "userid": "dss17",
-            "establish-communication": {
-                "mark": 5,
-                "comment": "Covers all/most"
-            }
-        },
-        {
-            "userid": "ksa170",
+            "userid": "alons",
             "establish-communication": {
                 "mark": 5,
                 "comment": "Covers all/most"
@@ -259,6 +21,13 @@
             }
         },
         {
+            "userid": "asm18",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
             "userid": "aspeers",
             "establish-communication": {
                 "mark": 5,
@@ -266,10 +35,24 @@
             }
         },
         {
-            "userid": "swa263",
+            "userid": "athapa",
             "establish-communication": {
-                "mark": 5.0,
-                "comment": "EXCEPTION No File Extension | Check file extension from next time"
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "bla135",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "bmckeen",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
             }
         },
         {
@@ -280,24 +63,31 @@
             }
         },
         {
-            "userid": "jcz3",
+            "userid": "cwa230",
             "establish-communication": {
-                "mark": 4.5,
-                "comment": "missing command"
+                "mark": 5,
+                "comment": "Covers all/most"
             }
         },
         {
-            "userid": "jml44",
+            "userid": "cya110",
             "establish-communication": {
-                "mark": 4.5,
-                "comment": "missing command"
+                "mark": 5,
+                "comment": "Covers all/most"
             }
         },
         {
-            "userid": "epa25",
+            "userid": "divyams",
             "establish-communication": {
-                "mark": 4,
-                "comment": "missing commands"
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "drashid",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
             }
         },
         {
@@ -308,7 +98,210 @@
             }
         },
         {
+            "userid": "dss17",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "dumpherv",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "epa25",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            }
+        },
+        {
+            "userid": "ezt",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            }
+        },
+        {
+            "userid": "hlebumfa",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            }
+        },
+        {
             "userid": "hssekhon",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "jcz3",
+            "establish-communication": {
+                "mark": 4.5,
+                "comment": "missing command"
+            }
+        },
+        {
+            "userid": "jkshergi",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "jmateo",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "jmerkl",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "jmix",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "jml44",
+            "establish-communication": {
+                "mark": 4.5,
+                "comment": "missing command"
+            }
+        },
+        {
+            "userid": "jvanloo",
+            "establish-communication": {
+                "mark": 0.0,
+                "comment": "EXCEPTION | Empty file"
+            }
+        },
+        {
+            "userid": "kmokaya",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "ksa170",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "ktoering",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "liyuyul",
+            "establish-communication": {
+                "mark": 4.5,
+                "comment": "missing command"
+            }
+        },
+        {
+            "userid": "llagerwe",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "mmsaki",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "nss11",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "rmakita",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "smoradkh",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "sraisudd",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            }
+        },
+        {
+            "userid": "ssa365",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "sukhal",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            }
+        },
+        {
+            "userid": "swa263",
+            "establish-communication": {
+                "mark": 5.0,
+                "comment": "EXCEPTION No File Extension | Check file extension from next time"
+            }
+        },
+        {
+            "userid": "tla152",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            }
+        },
+        {
+            "userid": "tpa35",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            }
+        },
+        {
+            "userid": "wshami",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            }
+        },
+        {
+            "userid": "zosmond",
             "establish-communication": {
                 "mark": 5,
                 "comment": "Covers all/most"

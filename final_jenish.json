@@ -1,0 +1,840 @@
+{
+    "marks": [
+        {
+            "userid": "akopylov",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "alons",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 43,
+                "comment": "hello not in myApps | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "amontede",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 38,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "asm18",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "aspeers",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "athapa",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 8,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "bla135",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "bmckeen",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 0.0,
+                "comment": "EXCEPTION | FILE READING ERROR | PLEASE UPLOAD FILE IN TXT"
+            },
+            "hello": {
+                "mark": 0,
+                "comment": "hello not in myApps | No welcome Message | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "cma107",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 38,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "cwa230",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "cya110",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "divyams",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "drashid",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12.0,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "drowsell",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 41,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+3] [-7] no busy wait | [+5] "
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "dss17",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12.0,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "dumpherv",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 10.0,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 38,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response no busy wait | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "epa25",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "ezt",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 0,
+                "comment": "Did not compile"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "hlebumfa",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12.0,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "hssekhon",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 13,
+                "comment": "hello not in myApps | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "jcz3",
+            "establish-communication": {
+                "mark": 4.5,
+                "comment": "missing command"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 21,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response [+3] [-7] | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "jkshergi",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "jmateo",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 43,
+                "comment": "hello not in myApps | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "jmerkl",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "jmix",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12.0,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "jml44",
+            "establish-communication": {
+                "mark": 4.5,
+                "comment": "missing command"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12.0,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 13,
+                "comment": "[+5] | [+3] | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "jvanloo",
+            "establish-communication": {
+                "mark": 0.0,
+                "comment": "EXCEPTION | Empty file"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 0.0,
+                "comment": "EXCEPTION | EMPTY FILE"
+            },
+            "hello": {
+                "mark": 13,
+                "comment": "hello not in myApps | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "kmokaya",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12.0,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "ksa170",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12.5,
+                "comment": "UPLOAD FILE WITH EXTENSION"
+            },
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "ktoering",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 13,
+                "comment": "hello not in myApps | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "liyuyul",
+            "establish-communication": {
+                "mark": 4.5,
+                "comment": "missing command"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": "Good work"
+            },
+            "hello": {
+                "mark": 0,
+                "comment": "hello not in myApps | No welcome Message | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "llagerwe",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "mmsaki",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 0.0,
+                "comment": "EXCEPTION | EMPTY"
+            },
+            "hello": {
+                "mark": 0,
+                "comment": "hello not in myApps | No welcome Message | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "nss11",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 4.0,
+                "comment": "MISSING NFS | LS"
+            },
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "rmakita",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "smoradkh",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "sraisudd",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 0.0,
+                "comment": "EXCEPTION | SUSPICIOUS OUTPUT"
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "ssa365",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "sukhal",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "swa263",
+            "establish-communication": {
+                "mark": 5.0,
+                "comment": "EXCEPTION No File Extension | Check file extension from next time"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 11.5,
+                "comment": "EXCEPTION | FILE READING ERROR | PLEASE UPLOAD FILE IN TXT"
+            },
+            "hello": {
+                "mark": 48,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "tla152",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 38,
+                "comment": "[+5] | [+3] | [+5] | [+10] | [+5] | [+5] | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "tpa35",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 43,
+                "comment": "hello not in myApps | [+3] | [+5] | [+10] | [+5] | [+5] | [+10] | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "wshami",
+            "establish-communication": {
+                "mark": 4,
+                "comment": "missing commands"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 0.0,
+                "comment": "EXCEPTION | ERROS IN ALL THREE SECTION"
+            },
+            "hello": {
+                "mark": 0,
+                "comment": "hello not in myApps | No welcome Message | LED0 didn't lightup | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        },
+        {
+            "userid": "zosmond",
+            "establish-communication": {
+                "mark": 5,
+                "comment": "Covers all/most"
+            },
+            "nfs-and-custom-login-message": {
+                "mark": 12,
+                "comment": ""
+            },
+            "hello": {
+                "mark": 18,
+                "comment": "[+5] | [+3] | [+5] | Issues in User Response | Issues in Summary | Didn;t repeat | Didn't Exit | [+5]"
+            },
+            "good-quality-code": {
+                "mark": 0.0,
+                "comment": ""
+            }
+        }
+    ]
+}
