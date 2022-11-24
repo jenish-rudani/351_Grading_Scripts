@@ -1,0 +1,69 @@
+ENSC 351 Assignment 2 Marking Guide
+Assignment must be done individually or in pairs.
+
+Total: [125] Marks
+
+[10] Debug noworky
+    [5] GDB text capture
+       - Show reasonable detail to discover the bug.
+       - Expecting use of at least: bt, list, up, print (or other reasonable debugging approach)
+    [3] Graphical Debugger
+       - Screenshot shows noworky being debugged through Eclipse (or another graphical debugger).
+    [2] noworky.c
+       - Must have corrected and commented the change.
+       - If the bug is resolved in a different (yet equally direct way) as 
+         expected, it will also be worth full marks.
+
+       (Graphical debugger screenshot will not show the sequence of steps used to debug
+         the application; just that the debugger is connected)
+
+
+[115] Light Sampler
+    [10] Design/Style
+        • Use good style
+            ? All modules, files, functions, and variables are named well
+            ? All .h files have a comment at the top
+            ? All code has excellent indentation
+          (You don’t need to match the course’s style guide, you just need to write beautiful code)
+        • Have a clean modular design:
+            ? No externally linked global variables
+            ? Functions meant to be used by other modules are externally linked and listed in .h file
+            ? Functions not meant to be used by other modules are internally linked
+            ? Thread IDs and mutextes are encapsulated inside modules (not available from other modules)
+                ? Multiple modules, each with its own .h and .c file. Expected ~5 to ~20 modules (each with a .h/.c file).
+        • Be multi-threaded and threadsafe (no race-cases; use mutexes to protect critical sections)
+        • Use no busy waits (use sleep() or mutexes instead)
+        • Be written in C, or Rust (requires guidance to TAs for compiling and running)
+        • Use a makefile to build your application and copy it to $(HOME)/cmpt433/public/myApps/light_sampler            
+
+    [30] Joystick and 8x8 Matrix (low level control)
+        - Readable digits and decimal point
+        - Correct Joystick control (directions)
+    
+    [10] Sampling
+        [ 5] On separate pthread
+        [ 5] Correctly samples at least 1s worth of data
+             Must use mutexes to protect against race cases
+    
+    [10] Dip Detection
+        - Correctly uses thresholds and hysteresis to detect dips reliably up to 20hz
+    
+    [50] Output (terminal & 8x8 LED Matrix)
+        [ 5] Terminal output format
+        [30] Display sampling interval via serial & 8x8; reasonable min/max/avg
+        [10] Display sample voltage via serial & 8x8; reasonable min/max/avg
+        [ 5] Display # dips and # samples taken in last second
+
+    [ 5] Other
+        [ 5] Exit on user-button pressed
+
+        [ 0] Memory
+            Up to a -20 penalty applied for memory errors found with valgrind.
+            Note: No deduction for memory still reachable at exit.
+
+   
+Forward to Dr. Brian if...
+- Material is suspiciously similar to another submission.
+- Inconsistent submission (inconsistent trace indicating results are forged).
+- All proven cases of academic dishonesty will be dealt with according to SFU's Academic Honesty policy:
+  http://www.sfu.ca/policies/gazette/student.html
